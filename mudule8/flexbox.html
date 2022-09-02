@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container {
+            height: 500px;
+            border: 2px dotted slategrey;
+            /* inerview question:how to set a content in center? to give display:flex and justify-content and align-items:center; */
+            display: flex;
+            /* full container k center e anar jonno */
+            /* left right position korar jonno */
+            justify-content: center;
+            /* box er majhe space er jonno */
+            /* justify-content: space-between;/space-evenly(shobjaygay ekishoman 
+            space/space-around(majhe jototuku space thakbe duiside e 
+            tar half space takbe))  */
+            /* position top-bottom  korar jonno  .we can also give (center)*/
+            /* align-items: flex-end; */
+            align-items: center;
+            /* we can also use stretch ,jodi .box or content ert height na deya thake tahoe .box k stretch korbe */
+            /* align-items: stretch; */
+        }
+        
+        .box {
+            width: 200px;
+            /* align-items:stretch; korle height bad dite hobe */
+            height: 200px;
+            border: 3px dashed rebeccapurple;
+            font-size: 3em;
+        }
+        
+        #box1 {
+            /* jaygar order change korte chai  */
+            order: 2;
+        }
+        
+        #box2 {
+            order: 1;
+            /* #box2 er jonno jototuku jayga chai jodi full space chai tahole 1;tahole r width only 200 jayga nibe na(side menubar er jonno use kora hoy) */
+            flex-grow: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>i am flexible right now</h1>
+    <div class="container">
+        <div id="box1" class="box">Box-1</div>
+        <div id="box2" class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .photo-album {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .photo-frame {
+            width: 300px;
+            height: 200px;
+            border: 2px solid greenyellow;
+            border-radius: 10px;
+            /* child er position absolute dile parent er position relative dite hoy */
+            position: relative;
+            margin: 15px;
+            /* <!-- Video : 8.8 :  Apply transition transform in  your photo album  --> */
+            /* hover korar por image jate large hoye onno border e na jay er jonno (overflow:hidden) dibo   */
+            overflow: hidden;
+            /* <!-- Video : 8.8 :  Apply transition transform in  your photo album  --> */
+        }
+        
+        .photo img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .photo-detail {
+            /* first e text display korbena tai display none disi but hover korar por dekhabe */
+            display: none;
+            /* photo-detaile er text ta ke photo er upor rakhbo jate hover korle dekhay */
+            position: absolute;
+            /* text er width tao photo img er shoman dibo */
+            width: 300px;
+            /* top 0 dile ekbare website er top e jeye boshbe text ta */
+            top: 0;
+            height: 200px;
+        }
+        
+        .photo-detail h3 {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        
+        .photo-detail p {
+            color: white;
+        }
+        /* photo-frame e hover korar por photo-detailer content dekhar jonno */
+        
+        .photo-frame:hover .photo-detail {
+            display: block;
+            background-color: rgba(199, 180, 134, 0.7);
+        }
+        /* <!-- Video : 8.8 :  Apply transition transform in  your photo album  --> */
+        
+        .photo-frame:hover .photo {
+            /* ekhane scale dibo karon scale korle boro hobe and scale,rotate and other property of transform ekshathe deya jabe or jekono ekta property deya jabe*/
+            /* hover or emnei class and id te transform and transition ekshathe use kora jay */
+            transform: scale(1.3) rotate(360deg) skew(30deg);
+            transition: transform 2s ease-in-out;
+        }
+        /* <!-- Video : 8.8 :  Apply transition transform in  your photo album  --> */
+    </style>
+</head>
+
+
+<body>
+    <h1>My Photo Album</h1>
+    <section>
+        <h3>Tiger Album</h3>
+        <div class="photo-album">
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/th.webp" alt="">
+                </div>
+                <div class="photo-detail">
+                    <h3>Tiger Candid</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat blanditiis distinctio labore est temporibus, voluptate repellendus exercitationem amet tenetur odit reprehenderit debitis. Omnis, alias dolores voluptas ea ullam fuga.
+                    </p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/th.webp" alt="">
+                </div>
+                <div class="photo-detail">
+                    <h3>Tiger Candid</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat blanditiis distinctio labore est temporibus, voluptate repellendus exercitationem amet tenetur odit reprehenderit debitis. Omnis, alias dolores voluptas ea ullam fuga
+                        .
+                    </p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/th.webp" alt="">
+                </div>
+                <div class="photo-detail">
+                    <h3>Tiger Candid</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat blanditiis distinctio labore est temporibus, voluptate repellendus exercitationem amet tenetur odit reprehenderit debitis. Omnis, alias dolores voluptas ea ullam fuga
+                        .
+                    </p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/th.webp" alt="">
+                </div>
+                <div class="photo-detail">
+                    <h3>Tiger Candid</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat blanditiis distinctio labore est temporibus, voluptate repellendus exercitationem amet tenetur odit reprehenderit debitis. Omnis, alias dolores voluptas ea ullam fuga
+                        .
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

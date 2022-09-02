@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid indigo;
+        }
+        
+        #box-1 {
+            background-color: khaki;
+        }
+        
+        #box-2 {
+            background-color: seagreen;
+        }
+        
+        #box-3 {
+            background-color: sienna;
+            /*display none korle jayga shoho 
+            content r ddekha jabena.oi jaygay 
+            er porer jinish boshbe */
+            display: none;
+            /* abar jodi display korte chai
+             tahole display block dibo  */
+            display: block;
+            /* hidden korle dekha jabena but 
+            je jaygay chilo sheta sei jayga 
+            faka thakbe */
+            visibility: hidden;
+        }
+        
+        #box-4 {
+            background-color: orchid;
+        }
+        /* display :none and visibility:hidden er moddhe difference ki? */
+    </style>
+</head>
+
+<body>
+    <!-- .box#box-$*4 -->
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
+    <div class="box" id="box-4"></div>
+</body>
+
+</html>

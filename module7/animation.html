@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* for creating animation we use (before,after) effect */
+        /* keyframe use korahoy animation moving kokhon kotha theke kothay jabe or ki state e thakbe */
+        
+        @keyframes sliding {
+            /* from - to na diye (0%,50%,75%,100%)diyeo kora jay like 0%{ left:0},50%{left:100px},100%{left:0} */
+            /* from {
+            background-color: limegreen;
+            left: 0;
+        }
+        
+        to {
+            background-color: magenta;
+            left: 200px;
+        } */
+            0% {
+                background-color: yellow;
+                left: 0;
+                top: 0;
+                /* top:0 te ball ta choto thakbe */
+                transform: scale(0.5);
+            }
+            25% {
+                /* 200x porjonto top theke move korbe */
+                top: 200px;
+                background-color: red;
+                /* top:200px e te ball ta boro thakbe */
+                transform: scale(1);
+            }
+            50% {
+                top: 0;
+                background-color: yellow;
+                transform: scale(0.5);
+            }
+            75% {
+                top: 200px;
+                background-color: red;
+                transform: scale(1);
+            }
+            100% {
+                background-color: yellow;
+                left: 600px;
+                top: 0;
+                transform: scale(0.5);
+            }
+        }
+        
+        .stage {
+            /* 700px width porjonto dure jabe  */
+            width: 700px;
+            height: 300px;
+            background-color: lightskyblue;
+        }
+        
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: limegreen;
+            border-radius: 50%;
+            position: relative;
+            /* animation alada vabe kora jay abar shob value ekebareo deya jabe */
+            /* animation-name:sliding,duration(kotoshomoy dhore animation ta hobe):1s,timing-function(kivabe hobe):ease-in/ease-out/linear/ease-in-out,delay(animation shuru howar age kono delay hobe kina):0.5s, iteration-count(kotobar cholbe)3/5/4/7/infinite,direction(shamner dike jabe naki backside e jabe)alternate,fill-mode(check on google) na dileo hoy */
+            animation: sliding 3s ease-in-out 0.5s infinite alternate;
+            /* save korar shathe  shathe run korbe and hover diyeo kora jay:hover korar por run korbe  */
+            animation-play-state: running;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>lets explore animation</h1>
+    <div class="stage">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+
+</html>

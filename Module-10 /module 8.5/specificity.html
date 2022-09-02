@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- shobcheye beshi valo external css use kora (link:css) shudhu name taa change kore save korlei hobe -->
+    <!-- internal css is more powerful than external css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* same tag er heta shobcheye pore thakbe ba niche thakbe ba latest style dibo shetai apply  hobe . ekhane (cadetblue) apply hobe */
+        
+        h1 {
+            background-color: cyan;
+            color: darkgoldenrod;
+        }
+        
+        h1 {
+            color: aquamarine;
+        }
+        /* normal heading, class,id,inline css er cheyeo beshi important (!important) . etake banned important bola hoy . but eta na use korai valo.*/
+        
+        h1 {
+            color: blue !important;
+        }
+        /* class normal heading er cheye powerful. tai konotate class dile eta jekono jaygay pore likhleo normal heading er style k override kore class style ta boshbe */
+        
+        .first-heading {
+            color: cadetblue
+        }
+        /* Id, class er cheye powerful. tai konotate id dile eta jekono jaygay pore likhleo class er style k override kore id style ta boshbe */
+        
+        #third {
+            color: red;
+        }
+        
+        p {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ctrl + alt + down arrow dile multi select hoy -->
+    <h1 class="first-heading">My heading number - 1</h1>
+    <h1 class="first-heading">My heading number - 2</h1>
+    <!-- class thin Id er cheye beshi powerful inline css -->
+    <h1 id="third" class="first-heading" style="color: blueviolet;">My heading number - 3</h1>
+    <h1 class="first-heading">My heading number - 4</h1>
+    <p class="paragraph">this is my text description-1</p>
+    <p>this is my text description-2</p>
+    <p>this is my text description-3</p>
+    <p>this is my text description-4</p>
+    <p>this is my text description-5</p>
+
+</body>
+
+</html>

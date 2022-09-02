@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            /* each column kototuku jayga nibe eta bole dey jabe and koyta column hobe etao */
+            /* grid-template-columns: 200px 100px 100px 200px; */
+            /* grid-template-columns: 200px 200px 200px 200px; */
+            /* ekirokom shobgular man hole evabeo likha jay (repeat(4{je koyta column hobe tar man},kototuku width hobe)) */
+            /* grid-template-columns: repeat(4, 200px); */
+            /* joto ta column e korte chaina keno 2,4,6,8 jodi 100% dhori full width k tahole always hisheb kore ber korte hoy tai jate hisheb korte nahoy er jonno (1fr/2fr/3fr)  */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* jodi (1fr) er por abar alada man boshate chai tahole (1fr) er por value ta likhe dibo */
+            /* grid-template-columns: repeat(4, 1fr) 100px; */
+            /* or */
+            grid-template-columns: repeat(4, 1fr) 2fr;
+            /* each grid er border er majhe gap o deya jabe . jodi 1 ta man thake then eta (column and row) duijaygar space e nibe. ar jodi 2 ta value thake tahole first value(column) er jonno and 2nd value(row) er jonno*/
+            grid-gap: 20px;
+            /* or */
+            grid-gap: 20px 10px;
+        }
+        /* grid-column er moto (grid-row) o use korte pari */
+        
+        .grid-cell {
+            font-size: 2em;
+            border: 3px solid goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>explore grid</h1>
+    <!-- .grid-container*12>{cell number-$} -->
+    <div class="grid-container">
+        <div class="grid-cell">cell number-1</div>
+        <div class="grid-cell">cell number-2</div>
+        <div class="grid-cell">cell number-3</div>
+        <div class="grid-cell">cell number-4</div>
+        <div class="grid-cell">cell number-5</div>
+        <div class="grid-cell">cell number-6</div>
+        <div class="grid-cell">cell number-7</div>
+        <div class="grid-cell">cell number-8</div>
+        <div class="grid-cell">cell number-9</div>
+        <div class="grid-cell">cell number-10</div>
+        <div class="grid-cell">cell number-11</div>
+        <div class="grid-cell">cell number-12</div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border: 2px solid red;
+        }
+        
+        .container {
+            border: 2px solid orange;
+            position: relative;
+        }
+        
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        
+        #box-1 {
+            background-color: cornflowerblue;
+        }
+        
+        #box-2 {
+            background-color: rebeccapurple;
+            /* #box-2 relatively top and left e er position change korbo tai age position diye nite hobe */
+            /* position: relative;
+            top: 30px;
+            left: 50px;  */
+            /* jodi absolute kori then position:absolut;left,top change korle oi content er position full webpage er body er related jayga niye change hobe mane top:0 bolle ekebare webpage er body er top e uthe jabe tai jodi kono content er position change korte chai er child er position:absolute; kore parent content er position:relative; dite hobe tahole absolute er change parent er jaygar moddhe hobe*/
+            position: absolute;
+            top: 30px;
+            left: 50px;
+        }
+        
+        #box-3 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>explore relative nd absolute one more time</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem laborum id totam eligendi quasi, obcaecati amet officia est optio, quae rem dignissimos quis, aliquam tenetur nulla accusamus. Fugiat, maxime? Est?</p>
+    <!-- .container>.box#box-$*3>{Box-$} -->
+    <div class="container">
+        <div class="box" id="box-1">Box-1</div>
+        <div class="box" id="box-2">Box-2</div>
+        <div class="box" id="box-3">Box-3</div>
+    </div>
+</body>
+
+</html>
