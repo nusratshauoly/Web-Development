@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- css bootstrap file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <!-- full-body background color er jonno -->
+  <body style="background-color: #F3F1FF;">
+
+    <!-- module-13-5.2 -->
+   <!-- navbar -->
+     <header>
+
+    <!-- jodi background color same boshate chai tahole right side e (color scheme) e click korbo. and style=background-color copy  korbo and (bg-light) bad diye (background-color) figma er heading e jeta ache sheta boshabo.
+    ** (navbar-dark) dibo text k white korar jonno.-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #562EFF;">
+            <!-- container-fluid dile content gulo left and right side e choriye jabe er (container-fluid) bad diye (container) rakhbo shudhu -->
+            <div class="container">
+                <!-- link er text gulo cennnter e boshanor jonno : utilities e jabo then (flex) e then (d-flex align-items-center) copy kore link gulor parent tag (a) e (navbar-brand) er pashe boshabo.  -->
+              <a class="navbar-brand d-flex align-items-center" href="#">
+                <!-- logo img boshanor jonno: right side e image and text e jabo then image part copy kore (a) tag er vitor boshabo text ta remove kore.  -->
+                <img src="./images/icons/logo.png" alt="" width="41" height="51" class="d-inline-block align-text-top">
+                <!-- logo and text er majhe space er jonno -->
+                <span class="ms-2">Idea</span>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- ekhane (me-auto) er jaygay (ms-auto) dibo jate left side/start e space thake and content gulo right side e shore jay -->
+
+                <!-- link er text gulo center e anar jonno (d-flex align-items-center) dibo (utilities) e (flex) e jeye -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Works</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./images/icons/profile.png" alt="" width="51" height="51" class="d-inline-block align-text-top">
+
+                    </a>
+                  </li>
+                  <!-- dropdown link ta dorkar nai tai -->
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li> -->
+                 <!--**** disable button tao dorkar nai -->
+                  <!-- <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li> -->
+                </ul>
+                <!-- search option ta dorkar nai ei website e tai eta bad dibo -->
+                <!-- <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+              </div>
+            </div>
+          </nav>
+     </header>
+
+     <!-- Module-13-5.3 -->
+     <main>
+      <!-- main-section er background-color er jonno (utilities) er moddhe (border) e (rounded) dibo -->
+         <section class="container bg-white rounded">
+            <div>
+  
+  <!-- top player text er upor margin-top e space er jonno -->
+                <h4 class="text-primary my-4">Top Players</h4>
+                
+  <!-- grid er majhe gap dile shetake bole gutter and (gutter) use kore (row) te and ekhane (vertically) dibo tai (gy-4) use korbo and bottom e space dibo tai (pb-3)-->
+                <div class="row gy-4 pb-3">
+
+          <!-- 1st column -->
+                    
+<!-- ekhane 1 ta row te 3 ta column thakbe tai (h4) er por (layout) e (grid) theke copy korbo (col-lg-4) andd medium er jonno (col-md-6) andd small er jonno (col-12) .(each column 12/3=4 ta column kore jayga nibe) -->
+
+        <!-- image and name side by side anar jonno (utilities) e (flex) e jabo and name ta horizontally and vertically center e anar jonno (flex) er ( justify-content) er (align-items-center) ei class ta nibo -->
+                    <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
+                        <img src="./images/players/player-1.png" alt="" width="56">
+            
+        <!-- name and image er majhe / name er left e space er jonno (ms-3) mane margin-start/margin-left dibo (left k start or s likha hoy bootstrap e ) -->
+                        <h4 class="ms-3">John Smith</h4>
+                    </div>
+                    
+<!-- 2nd column -->
+
+<!-- ekhane 1 ta row te 3 ta column thakbe tai (h4) er por (layout) e (grid) theke copy korbo (col-lg-4) andd medium er jonno (col-md-6) andd small er jonno (col-12) .(each column 12/3=4 ta column kore jayga nibe) -->
+
+                <!-- image and name side by side anar jonno (utilities) e (flex) e jabo and name ta horizontally and vertically center e anar jonno (flex) er ( justify-content) er (align-items-center) ei class ta nibo -->
+                <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
+                    <img src="./images/players/player-2.png" alt="" width="56">
+
+                <!-- name and image er majhe / name er left e space er jonno (ms-3) mane margin-start/margin-left dibo (left k start or s likha hoy bootstrap e ) -->
+                    <h4 class="ms-3">Pro Rasel</h4>
+                </div>
+
+<!-- 3rd column -->
+
+<!-- ekhane 1 ta row te 3 ta column thakbe tai (h4) er por (layout) e (grid) theke copy korbo (col-lg-4) andd medium er jonno (col-md-6) andd small er jonno (col-12) .(each column 12/3=4 ta column kore jayga nibe) --> 
+
+                    <!-- image and name side by side anar jonno (utilities) e (flex) e jabo and name ta horizontally and vertically center e anar jonno (flex) er ( justify-content) er (align-items-center) ei class ta nibo -->
+                    <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
+                        <img src="./images/players/player-3.png" alt="" width="56">
+            
+        <!-- name and image er majhe / name er left e space er jonno (ms-3) mane margin-start/margin-left dibo (left k start or s likha hoy bootstrap e ) -->
+                        <h4 class="ms-3">Abu Sufian</h4>
+                    </div>   
+
+<!-- 4th column -->
+
+<!-- ekhane 1 ta row te 3 ta column thakbe tai (h4) er por (layout) e (grid) theke copy korbo (col-lg-4) andd medium er jonno (col-md-6) andd small er jonno (col-12) .(each column 12/3=4 ta column kore jayga nibe) -->
+
+                <!-- image and name side by side anar jonno (utilities) e (flex) e jabo and name ta horizontally and vertically center e anar jonno (flex) er ( justify-content) er (align-items-center) ei class ta nibo -->
+                <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
+                  <img src="./images/players/player-4.png" alt="" width="56">
+
+              <!-- name and image er majhe / name er left e space er jonno (ms-3) mane margin-start/margin-left dibo (left k start or s likha hoy bootstrap e ) -->
+                  <h4 class="ms-3">Shajedul Karim</h4>
+              </div>
+
+<!-- 5th column -->
+
+<!-- ekhane 1 ta row te 3 ta column thakbe tai (h4) er por (layout) e (grid) theke copy korbo (col-lg-4) andd medium er jonno (col-md-6) andd small er jonno (col-12) .(each column 12/3=4 ta column kore jayga nibe) -->
+
+                <!-- image and name side by side anar jonno (utilities) e (flex) e jabo and name ta horizontally and vertically center e anar jonno (flex) er ( justify-content) er (align-items-center) ei class ta nibo -->
+                <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
+                  <img src="./images/players/player-5.png" alt="" width="56">
+
+              <!-- name and image er majhe / name er left e space er jonno (ms-3) mane margin-start/margin-left dibo (left k start or s likha hoy bootstrap e ) -->
+                  <h4 class="ms-3">Maruf Ahmed</h4>
+              </div>
+
+<!-- 6th column -->
+
+<!-- ekhane 1 ta row te 3 ta column thakbe tai (h4) er por (layout) e (grid) theke copy korbo (col-lg-4) andd medium er jonno (col-md-6) andd small er jonno (col-12) .(each column 12/3=4 ta column kore jayga nibe) -->
+
+                <!-- image and name side by side anar jonno (utilities) e (flex) e jabo and name ta horizontally and vertically center e anar jonno (flex) er ( justify-content) er (align-items-center) ei class ta nibo -->
+                <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
+                  <img src="./images/players/player-6.png" alt="" width="56">
+
+              <!-- name and image er majhe / name er left e space er jonno (ms-3) mane margin-start/margin-left dibo (left k start or s likha hoy bootstrap e ) -->
+                  <h4 class="ms-3">Mujahid</h4>
+              </div>
+
+
+                  </div>
+            </div>
+
+                <hr>
+
+<!-- module-13-5.4: second section -->
+
+<!-- 2nd section 1st div -->
+                 <div>
+                  <h4 class="text-primary my-4">Top Blogs</h4>
+<!-- grid er moddhe space er jonno (gutter) use korte hoy (g- ) -->
+                  <div class="row g-3 pb-3">
+                    <div class="col-lg-6 col-md-12 d-flex">
+
+
+<!-- extra small device er jonno img and text alada column e neyar jonno img and text k row er vitor notun arekta row er moddhe rakhbo -->
+
+<!-- (layout) er (grid) e (nesting) e row er vitor arekta row deya jay-->
+                        <div class="row">
+  <!-- jodi col-6 dei tahole pashe onek space thake tai (col-4) dibo-->
+                          <div class="col-md-4 col-12">
+                            <img src="./images/blogs/blog-1.png" alt="" width="177">
+                          </div>
+                          
+                          <!-- left side e space er jonno text er -->
+                            <div class="ps-2 col-md-6 col-12">
+                              <h4>13 of My Favorite
+                                                UI/UX Goodies</h4>
+                              <p>By<a href="">Danny Sapio</a></p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+   <!-- 2nd section 2nd div -->
+                    <div class="col-lg-6 col-md-12 d-flex">
+
+ <!-- (layout) er (grid) e (nesting) e row er vitor arekta row deya jay-->                     
+                      <div class="row">
+                        <!-- jodi col-6 dei tahole pashe onek space thake tai (col-4) dibo-->
+                             <div class="col-md-4 col-12">
+                                  <img src="./images/blogs/blog-2.png" alt="" width="177">
+                              </div>
+                                                
+                      <!-- left side e space er jonno text er -->
+                              <div class="ps-2 col-md-6 col-12">
+                                <h4>13 of My Favorite
+                                                                      UI/UX Goodies</h4>
+                                  <p>By<a href="">Danny Sapio</a></p>
+                              </div>
+                        </div>
+
+                    </div>
+
+
+
+<!-- 2nd section 3rd div -->
+<div class="col-lg-6 col-md-12 d-flex">
+
+<!-- (layout) er (grid) e (nesting) e row er vitor arekta row deya jay-->
+  <div class="row">
+    <!-- jodi col-6 dei tahole pashe onek space thake tai (col-4) dibo-->
+                            <div class="col-md-4 col-12">
+                              <img src="./images/blogs/blog-3.png" alt="" width="177">
+                            </div>
+                            
+                            <!-- left side e space er jonno text er -->
+                              <div class="ps-2 col-md-6 col-12">
+                                <h4>13 of My Favorite
+                                                  UI/UX Goodies</h4>
+                                <p>By<a href="">Danny Sapio</a></p>
+                              </div>
+                          </div>
+
+</div>
+
+
+<!-- 2nd section 4th div -->
+<div class="col-lg-6 col-md-12 d-flex">
+  <!-- (layout) er (grid) e (nesting) e row er vitor arekta row deya jay-->
+  <div class="row">
+    <!-- jodi col-6 dei tahole pashe onek space thake tai (col-4) dibo-->
+                            <div class="col-md-4 col-12">
+                              <img src="./images/blogs/blog-4.png" alt="" width="177">
+                            </div>
+                            
+                            <!-- left side e space er jonno text er -->
+                              <div class="ps-2 col-md-6 col-12">
+                                <h4>13 of My Favorite
+                                                  UI/UX Goodies</h4>
+                                <p>By<a href="">Danny Sapio</a></p>
+                              </div>
+                          </div>
+
+</div>
+
+                  </div>
+                 </div>
+
+         </section>
+<!-- 3rd section -->
+         <section>
+
+         </section>
+     </main>
+
+     <footer>
+
+     </footer>
+
+
+
+
+
+      <!-- css bootstrap file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
