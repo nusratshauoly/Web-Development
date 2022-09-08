@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Panda Commerce</title>
 
-    <!-- css link -->
+    <!-- css (custom-styles) link -->
     <link rel="stylesheet" href="style.css">
 
     <!-- bootstrap css link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
+    
 <!-- header strat -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+    <!-- 0. navbar k (fixed-top) jate eta scroll korleo fixed thake -->
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
 <!-- (container-fluid) dile header e shobtuku jayga nibe tai (container) dibo all side e kichu space er jonno -->
             <div class="container">
               <a class="navbar-brand" href="#">
@@ -31,13 +33,14 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Shoes</a>
+    <!-- 30. shoes , backpack section er id name ekhane href e (#id-name) diye boshabo -->
+                    <a class="nav-link" href="#shoe">Shoes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Backpack</a>
+                    <a class="nav-link" href="#backpack">Backpack</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Subscribe</a>
+                    <a class="nav-link" href="#subscribe">Subscribe</a>
                   </li>
 
 <!-- dropdown link lagbena
@@ -69,6 +72,8 @@
             </div>
           </nav>
 
+
+<!-- image slider carousel -->
     <!-- 1. header er moddhe header part shesh howar por  -->
     <!-- 2. image slider/carousel part starts here -->
     <!-- 3. first e container class shoho 1ta section nibo then bootstrap theke (container er carousel) e jeye (with controls) copy kore boshabo thenn image er link gulo dibo -->
@@ -83,13 +88,17 @@
     <!-- 5. carousel er background color deyar jonno row er moddhe (utilities) er (backround-color) e jabo -->
     <!-- 7. Likhar majhe space er jonno padding dite  hobe -->
     <!-- 8. utilities er moddhe (flex) e (align-items) e jabo (d-flex align-items-center) select korbo -->
+
+    <!-- 1st carousel -->
                     <div class="carousel-item active">
-                        <div class="row bg-info bg-gradient d-flex align-items-center p-5">
+                        <div class="row panda-bg-info-background bg-gradient d-flex align-items-center p-5">
                             <div class="col-lg-7">
                                 <h1>Cool Dude HeadPhone</h1>
                                 <p>This is the best headphone in the world for people who just want to waste time in front of funky world.</p>
                                 <h1>$420</h1>
-                                <button class="btn-warning">Buy Now</button>
+
+    <!-- /* 38.carousel and footer button */ -->
+                                <button class="panda-carousel-footer-btn">Buy Now</button>
                             </div>
                             <div class="col-lg-5">
                                 <img src="./image/banner-images/headphone.png" class="d-block w-100" alt="...">
@@ -101,14 +110,18 @@
     <!-- 4. ekhane (row class) boshate hobe then carousel er (left side text) and (image) alada korar jonno (column-7 for text and column-5 for image) kore nite hobe image and text er jonno -->
     <!-- 5. carousel er background color deyar jonno row er moddhe (utilities) er (backround-color) e jabo -->
     <!-- 7. Likhar majhe space er jonno padding dite  hobe -->
-    <!-- 8. utilities er moddhe (flex) e (align-items) e jabo (d-flex align-items-center) select korbo -->         
+    <!-- 8. utilities er moddhe (flex) e (align-items) e jabo (d-flex align-items-center) select korbo --> 
+    
+    <!-- 2nd carousel -->
                 <div class="carousel-item">        
-                    <div class="row bg-info bg-gradient d-flex align-items-center p-5">
+                    <div class="row panda-bg-info-background bg-gradient d-flex align-items-center p-5">
                         <div class="col-lg-7">
                             <h1>Mega LCD TV For Sports</h1>
                             <p>This is the best tv in the world for people who just want to waste time infront of fake sports.</p>
                             <h1>$1200</h1>
-                            <button class="btn-warning">Buy Now</button>
+
+    <!-- /* 38.carousel and footer button */ -->
+                            <button class="panda-carousel-footer-btn">Buy Now</button>
                         </div>
                         <div class="col-lg-5">
                             <img src="./image/banner-images/tv.png" class="d-block w-100" alt="...">
@@ -120,14 +133,20 @@
     <!-- 4. ekhane (row class) boshate hobe then carousel er (left side text) and (image) alada korar jonno (column-7 for text and column-5 for image) kore nite hobe image and text er jonno -->
     <!-- 5. carousel er background color deyar jonno row er moddhe (utilities) er (backround-color) e jabo -->
     <!-- 7. Likhar majhe space er jonno padding dite  hobe -->
-    <!-- 8. utilities er moddhe (flex) e (align-items) e jabo (d-flex align-items-center) select korbo --> 
+    <!-- 8. utilities er moddhe (flex) e (align-items) e jabo (d-flex align-items-center) select korbo -->
+    
+    <!-- 31. (related step: 1-8) nije customize korte hobe (company name onujayi color customize kore and carousel-slider theke (.bg-info) bad diye dibo and (.panda-bg-info-background) boshabo -->
+    
+    <!-- 3rd carousel -->
                     <div class="carousel-item">
-                        <div class="row bg-info bg-gradient d-flex align-items-center p-5">
+                        <div class="row panda-bg-info-background bg-gradient d-flex align-items-center p-5">
                             <div class="col-lg-7">
                                 <h1>X-Box for your living room</h1>
                                 <p>This is the best x-box in the world for people who just want to waste time infront of fake sports.</p>
                                 <h1>$600</h1>
-                                <button class="btn-warning">Buy Now</button>
+
+        <!-- /* 38.carousel and footer button */ -->
+                                <button class="panda-carousel-footer-btn">Buy Now</button>
                             </div>
                             <div class="col-lg-5">
                                 <img src="./image/banner-images/xbox.png" class="d-block w-100" alt="...">
@@ -137,6 +156,7 @@
 
                     </div>
                 </div>
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -155,7 +175,8 @@
         <main>
 <!--10. module-14.4 : categories -->
 <!--13. marin-top / y-axis e space er jonno (my-5) nibo  -->
-            <section class="container my-5">
+<!-- /* 35. cateories class for image width */ -->
+            <section class="container my-5 categories">
 <!--11. ei container ta bootstrap theke pawa.jehettu already container class neya hoise tai ei container ta bad dibo -->
                 <!-- <div class="container text-center"> -->
 <!-- 14. column gular majhe space er jonno gutter dibo (g-4) -->
@@ -167,23 +188,27 @@
                         <div class="col-lg-4 col-md-6 col-12">
 <!-- 15. h1 text and image flex korar jonno (utilities) e (flex) e (align-items) e jeye (d-flex align-items-center) dibo and image and text er majhe space er jonno (justify-content-between) dibo -->
 <!-- 16. border-radius er jonno (rounded) use korbo -->
-                            <div class="p-3 border bg-warning d-flex align-items-center justify-content-between  rounded">
+
+<!-- /* 32. categories section er 1st column er background change */ -->
+                            <div class="p-3 border categories-bg-1 d-flex align-items-center justify-content-between  rounded">
                                 <h1 class="text-white">Watch</h1>
-                                <img src="./image/categories/watch.png" alt="" width="100" height="100">
+                                <img src="./image/categories/watch.png" alt="">
                             </div>
                         </div>
              <!-- 2nd column -->
+    <!-- /* 33. categories section er 2nd column er background change */ -->
                         <div class="col-lg-4 col-md-6 col-12">
-                            <div class="p-3 border bg-info d-flex align-items-center justify-content-between  rounded">
+                            <div class="p-3 border categories-bg-2 d-flex align-items-center justify-content-between  rounded">
                                 <h1 class="text-white">Bag</h1>
-                                <img src="./image/categories/bag.png" alt="" width="100" height="100">
+                                <img src="./image/categories/bag.png" alt="">
                             </div>
                         </div>
               <!-- 3rd column -->
+    <!-- /* 34. categories section er 2nd column er background change */ -->
                         <div class="col-lg-4 col-md-6 col-12">
-                            <div class="p-3 border bg-primary d-flex align-items-center justify-content-between  rounded">
+                            <div class="p-3 border categories-bg-3 d-flex align-items-center justify-content-between  rounded">
                                 <h1 class="text-white">Shoes</h1>
-                                <img src="./image/categories/shoes.png" alt="" width="100" height="100">
+                                <img src="./image/categories/shoes.png" alt="">
                             </div>
                         </div>
                       
@@ -196,22 +221,30 @@
 <!-- module-14.5 starts -->
 
  <!-- card (shoes)  section starts -->
-            <section class="container">
+ <!-- 30. shoes , backpack section er id name ekhane href e (#id-name) diye boshabo -->
+            <section class="container" id="shoe">
     <!-- 18. (components) er (card) e (grid card) e (last part) e jabo-->
 
                 <h2>Shoes</h2>
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- 22. jodi chai (row-cols-md-3) er bodole (row-cols-md-2) dibo tahole medium screen e 2 ta kkkore column dekhabe (row-cols-lg-3) and large screen e 3 ta dekhabe -->
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <!-- ist column -->
                         <div class="col">
-                        <div class="card h-100">
+    <!-- 20. card er moddhe theke border remove korte hobe (utilities) e (border) e (border-0) dibo and 1 ta shadow dibo -->
+                        <div class="card border-0 shadow-lg h-100">
                             <img src="./image/shoes/shoe-1.png" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">Supply 350</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
-                            <div class="card-footer">
+    
+        <!-- 21. footer er border o shoraye felbo and button er left side e space er jonno (m-3) dibo -->
+                            <!-- <div class="card-footer"> -->
+                            <div class="m-3">
         <!-- 19. ei text er poriborte button boshabo -->
-                            <button class="btn btn-warning">Buy Now</button>
+        <!-- /* 36.shoes andd backpack button color ((btn btn-warning) er poriborte (panda-buy-button) boshabo) */ -->
+                            <button class="panda-buy-button">Buy Now</button>
+                            <!-- <button class="btn btn-warning">Buy Now</button> -->
                             <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
                             </div>
                         </div>
@@ -219,14 +252,15 @@
 
     <!-- 2nd column -->
                         <div class="col">
-                        <div class="card h-100">
+                        <div class="card border-0 shadow-lg h-100">
                             <img src="./image/shoes/shoe-2.png" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">Nike 360</h5>
                             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                             </div>
-                            <div class="card-footer">
-                                <button class="btn btn-warning">Buy Now</button>
+                            <div class="m-3">
+    <!-- /* 36.shoes andd backpack button color */ -->
+                                <button class="panda-buy-button">Buy Now</button>
                             <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
                             </div>
                         </div>
@@ -234,14 +268,15 @@
 
     <!-- 3rd column -->
                         <div class="col">
-                        <div class="card h-100">
+                        <div class="card border-0 shadow-lg h-100">
                             <img src="./image/shoes/shoe-3.png" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">Red Airmax</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                             </div>
-                            <div class="card-footer">
-                                <button class="btn btn-warning">Buy Now</button>
+                            <div class="m-3">
+    <!-- /* 36.shoes andd backpack button color */ -->
+                                <button class="panda-buy-button">Buy Now</button>
                             <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
                             </div>
                         </div>
@@ -251,13 +286,105 @@
 
             </section>
             
-          
+   
+            
+
+<!-- 23. bag section starts (same a s shoes section)-->
+  <!-- 24. ei section er top e space er jonno (my-5) -->
+            <section class="container my-5" id="backpack">
+    <!-- 18. (components) er (card) e (grid card) e (last part) e jabo-->
+
+                <h2>Backpack</h2>
+    <!-- 22. jodi chai (row-cols-md-3) er bodole (row-cols-md-2) dibo tahole medium screen e 2 ta kkkore column dekhabe (row-cols-lg-3) and large screen e 3 ta dekhabe -->
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- ist column -->
+                        <div class="col">
+    <!-- 20. card er moddhe theke border remove korte hobe (utilities) e (border) e (border-0) dibo and 1 ta shadow dibo -->
+                        <div class="card border-0 shadow-lg h-100">
+                            <img src="./image/bags/bag-1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Ison Backpack</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+    
+        <!-- 21. footer er border o shoraye felbo and button er left side e space er jonno (m-3) dibo -->
+                            <!-- <div class="card-footer"> -->
+                            <div class="m-3">
+        <!-- 19. ei text er poriborte button boshabo -->
+
+        <!-- /* 36.shoes andd backpack button color */ -->
+                            <button class="panda-buy-button">Buy Now</button>
+                            <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+                            </div>
+                        </div>
+                        </div>
+
+    <!-- 2nd column -->
+                        <div class="col">
+                        <div class="card border-0 shadow-lg h-100">
+                            <img src="./image/bags/bag-2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Biaowang Backpack</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                            <div class="m-3">
+     <!-- /* 36.shoes and backpack button color */ -->
+                                <button class="panda-buy-button">Buy Now</button>
+                            <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+                            </div>
+                        </div>
+                        </div>
+
+    <!-- 3rd column -->
+                        <div class="col">
+                        <div class="card border-0 shadow-lg h-100">
+                            <img src="./image/bags/bag-3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Dxyizu WS54 Smart</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="m-3">
+    <!-- /* 36.shoes andd backpack button color */ -->
+                                <button class="panda-buy-button ">Buy Now</button>
+                            <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                                
+
+            </section>
+
+
+
+
+<!-- module-14.6 starts : subscribe section-->
+
+    <!-- 25. first container section dibo -->
+    <!-- 27. section er content guloke flex korbo and center korbo  and (bg-info) diye background-color dibo , style e height dibo and border-radius dibo-->
+
+    <!-- /* 31. (related step: 1-8) nije customize korte hobe (company name onujayi color customize kore and carousel-slider theke (.bg-info) bad diye dibo and (.panda-bg-info-background) boshabo */ -->
+            <section style="height: 300px;" class="container panda-bg-info-background d-flex justify-content-center align-items-center rounded-3" id="subscribe">
+    <!-- 26. jodi section e d-flex dei tahole section er vitor shob side by side eshe jabe tai age shobguloke (div) er vitor boshabo.-->
+               <div>
+                <h1>LET'S STAY IN  TOUCH</h1>
+                <p>Get updates on sales, specials and more</p>
+    <!-- 37.input e space er jonno (forms) e (form-control)
+    class use korbo. -->
+                <input class="form-control" type="text" name="" placeholder="Your Email" id=""> <br>
+
+<!-- /* 38.Carousel and Footer button */ -->
+                <button class="panda-carousel-footer-btn">Submit</button>
+               </div>
+            </section>
 
         </main>
 
-
-
-        <footer></footer>
+<!--28:footer section starts  -->
+<!-- 29. margin-top e space er jonno and text er center er jonno (utilities) e (text) e jabo-->
+        <footer class="my-5 text-center">
+            <p><small>&copy;2022. Panda Commerce. All rights reserved.Sofia,Bulgaria</small></p>
+        </footer>
 
 
 
