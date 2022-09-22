@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind css</title>
+        <!-- tailwind css link -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+    <body>
+        <!-- (Typography) te (font size) e jabo-->
+        <h1 class="text-6xl">I am learning tailwind css now.</h1>
+        <h3 class="text-3xl">I know bootstrap now.</h3>
+
+          <!-- (Typography) te (font size,font-weight) e jabo-->
+        <h3 class="text-3xl font-extrabold">I know bootstrap now.</h3>
+        <h3 class="text-3xl font-bold">I know bootstrap now.</h3>
+        <h3 class="text-3xl">I know bootstrap now.</h3>
+        <!-- (backgrounds) theke (background color), (typography) theke (text-color), (spacing) theke (padding) er class use korbo-->
+        <button class="bg-blue-800 text-white px-3">click me</button>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, iure?</p>
+        <section>
+            <!-- (spacing) er (margin) e (mx-auto) nibo wepage er center  e anar jonno, (borders) er (border color) e jabo (border-4 = border-width) er jonno, margin er jonno (spacing) er (margin) er (ml-auto) use korbo-->
+            <div class="container mx-auto border-4 border-indigo-500/100 ml-10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas architecto, modi quos neque blanditiis accusamus repellat deserunt fugiat animi earum?</p>
+            </div>
+
+            <!-- margin er jonno (spacing) er (margin) er value (-) minus o use kora  jay(ml-auto) use korbo -->
+            <div class="container mx-auto border-4 border-red-500/100 -ml-10">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas architecto, modi quos neque blanditiis accusamus repellat deserunt fugiat animi earum?</p>
+            </div>
+            
+        </section>
+
+
+        <!-- video-15.3: flexbox and  grid -->
+
+        <!-- (flexbox and grid) er (flex and justify-content), (align-items) e jabo -->
+        <!-- jodi kono content er vitor onekgulo tag thake r eder jodi flex korte chai tahole eder parent e class bosheiye flex korbo.   -->
+        <section class="flex justify-center">
+        <!-- (sizing) e (height), (width) e  jabo -->
+        <!-- parent e (flex) boshanor por jodi oi parent er vitor alada arekta div nei or section nei tahole parent er flex ei div or section e kaj korbena er jonno alada abar flex boshate hobe and horizontally korte hole(justify-center) and vertically korte hole (align-center)-->
+            <div class="h-64 bg-blue-200 w-44 flex justify-center items-center">
+                <h2 class="text-5xl font-bold bg-purple-200">My first heading</h2>
+            </div>
+            <h2 class="text-5xl font-bold bg-red-200">My last heading</h2>
+        </section>
+
+        <!-- video-15.4: tailwind grid -->
+        <h2 class="text-5xl">My grid section</h2>
+        <!-- (flex-wrap) mane holo jototuku jayga ache tarmoddhe je koyta grid jayda hoy responsive device onujayi -->
+        <!-- 1 column e koyta line thakbe eta thik korar jonno grid use korte hobe (flexbox and grid) e (grid Template Columns) e onek gulo conyent thakle (flex and flex-wrap)uthaye (grid) and jotogulo column hobe sheta boshabo (grid ), koyta template banabo ba 1 ta column kototuku jayga nibe er jonno (grid column start/end) e (col-span-2) tahole 1 ta column 2 ta column er shoman jayga nibe. column er moto row er change o korte pari(row-span-3/2/4)-->
+        <!-- <section class="bg-yellow-400 flex flex-wrap"> -->
+        <!-- .bg-blue-400.m-4.p-4*15{$} -->
+        <section class="bg-yellow-400 grid grid-cols-3">
+        <div class="bg-blue-400 m-4 p-4 col-span-2">1</div>
+        <div class="bg-blue-400 m-4 p-4">2</div>
+        <div class="bg-blue-400 m-4 p-4">3</div>
+        <div class="bg-blue-400 m-4 p-4 row-span-3">4</div>
+        <div class="bg-blue-400 m-4 p-4">5</div>
+        <div class="bg-blue-400 m-4 p-4">6</div>
+        <div class="bg-blue-400 m-4 p-4">7</div>
+        <div class="bg-blue-400 m-4 p-4">8</div>
+        <div class="bg-blue-400 m-4 p-4">9</div>
+        <div class="bg-blue-400 m-4 p-4">10</div>
+        <div class="bg-blue-400 m-4 p-4">11</div>
+        <div class="bg-blue-400 m-4 p-4">12</div>
+        <div class="bg-blue-400 m-4 p-4">13</div>
+        <div class="bg-blue-400 m-4 p-4">14</div>
+        <div class="bg-blue-400 m-4 p-4">15</div>
+        </section>
+
+
+<!-- (flexbox and grid) e (gap) e jabo then(gap-4) dile x and y all side e gap hobe -->
+        <section class="grid grid-cols-3 bg-purple-200 gap-4">
+            <div class="bg-blue-400 p-4  col-span-3">header</div>
+            <div class="bg-blue-400 p-4 col-span-2 row-span-2 h-64">article</div>
+            <div class="bg-blue-400 p-4 row-span-2">nav</div>
+            <div class="bg-blue-400 p-4 col-span-3">footer</div>
+        </section>
+    </body>
