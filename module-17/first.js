@@ -1,19 +1,19 @@
 // video-17.3
 // writing/declare a variable:(numeric) bole
-var price = 21;
-var age = 25;
+// var price = 21;
+// var age = 25;
 
 
 // not everything i can declare with number , many  things will vary dependinding situation. example:  name;
 //etate (string) bole
-var name = "nusrat"; //double quotation use kora jay
-var name = 'nusrat'; //single quotation use kora jay
-var address = "vuter goli";
-var friend = "syed saddiq";
+// var name = "nusrat"; //double quotation use kora jay
+// var name = 'nusrat'; //single quotation use kora jay
+// var address = "vuter goli";
+// var friend = "syed saddiq";
 
-//yes/no declaration(boolean) bole:
-var pass = true;
-var subscribed = false;
+// //yes/no declaration(boolean) bole:
+// var pass = true;
+// var subscribed = false;
 
 // video-17.4 : variable name
 //variable should be case sensitive
@@ -111,3 +111,117 @@ var subscribed = false;
 // love -= 1;
 // love--;
 // console.log(love);
+
+
+// // video- 17.7:string concatenation integer float parseInt, conversion:
+// //print name with space
+// var firstName = 'Jennie';
+// var lastName = 'kim';
+// // name er majhe space er jonno evabeo likha jay
+// var fullName = firstName + ' ' + lastName;
+// console.log(fullName);
+
+// //or
+
+// var first = 'Ariana';
+// var last = 'kim';
+// var name = first + ' ' + last;
+// console.log(name);
+
+// // both string calculation
+// var onionPrice = '42';
+// var eggPrice = '41';
+// var totalPrice = onionPrice + eggPrice;
+// console.log(totalPrice);
+// // string er add hoy side by side. jodi jekono ekta string hoy then 1 ta string arekta string k niye add kore side by side boshbe.
+
+// // 1 string calculation
+// var onionPrice = 42;
+// var eggPrice = '41';
+// var totalPrice = onionPrice + eggPrice;
+// console.log(totalPrice);
+
+// // without string calculation
+// var onionPrice = 42;
+// var eggPrice = 41;
+// var totalPrice = onionPrice + eggPrice;
+// console.log(totalPrice);
+
+
+// // convert integer to float and parseInt to parseFloat
+// //integer
+// var sunglass = 3;
+// //float
+// var price = 99.99;
+
+// //jodi string k integer e convert korte chai
+// var onionPrice = '42';
+// var eggPrice = '41';
+// var onionPriceNumber = parseInt(onionPrice);
+// console.log(onionPriceNumber);
+
+// //jodi string er moddhe (.99) point er por man thake tahole integer korle (doshomik) er porer man fele dibe.
+// var onionPrice = '42.50';
+// var eggPrice = '41';
+// var onionPriceNumber = parseInt(onionPrice);
+// console.log(onionPriceNumber);
+
+// //parsefloat = (.)(doshomik) er por value gulo show korar jonno
+// var onionPrice = '42.50';
+// var eggPrice = '41.33';
+// var onionPriceNumber = parseInt(onionPrice);
+// var eggPriceNumber = parseFloat(eggPrice);
+// console.log(eggPriceNumber);
+// console.log(eggPriceNumber + onionPriceNumber);
+
+
+//video - 17.8: variable-types
+//konta ki type er variable eta ber korar jonno (typeof) use kora hoy 
+// var tShirtPrice = 200;
+// console.log(typeof tShirtPrice);
+
+// //
+// var tShirtPrice2 = '200';
+// console.log(typeof tShirtPrice2);
+// //
+// var isRaining = true;
+// console.log(typeof isRaining);
+// //jodi variable name declare na kori
+// var isRomantic;
+// console.log(typeof isRomantic);
+// //date type 
+// var today = new Date();
+// console.log(today);
+// console.log(typeof today);
+
+// special edition
+// var firstNumber = 0.1;
+// var secondNumber = 0.2;
+// var total = firstNumber + secondNumber;
+// //(.) er por onekgulo digit dekhabe
+// console.log(total);
+// // toFixed => (.point) er por koy digit porjonto dekhabe (string) e 
+// console.log(total.toFixed(2));
+// // string k jodi float number e convert korte chai
+// console.log(parseFloat(total.toFixed(2)));
+
+//modulas(vagshesh)
+var mangoes =7;
+var hungryPerson = 2;
+var dividing = mangoes / hungryPerson;
+console.log(dividing);
+var remaining = mangoes % hungryPerson;
+console.log(remaining);
+
+
+
+
+
+//video-17.9: summary
+// 1.declaring variable: 5 ta step lage
+// var eggPrice = 30; (number type variable)
+// eggPrice = 39*2;(same variable name e value change korle (var) likhbo na)
+//console.log(eggPrice); (konokichu publish korar jonno)
+//console.log(typeof eggPrice); (ki type er variable)
+// var singer = 'jennie lim'; (string type variable)
+//var isHot = true/no; (boolean type variable)
