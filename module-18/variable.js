@@ -72,4 +72,154 @@
 // console.log(lastItem);
 
 
-// video- 18.5 : 
+// // video- 18.5 : compare variables
+// // greater than
+// console.log(5 > 6);
+// // less than
+// console.log(5 < 6);
+// // is equal to
+// console.log(5 == 6);
+// console.log(6 == 6);
+// //is not equal to
+// console.log(5 != 6);
+// console.log(6 != 6);
+// //variale name diyeo compare kora jabe
+// var myLove = 99;
+// var yourLove = 100;
+// console.log(myLove > yourLove);
+// console.log(myLove == yourLove);
+// console.log(myLove < yourLove);
+// console.log(myLove != yourLove);
+// // &&(and) operator (duita condition e fulfil korte hobe)
+// console.log(studyGood && goodPerson);
+// // ||(or) operator (2 ta condition er jekkono 1 ta  fulfil korte hobe)
+// console.log(isBanker || goodResult);
+
+// // video-18.6: conditional decision
+// var isFoodReady = true;
+// // if the food is ready i will eat
+// if (isFoodReady == true){
+//     console.log('i will eat now.');
+// }
+// // or jodi variable change hoy
+// var isFoodReady = false;
+// if (isFoodReady == true){
+//     console.log('i will eat now.');
+// }
+
+// ///////less than(false condition)
+// var iphonePrice = 70000;
+// var myBudget = 9500;
+// if(iphonePrice < myBudget){
+//     console.log('I will buy Iphone');
+// }
+// // or(true condition)
+// var iphonePrice = 70000;
+// var myBudget = 109500;
+// if(iphonePrice < myBudget){
+//     console.log('I will buy Iphone');
+// }
+
+// ///////greater than 
+// var iphonePrice = 70000;
+// var myBudget = 109500;
+// if(iphonePrice > myBudget){
+//     console.log('I will not buy Iphone');
+// }
+
+// // dual condition (true and false) ekshathe likha jay
+// // if(conditional){
+// // }
+// // else{
+// // }
+// var chickenPrice = 180;
+// var myMoney = 50;
+// if(chickenPrice < myMoney){
+//    console.log('i will eat');
+// }
+// else{
+//    console.log(i will not eat);
+// }
+// // or
+// var chickenPrice = 180;
+// var myMoney = 850;
+// if(chickenPrice < myMoney){
+//    console.log('i will eat');
+// }
+// else{
+//    console.log(i will not eat);
+// }
+
+
+// video-18.7: multiple condition 
+// for && (and) operator(shobgulo condition true hote hobe)
+var gotJob = true;
+// or
+// var gotJob = false;
+//compare korar jonno (==) use kora hoy
+if(gotJob == true){
+    console.log('i am now self ependent');
+}
+else{
+    console.log('i am not self ependent');
+}
+
+
+// for multiple condition
+var gotJob = true;
+var moneySaved = 150000;
+// or
+var moneySaved = 200000;
+if(gotJob == true && moneySaved > 200000){
+    console.log('i am now self ependent');
+}
+else{
+    console.log('i am not self ependent');
+}
+
+// for triple condition or aro onek beshi condition deya jabe
+var gotJob = true;
+var moneySaved = 150000;
+var hasFlat  = false;
+if(gotJob == true && moneySaved > 200000 && hasFlat == true){
+    console.log('i am now self ependent');
+}
+else{
+    console.log('i am not self ependent');
+}
+
+
+// for || (or) operator (jekono 1ta condition true holei hobe)
+var gotJob = true;
+var moneySaved = 150000;
+var hasFlat  = false;
+if(gotJob == true || moneySaved > 200000){
+    console.log('i am now self ependent');
+}
+else{
+    console.log('i am not self ependent');
+}
+
+
+// for multiple condition
+var gotJob = false;
+var moneySaved = 150000;
+var hasFlat  = false;
+if(gotJob == true || moneySaved > 200000 || hasFlat == true){
+    console.log('i am now self ependent');
+}
+else{
+    console.log('i am not self ependent');
+}
+
+// complex condition
+var gotJob = false;
+var moneySaved = 150000;
+var hasFlat  = false;
+var hasHouse = true;
+if((gotJob == true && moneySaved > 200000) || hasHouse == true){
+    console.log('i am now self ependent');
+}
+else{
+    console.log('i am not self ependent');
+}
