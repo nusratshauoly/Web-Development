@@ -153,73 +153,158 @@
 
 // video-18.7: multiple condition 
 // for && (and) operator(shobgulo condition true hote hobe)
-var gotJob = true;
-// or
+// var gotJob = true;
+// // or
+// // var gotJob = false;
+// //compare korar jonno (==) use kora hoy
+// if(gotJob == true){
+//     console.log('i am now self ependent');
+// }
+// else{
+//     console.log('i am not self ependent');
+// }
+
+
+// // for multiple condition
+// var gotJob = true;
+// var moneySaved = 150000;
+// // or
+// var moneySaved = 200000;
+// if(gotJob == true && moneySaved > 200000){
+//     console.log('i am now self ependent');
+// }
+// else{
+//     console.log('i am not self ependent');
+// }
+
+// // for triple condition or aro onek beshi condition deya jabe
+// var gotJob = true;
+// var moneySaved = 150000;
+// var hasFlat  = false;
+// if(gotJob == true && moneySaved > 200000 && hasFlat == true){
+//     console.log('i am now self ependent');
+// }
+// else{
+//     console.log('i am not self ependent');
+// }
+
+
+// // for || (or) operator (jekono 1ta condition true holei hobe)
+// var gotJob = true;
+// var moneySaved = 150000;
+// var hasFlat  = false;
+// if(gotJob == true || moneySaved > 200000){
+//     console.log('i am now self ependent');
+// }
+// else{
+//     console.log('i am not self ependent');
+// }
+
+
+// // for multiple condition
 // var gotJob = false;
-//compare korar jonno (==) use kora hoy
-if(gotJob == true){
-    console.log('i am now self ependent');
+// var moneySaved = 150000;
+// var hasFlat  = false;
+// if(gotJob == true || moneySaved > 200000 || hasFlat == true){
+//     console.log('i am now self ependent');
+// }
+// else{
+//     console.log('i am not self ependent');
+// }
+
+// // complex condition
+// var gotJob = false;
+// var moneySaved = 150000;
+// var hasFlat  = false;
+// var hasHouse = true;
+// if((gotJob == true && moneySaved > 200000) || hasHouse == true){
+//     console.log('i am now self ependent');
+// }
+// else{
+//     console.log('i am not self ependent');
+// }
+
+
+// video- 18.8 - multi stage condition and nested condition
+
+// // multi stage condition 
+// var danishPrice = 25;
+// var toastBiscuitPrice = 10;
+// var butterBreadPrice = 50;
+// // var myBudget = 100;
+// // or
+// // var myBudget = 20;
+// // or
+// var myBudget = 40;
+
+// if(danishPrice < myBudget){
+//     console.log('danish khabo');
+// }
+// else if(butterBreadPrice < myBudget){
+//     console.log('butterBread khabo');
+// }
+// else if(toastBiscuitPrice < myBudget){
+//     console.log('toastBiscuit khabo');
+// }
+// else{
+//     console.log('my money is not enough');
+// }
+
+// // nested condition (condition er vitor abar condition)
+// var danishPrice = 25;
+// var toastBiscuitPrice = 10;
+// var butterBreadPrice = 50;
+// var myBudget = 40;
+// var packedWell = false;
+
+// if(danishPrice < myBudget){
+//     if(packedWell == true){
+//         console.log('danish khabo');
+//     }else{
+//         console.log('danish khabo na');
+//     }
+// }
+
+// video - 18.9: summary
+
+// 1. array likhar  niyom(position count shuru hobbe 0,1,2, evabe)
+var tableLength = 12;
+var tourDestination = ['coxsbazar', 'nepal', 'vutan', 'paris'];
+// 2.indexOf : element gulo k kon position e ache janar jonno
+tourDestination.indexOf('vutan');
+// 3.kon position e kon element ache eta  jannar jonno
+var fourthDestination = tourDestination[3];
+// 4.changing array elements
+tourDestination[1] = 'srilanka';
+// 5.new array elemment add and delete in the last of a array
+tourDestination.push('london');
+tourDestination.pop('paris');
+// 6.condition (complexe composotion)
+if(tourDestination[1] == 'nepal'){
+    console.log('pahare pshsre');
+}
+else if(tourDestination[1] == 'china'){
+    console.log(i will not go china);
+}
+//7.length = kono array te kotogulo element ase
+else if(tourDestination.length == 4){
+    console.log('aro travel korte chai')
 }
 else{
-    console.log('i am not self ependent');
+    console.log('will not go anywhere');
+}
+//8. 18.9: two extra conditional comparison
+// less than or equal (<=)
+var eggPrice = 32;
+var myBudget = 32;
+if (eggPrice <= myBudget){
+    console.log('ami dim khabo');
 }
 
-
-// for multiple condition
-var gotJob = true;
-var moneySaved = 150000;
 // or
-var moneySaved = 200000;
-if(gotJob == true && moneySaved > 200000){
-    console.log('i am now self ependent');
-}
-else{
-    console.log('i am not self ependent');
-}
-
-// for triple condition or aro onek beshi condition deya jabe
-var gotJob = true;
-var moneySaved = 150000;
-var hasFlat  = false;
-if(gotJob == true && moneySaved > 200000 && hasFlat == true){
-    console.log('i am now self ependent');
-}
-else{
-    console.log('i am not self ependent');
-}
-
-
-// for || (or) operator (jekono 1ta condition true holei hobe)
-var gotJob = true;
-var moneySaved = 150000;
-var hasFlat  = false;
-if(gotJob == true || moneySaved > 200000){
-    console.log('i am now self ependent');
-}
-else{
-    console.log('i am not self ependent');
-}
-
-
-// for multiple condition
-var gotJob = false;
-var moneySaved = 150000;
-var hasFlat  = false;
-if(gotJob == true || moneySaved > 200000 || hasFlat == true){
-    console.log('i am now self ependent');
-}
-else{
-    console.log('i am not self ependent');
-}
-
-// complex condition
-var gotJob = false;
-var moneySaved = 150000;
-var hasFlat  = false;
-var hasHouse = true;
-if((gotJob == true && moneySaved > 200000) || hasHouse == true){
-    console.log('i am now self ependent');
-}
-else{
-    console.log('i am not self ependent');
+// greater than or equal(>=)
+var eggPrice = 32;
+var myBudget = 32;
+if (eggPrice >= myBudget){
+    console.log('ami dim khabo na');
 }
