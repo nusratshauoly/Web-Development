@@ -54,5 +54,86 @@
 // turnOnFan();
 
 // video-19.3: 
-// function parameter
- 
+// function parameter(input parameter)
+// function bringSingara( taka){
+
+//     console.log('singara er jonno dise', taka);
+//     console.log('mama singara den');
+// }
+// bringSingara(100);
+// // or evaeo declare kora jay
+// function bringSingara( taka){
+
+//     console.log('singara er jonno dise', taka);
+//     console.log('mama singara den');
+// }
+// var money = 250;
+// bringSingara(money);
+
+
+// // return statement (function call korle return o korbe statement)
+// function bringSingara(taka){
+//     console.log('singara er jonno dise', taka);
+//     console.log('mama singara den');
+//     var singaraPrice = 10;
+//     var singaraQuantity = taka / singaraPrice;
+//     return singaraQuantity;
+// }
+// var money = 250;
+// var singara = bringSingara(money);
+// console.log('ai nen singara', singara);
+
+// // video-19.4:multiple parameter add
+// function addTwoNumbers(number1, number2){
+//     console.log(number1, number2);
+//     var total = number1 + number2;
+//     return total;  
+//     //console.log(number2);
+//     // jodi ekhanne return value na dei tahole result er addition show korbena. r jodi return valu dei tahole addition show korbe 
+// }
+
+// // function jokhon call korbo parameter er vitor o value dite pari or er upor variable diye value declare korte pari.
+// var firstNumber = 21;
+// var secondNumber = 59;
+// var result = addTwoNumbers(firstNumber, secondNumber);
+// console.log('result value: ', result);
+
+// // ekhane jei number first e call kora hobe shei number tai first position e show korbe number 1 hishebe
+// // addTwoNumbers(secondNumber, firstNumber);
+// // or
+// //addTwoNumbers(21, 59);
+
+
+// // another funnctionn for multiplication
+// // variable,patameter and others name should be meaningful
+// function multiplyTwoNumbers(num1, num2){
+//     var result =  num1 * num2;
+//     return result;
+// }
+
+// var total = multiplyTwoNumbers(5,100);
+// console.log('total after multiplication', total);
+
+
+// // another funnction for sutraction
+// // variable,patameter and others name should be meaningful
+// function subtractTwoNumbers(num1, num2){
+//     var result =  num1 - num2;
+//     return result;
+// }
+
+// var remain = subtractTwoNumbers(100,20);
+// console.log('remaining after subtraction', remain);
+
+
+// // another funnction for division
+// // variable,patameter and others name should be meaningful
+// function divideTwoNumbers(num1, num2){
+//     var result =  num1 % num2;
+//     return result;
+// }
+
+// var remain = divideTwoNumbers(100,20);
+// console.log('remaining after divition', remain);// 
+
+// video-19.5: declare multiple objects
