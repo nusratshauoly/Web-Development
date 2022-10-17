@@ -137,3 +137,121 @@
 // console.log('remaining after divition', remain);// 
 
 // video-19.5: declare multiple objects
+// {} => object. Inside object Key:value, is called property
+// object can also write in many lines
+// var student1 = {id: 115, name: 'abir', marks : 81, phone: 858575665};
+// var student1 = {
+//     id: 115, 
+//     name: 'abir', 
+//     marks : 81, 
+//     phone: 858575665
+// };
+// var mobile = {
+//     color: 'black',
+//     storage: '16GB',
+//     price: 15000,
+//     screensize: 5
+// };
+// var book = {
+//     title: 'start with why',
+//     author: 'simon sinek',
+//     price: 200,
+//     page: 250
+// }
+
+// video-19.6: multiple ways to get and set property
+// object er property read korar jonno
+// var computer = {
+//     price: 229000,
+//     storage: '156gb',
+//     processor: 'intel i5',
+//     color: 'silver'
+
+// };
+// // console.log(computer);
+
+// // shobgulo computer er property na  dekha shudhu 1 ta property dekhte chai
+// console.log(computer.processor);
+// // or : evabeo variable declare kore likha jay
+// var computerPrice = computer.price;
+// console.log(computerPrice);
+
+// // set a object property value
+// // boject property te new value set or add korar jonno
+// computer.price = 22000;
+// console.log(computer);
+
+// // different ways to set a value of an object property
+// // 1.set a value
+// computer.price = 22000;
+// console.log(computer);
+// // 2.set a value
+// computer["price"] = 23000;
+// console.log(computer);
+// // 3. set a value
+// var priceProperty = "price";
+// computer[priceProperty] = 24000;
+// //another set value
+// var storageProperty = 'storage';
+// computer[storageProperty] = '512gb';
+
+// computer['storage'] = '1tb';
+
+// computer.storage = '5tb';
+
+// // video-19.7:
+// // switch case valiu" 
+// var color = 'yellow';
+
+// // if-else condition
+// if(color == 'blue'){
+//     console.log('color is blue');
+// }
+// else if(color == "red"){
+//     console.log('color is red');
+// }
+// else if(color == "green"){
+//     console.log('color is green');
+// }
+// else if(color == "white"){
+//     console.log('color is white');
+// }
+// else if(color == 'megenta'){
+//     console.log('color is megenta');
+
+// }
+// else if(color == "yellow"){
+//     console.log('color is yellow');
+// }
+// else{
+//     console.log('color is black');
+// }
+
+// // ei control ;ook aro easy babe (switch case break diyo korar jay)
+// // break will stop the execution inside the switch box
+// switch(color){
+//     case 'blue':
+//         console.log('color is blue');
+//         break;
+//     case 'red':
+//         console.log('color is red');
+//         break;
+//     case 'green':
+//         console.log('color is green');
+//         break;
+//     case 'white':
+//         console.log('color is white');
+//         break;
+//     case 'megenta':
+//         console.log('color is megenta');
+//         break;
+//     case 'yellow':
+//         console.log('color is yellow');
+//         break;
+//     default:
+//         console.log('color is black');
+
+// } 
+// // last option er age default dite hobe.
+
+// video-19.8
