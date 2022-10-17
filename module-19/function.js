@@ -254,4 +254,119 @@
 // } 
 // // last option er age default dite hobe.
 
-// video-19.8
+// video-19.8:break for while and for loop:
+// 1 to 10 number print
+// var i = 0;
+// while(i < 10){
+//     console.log(i);
+// // loop 5 porjonto jeye stop hoye jabe e jonno. kono ekta condition e jodi break dei ,condition ta true hole execution stop hoye jabe
+//     if(i == 5){
+//         break;
+//     }
+//     i++;
+// }
+
+
+// // same thing will be happen in for loop
+// for(var i = 0; i < 20; i++){
+//     console.log(i);
+//     if(i==8){
+//         break;
+//     }
+// }
+
+// // or
+// for(var i = 0; i < 20; i++){
+//     console.log(i);
+//     if(i > 8){
+//         break;
+//     }
+// }
+
+// // on array
+// var numbers = [54, 35, 21, 78, 98, 23, 101, 45];
+// for(var i=0; i < numbers.length; i++){
+//     var number = numbers[i];
+//     console.log(number);
+// // condition inside condition
+// // 100 er upor value pele loop stop hoye jabe
+//     if(number > 100){
+//         break;
+//     }
+// }
+
+// // for loop on array(continue)
+// var numbers = [54, 35, 21, 78, 98, 23, 101, 45];
+// for(var i = 0; i < numbers.length; i++){
+//     var number = numbers[i];
+// // continue statement e condition er statement k pass kore iteration start kore
+// // ekhane (90 er porer / boro number or 90 er cheye choto number gulo print korbe gulo print korbe)
+//     if(number > 90){
+//         continue;
+//     }
+//     console.log(number);
+// }
+
+// // break loop
+// while(i < 10)
+// {
+//     if(i==4)
+//     break;
+//     console.log(i);
+//     i++;
+// }
+// // output: 123
+
+
+// // continue loop
+// while(i < 10)
+// {
+//     if(i==4)
+//     continue;
+//     console.log(i);
+//     i++;
+// }
+// // output: 123456
+
+// video-19.9: module summary
+
+var watchPrice = 300;
+console.log('the price of watch is', watchPrice);
+
+var phones = ['iphone','samsung','tesla'];
+phones[3] ='walton';
+
+// check an element exist in an array
+if(phones.indexOf('oppo') == -1){
+    console.log('opps! oppo is missing');
+}
+// lg is available
+if(phones.indexOf('lg') != -1){
+    console.log('Lg is available now');
+}
+
+// loop
+var num = 0;
+while(num <= 10){
+    num++;
+}
+// for loop
+for(var i = 0; i < phones.length; i++) {
+    console.log("");
+}
+// function
+function addThreenumbers(number1, number2, number3){
+    var total = number1 + number2 + number3;
+    return total;
+
+}
+addThreenumbers(87, 41, 56);
+
+// object(3 types of object proprty)
+var microohone = {
+    brand : 'blue yeti',
+    price: 120
+}
+
+// variable 3 types : number, string,boolean
+
