@@ -144,3 +144,129 @@
 // // how to run:182 % 2 == 0
 
 // video-20.4: check whether leap year or not
+// simple calculation of leap year
+// function isLeapYear(year){
+//     if(year %4 == 0){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
+// const myYear = 2026;
+// const isMyYearLeapYear = isLeapYear(myYear);
+// console.log('Is my year leap year', isMyYearLeapYear);
+
+// // another year call
+// const yourYear = 2028;
+// const isYourYearLeapYear = isLeapYear(yourYear);
+// console.log('Is your year leap year', isYourYearLeapYear);
+
+
+// Video- 20.5: factorial number using for loop
+
+// 3! = 3 * 2 * 1
+// var  na likhe let likhte pari
+// multiplication and division er shomoy 1  dibo i er value
+// each time number increment er por calculation er jonno factorial k for loop er bahire set korte hobe
+// var factorial = 1;
+// for(var i = 1; i <= 7; i++){
+//     // console.log(i);
+//     // var factorial = 1;
+//     factorial = factorial * i;
+// }
+// console.log(factorial);
+
+// video- 20.6 : recalculate factorial multiple times using function
+// let factorial = 1;
+// for(let i = 1; i <= 5; i++){
+//    factorial = factorial * i;
+// }
+// console.log(factorial);
+
+// function factorial(number){
+// // number e value joto hobe toto porjonto loop hobe
+//     let fact = 1;
+//     for(let i = 1; i <= number; i++){
+//         fact = fact * i;
+//     }
+//     return fact;
+// }
+// var firstFactorial = factorial(7);
+// console.log('factorial of 7 is', firstFactorial);
+
+// var secondFactorial = factorial(9);
+// console.log('factorial of 9 is', secondFactorial);
+
+// module- 20-7; factorial using a while loop or a decrementing loop
+
+// function factorial(number){
+//     let factorial = 1;
+//     let i = 1;
+//     while(i <= number){
+//         factorial = factorial * i;
+//         i++;
+//     }
+//     return factorial;
+// }
+// const myFactorial = factorial(6);
+// console.log(myFactorial);
+
+// // for decrementing in a while loop
+
+// function factorial(number){
+//     let factorial = 1;
+//     let i = number;
+//     while(i >= 1){
+//         factorial = factorial * i;
+//         i--;
+//     }
+// // kono function k call kore reult pete chaile variable return korte hobe noyto result undefined dekhabe
+//     return factorial;
+// }
+// const myFactorial1 = factorial(6);
+// console.log(myFactorial1);
+
+// // decrementing factorial in for loop
+// function factorial2(number){
+//     let factorial = 1;
+//     for(let i = number; i >= 1; i--){
+//         factorial = factorial * i;
+//     }
+//     return factorial;
+// }
+// const myFactorial2 = factorial2(6);
+// console.log(myFactorial2);
+
+// video -20.8: moddule summary(2 bar kore video dekhte hobe )
+// 3! = 3* 2*1;
+// 2! = 2*1;
+
+// 1. inch to feet 
+// 2. leap year 
+// 3. or / even 
+// 4. factorial(5 types )
+// *loop increment using for loop
+// *loop increment using while loop
+// *loop decrement using for loop
+// *loop decrement using while loop
+// *loop increment using recursion 
+// 5.how to do debug
+
+// debug example
+// error answer show korle debug kore or console log kore dekhbo OR BREAK POINT DIYE kaj korbo
+//     function getFactorial(number){
+//     let factorial = 1;
+//     // console.log(number); (try korar jonno)
+//     // for(let i = 0; i <= number; i++){ (i er value always 1 hobe * er shomoy)
+//     for(let i = 1; i <= number; i++){
+//     // console.log(number);  (try korar jonno)
+//         factorial = factorial * i;
+//         // factorial = factorial + i; (factorial e * use hoy)
+//         // console.log(factorial);  (try korar jonno)
+//     } 
+//     return factorial;
+// }
+// const getMyFactorial = getFactorial(6);
+// console.log(getMyFactorial);
+ 
