@@ -186,10 +186,128 @@
 
 
 // video - 22.6: divisible
-// 1 to 50 discovered to print
-for(let i = 1; i <= 50; i++){
-    console.log(i);
-}
+//1. 1 to 50 discovered to print
+// for(let i = 1; i <= 50; i++){
+// // 2. divided by 3/5/3 and 5
+// if(i%3 == 0 && i%5 == 0){
+//     console.log('foobar');
+// }
+// else if(i%3 == 0){
+//     console.log('foo');
+// }
+// else if(i%5 == 0){
+//     console.log('bar');
+// }
+// else {
+//     console.log(i);
+// }
+// }
 
 
+
+// video-22.7:find cheapest phone from an array
+// array of object theke kono property value compare kore ber kora
+// objects
+// const phones = [
+//     {name: 'samsung s5', price: 45000, camera: 10, storage: 32},
+//     {name: 'walton m32', price: 15000, camera: 8, storage: 8},
+//     {name: 'shaomi m3', price: 75000, camera: 16, storage: 8},
+//     {name: 'oppo a2', price: 25000, camera: 32, storage: 8},
+//     {name: 'nokia n95', price: 55000, camera: 5, storage: 8},
+//     {name: 'htc 81', price: 5000, camera:4, storage: 8}
+
+// ]
+// //1. array er moddhe j element ache oitai cheapest phone hishebe dhore nibo
+// let cheapest = phones[0];
+// //2. loop( for ..  of) dibo and each phone check korbo phones object array theke
+// for(const phone of phones){
+// // 3. each phone show korbe object array er
+//     // console.log(phone);
+// // 4.compare price : condition loop (shudhu phone er price k compare kortesi tai shudhu phone.price compare korbo cheapest.price er shathe but cheapest = phone (cheapest er shathe phone k set korbo))
+//    if(phone.price < cheapest.price){
+//     cheapest = phone;
+//    }
+// }
+// // 4.we can try normally condition loop as example
+// console.log(cheapest);
+
+
+// // video- 22.8: total cost using object
+// const products = [
+//      {name: 'laptop', price: 43000},
+//      {name: 'shirt', price: 500},
+//      {name: 'watch', price: 3680},
+//      {name: 'phone', price: 55000}
+// ];
+// let totalPrice = 0;
+// for(const product of products){
+// // 1. product er total price ber hobe previous product er total price + new product er price add kore total product price ber hobe
+//     totalPrice = totalPrice + product.price;
+// }
+// console.log(totalPrice);
+
+// // adding mega shopping
+// const shoppingCart = [
+//     {name: 'laptop', price: 43000, quantity: 1},
+//     {name: 'shirt', price: 500, quantity: 8},
+//     {name: 'watch', price: 3680, quantity: 3},
+//     {name: 'phone', price: 55000, quantity: 1}
+// ];
+// let shoppingCartTotal = 0;
+// for(const product of shoppingCart){
+//     console.log(product);
+//     const productTotal = product.price * product.quantity;
+//     shoppingCartTotal = shoppingCartTotal + productTotal;
+// }
+// console.log(shoppingCartTotal);
+
+
+// video- 22.9: counting animals
+// suppose first 10 miles e average e each mile e 10 ta kore animal thake . second 10 theke 50 mile e average e 50 ta kore animal thake, and er cheye beshi mile e gele each mile e average a 100 ta kore animal thakbe
+// first 13 miles jabo (ist 10 miles * animals 10 ta kore)=10*10 = 100 . Next 3 miles 11 to 13 ( 3 miles * each mil e 50 animals)= 50 * 3;
+//  function animalCount(miles){
+//     // 1. first and second 10 miles e kotota animal ache
+//     const animalDensityFirst10PerMiles = 10;
+//     const animalDensitySecond10PerMiles = 50;
+//     const animalDensityRestMiles = 100;
+
+//     if(miles <= 10){
+//         const count = miles * animalDensityFirst10PerMiles;
+//         return count;
+//     }
+//     else if(miles <= 20){
+//     // 2. ekhane first 10 mile age dibo then baki mile count korbo
+//         const firstDenseAnimals = 10 * animalDensityFirst10PerMiles;
+//     //3.total miles theke first 10 miles bad dibo
+//         const restMiles = miles - 10;
+//         const secondDenseAnimals = restMiles * animalDensitySecond10PerMiles;
+//         const totalAnimals = firstDenseAnimals + secondDenseAnimals;
+//         return totalAnimals;
+//     }
+// //4. 20 miles er porer animal count er jonno
+//     else{
+//         const firstDenseAnimals = 10 * 
+//         animalDensityFirst10PerMiles;
+//         const secondDenseAnimals = 10 * animalDensitySecond10PerMiles;
+//         const restMiles = miles - 20;
+//         const restDenseAnimals = restMiles * animalDensityRestMiles;
+//         const totalAnimals = firstDenseAnimals + secondDenseAnimals + restDenseAnimals;
+//         return totalAnimals;
+
+//     }
+// }
+// // animalDensityFirst10PerMiles count er jonno ( if condition e calculate hobe)
+// const animals1 = animalCount(10);
+// // animalDensitySecond10PerMiles count er jonno(else if condition e calculate hobe)
+// const animals2 = animalCount(17);
+// // animalDensityRestMiles count er jonno (else condition e calculate hobe)
+// const animals3 = animalCount(25);
+// const animals4 = animalCount(55);
+
+// console.log(animals1);
+// console.log(animals2);
+// console.log(animals3);
+// console.log(animals4);
+
+// video -22.10: summary
 
