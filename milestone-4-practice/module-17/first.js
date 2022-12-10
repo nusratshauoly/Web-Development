@@ -14,7 +14,7 @@
 // //yes/no declaration(boolean) bole:
 // var pass = true;
 // var subscribed = false;
-
+// --------------------------
 // video-17.4 : variable name
 //variable should be case sensitive
 //variabble likhar jonno some rules ache
