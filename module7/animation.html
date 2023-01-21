@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -85,3 +85,89 @@
 </body>
 
 </html>
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom property</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* custom property to change specific things from all common tags/elements and apply where it is needed with var*/
+        :root{
+            --side-width:200px;
+            --main-color:slateblue;
+            --border-color: red;
+            --background-color:orange;
+        }
+        h1{
+            /* var is a css function */
+            color: var(--main-color);
+        }
+        /* h1{
+            color:slateblue;
+        } */
+        p{
+            color:var(--main-color);
+        }
+        h2{
+            color:slateblue;
+            border: 2px solid slateblue ;
+        }
+        h6{
+            background-color: var(--background-color);
+            border-color: var(--border-color);
+        }
+        footer{
+            color:slateblue;
+            /* footer er both side clear rakhar jonno */
+            clear: both;
+        }
+
+        /* for aside nav */
+        /* this type of code used before flex  */
+        .side-nav, .blogs{
+            float: left;
+            height: 500px;
+        }
+        aside{
+            background-color: springgreen;
+            /* width: 200px; */
+            width: var(--side-width);
+        }
+        .blogs{
+            background-color: tomato;
+            /* width : calc(100% - 200px); */
+            width : calc(100% - 2*var(--side-width));
+        }
+    </style>
+ </head>
+ <body>
+    <!-- <header> -->
+        <h1>i am exploring custom property</h1>
+        <p>welcome to my website</p>
+    </header>
+
+    <main>
+        <h2>my awesome content</h2>
+        <h6>my tiny heading</h6>
+        <section>
+            <!-- aside tag to place it side with div -->
+            <aside class="side-nav">
+                my side navigation
+            </aside>
+            <div class="blogs">
+                <h4>Blogs</h4>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy; copyright</small></p>
+    </footer>
+ </body>
+ </html>
