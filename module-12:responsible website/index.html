@@ -268,7 +268,181 @@
      </div>
 </section>
 
+<!-- Module-12.2:flex layout,justify content, align items, horizontal center, flex(grow and shrink) -->
+<div class="d-flex flex-row-reverse flex-column justify-content-center flex-wrap">
+  <div class="w-50 flex-grow-1 border border-success rounded">
+    <img class="img-fluid" src="./izuddin-helmi-adnan-1e71PSox7m8-unsplash.jpeg" alt="">
+    <h3>double room</h3>
+    <h5>125$</h5>
+  </div>
 
+  <div class="w-50 border border-success rounded">
+    <img src="./jason-rost-iaaIzf_1myY-unsplash.jpeg" alt="">
+    <h3>single room</h3>
+    <h5>125$</h5>
+  </div>
+
+  <div class="w-50 border border-success rounded">
+    <img src="./izuddin-helmi-adnan-1e71PSox7m8-unsplash.jpeg" alt="">
+    <h3>double room</h3>
+    <h5>125$</h5>
+  </div>
+</div>
+
+
+<!-- Module-12.4: grid system with 12 column layout, responsive grid -->
+<h1>responsive bootstrap</h1>
+<div class="container bg-warning">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aspernatur autem nemo necessitatibus accusantium fuga doloremque similique est! Iusto perspiciatis saepe itaque, animi quos quaerat blanditiis cupiditate mollitia rerum consequuntur. Nulla odit optio quia sit, nesciunt aliquam voluptate exercitationem, excepturi animi porro temporibus ut! Quibusdam culpa fugit ipsa cum veritatis.
+</div>
+<div class="container-fluid bg-info">
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, velit tempore neque harum, accusantium hic quasi veritatis officia aspernatur soluta, corrupti nostrum dolorem pariatur excepturi autem facere labore aliquid nam.
+</div>
+
+<!-- bootstrap columns -->
+<!-- column 12 vag korte hobe konovabe jodi (col-10) dei r porerta (col-3) dei tahole 12 er beshi hoye gese tai (col-3) next row te chole jabe -->
+<!-- 3 vabe grid hisheb korte pari : 
+1. 1 ta regular column and column er size koto sheta dite pari
+2.kon device kototuku 12 column er moddhe nibe
+3.
+ -->
+<div class="container">
+  <div class="row">
+    <!-- extra small er jonno col-6/ col-12 evabe nite hobe -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <h2>first column</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero incidunt placeat </p>
+      <div class="col-6">
+        <h2>second Column</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum totam, eligendi  </p>
+      </div>
+      <!-- .col>h2{third column}P>lorem30 -->
+      <div class="col">
+        <h2>third column</h2>
+        <P>Lorem ipsum dolor sit amet consectetur </P>
+      </div>
+      <div class="col">
+        <h2>fourth column</h2>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. In saepe nemo tenetur sequi </P>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Module-12.6:(recap) more Responsive example for bags and jackets -->
+
+<h1>resposive bags</h1>
+<section>
+  <h2>buy bags from me</h2>
+  <div class="row">
+    <!-- .container>.row>.col-md-4.col-sm-6.col-12*7>img.img-fluid[src="./images/bags/bag-$.png"]+h3{Bag - $}+p>lorem30 -->
+    <div class="col-md-4 col-sm-6 col-12">
+      <img src="./jason-rost-iaaIzf_1myY-unsplash.jpeg" alt="" class="img-fluid">
+      <h2>Bag - 1</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit atque magnam commodi rerum laboriosam?</p>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-12">
+      <img src="./jason-rost-iaaIzf_1myY-unsplash.jpeg" alt="" class="img-fluid">
+      <h2>Bag - 2</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit atque magnam commodi rerum laboriosam?</p>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-12">
+      <img src="./jason-rost-iaaIzf_1myY-unsplash.jpeg" alt="" class="img-fluid">
+      <h2>Bag - 3</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit atque magnam commodi rerum laboriosam?</p>
+    </div>
+  </div>
+</section>
+
+<!-- Video-12.7: responsive card layout using card layout and gutters -->
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 gx-2 gy-4">
+  <div class="col">
+    <div class="card">
+      <img src="./images/bags/bag-1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./images/bags/bag-2" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./images/bags/bag-3" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Module-12.8:Create form with floating label and form validation -->
+<section class="container">
+  <div class="row">
+    <div class="col-md-6 d-flex flex-col justify-content-center align-items-center">
+       <h3 class="my-3">please register</h3>
+       <form action="">
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>select one</option>
+          <option value="male">male</option>
+          <option value="female">female</option>
+          <option value="nothing">nothing</option>
+        </select>
+        <!-- checks & radios -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            please accept our <a href="">terms & conditions</a>
+          </label>
+        </div>
+        <input class= "btn btn-primary" type="submit" value="register">
+       </form>
+    </div>
+
+    <div class="col-md-6">
+      <img class="img-fluid" src="./images/signup.png" alt="">
+    </div>
+  </div>
+
+</section>
 
     <!--bootstrap js  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
