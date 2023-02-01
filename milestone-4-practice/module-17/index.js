@@ -102,3 +102,170 @@ console.log(friends);
 console.log(6 != 5);
 var myLove = 99;
 var yourLove = 100;
+
+// 17.6
+var iphonePrice = 79000;
+var myBudget = 9500;
+// if iphone price is less than my Budget. I will buy the iphone
+// if(condition)
+//will execute if the condtion is true
+
+if(iphonePrice < myBudget){
+//i will buy the phone 
+    console.log("i will buy the phone");
+}
+// if condition is not trur then output will be shown
+
+// or
+
+var iphonePrice = 79000;
+var myBudget = 95000;
+// if iphone price is less than my Budget. I will buy the iphone
+// if(condition)
+//will execute if the condtion is true
+
+if(iphonePrice < myBudget){
+//i will buy the phone 
+    console.log("i will buy the phone");
+}
+
+// or
+// if condition is not trur then output will be shown
+var chickenPrice = 500;
+var myMoney = 50;
+if(chickenPrice <= myMoney){
+    console.log("chicken khabo");
+}
+
+// or
+
+if(chickenPrice > myMoney){
+    console.log("i will eat alu vorta and dal");
+}
+
+// make else condition
+if(chickenPrice < myMoney){
+    console.log("chicken khabo");
+}
+else{
+    console.log("i will eat potato");
+}
+
+// 17.7
+// = means value set kora
+// == means compare Kora
+//  === means 
+// && means all of condition must match
+// || means any of the condition have to match
+var isGraduated = true;
+var salary = 25000;
+var cars = 0;
+if(isGraduated == true){
+   console.log('lets get married');
+}
+else{
+    console.log("you'l not get married");
+}
+
+// or if both condition need to do
+if(isGraduated == true && salary > 50000 && cars >= 1){
+    console.log("esho biye kore feli");
+}
+else{
+ console.log("tor kopale biya nai");
+}
+
+// or || condition
+
+var isGraduated1 = true;
+var salary1 = 25000;
+var cars1 = 0;
+
+if(isGraduated1 === true || salary > 50000 || cars >= 1){
+    console.log('esho prem kori');
+}
+else{
+   console.log('tomar friend r mobile number dao');
+}
+
+// double condition
+if( (isGraduated1 === true && salary > 50000) || cars >= 1){
+    console.log('esho prem kori');
+}
+else{
+    console.log('tomar friend r mobile number dao');
+}
+
+// or
+if(isGraduated1 === true && (salary > 50000 || cars >= 1)){
+    console.log('esho prem kori');
+}
+else{
+    console.log('tomar friend r mobile number dao');
+}
+
+
+
+
+// 17.8 multistage conditions
+
+var money = 10;
+var danishPrice = 45;
+var butterBread = 35;
+var toastBiscuit = 20;
+
+if(danishPrice < money){
+    console.log("danish khabo");
+}
+else if(butterBread < money)
+{
+    console.log("butterbread den");
+}
+else if(toastBiscuit < money){
+    console.log("toastBiscuit khabo");
+}
+else{
+    console.log("khali cha e khabo");
+}
+// or jodi money beshi thake tahole first condition fulfill hole shetai dekhabe r porer condition gulate jabena
+
+// nested condition
+var math = true;
+var geometry = true;
+var straightLine = false;
+if(math == true){
+    if(geometry == true){
+        if(straightLine === true){
+        }
+        else{
+          console.log("baka line deya jabe na");
+        }
+
+    }
+    else{
+        console.log("can't be a mathematician");
+    }
+}
+else{
+
+}
+// 17.9
+
+// practice problem 1
+
+var fruits = ['Apple', 'Banana', 'Orange'];
+// find the indexof 'Banana'
+var findBanana = fruits.indexOf('Banana');
+console.log(findBanana);
+// replace 'Banana' with 'Mango'
+fruits[1] = 'Mango';
+console.log(fruits);
+// remove 'Orange'
+var removeOrange = fruits.pop();
+console.log(removeOrange);
+// add 'Watermelon'
+fruits.push('Watermelon');
+console.log(fruits);
+
+
+// practice problem 2
