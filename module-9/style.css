@@ -1,0 +1,111 @@
+img{
+    height:100%;
+    width:100%;
+}
+.row{
+    /* height: 400px; */
+    margin-bottom: 5px;
+}
+.second-row, .third-row{
+    display:flex;
+    gap:5px;
+}
+.second-row > div{
+    flex:1;
+}
+.second-row-third-container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.second-row-third-container div{
+    height: calc(50% - 5px/2);
+}
+.third-row-second-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:5px;
+}
+.third-row > div{
+    flex:1;
+}
+
+@media screen and(max-width:576px){
+    .second-row, .third-row{
+        flex-direction: column;
+    }
+    .third-row-second-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* 577px er niche hole kono height set korbona image er */
+@media screen and (min-width:577px){
+    .row{
+        height:400px;
+    }
+}
+
+/* grid example */
+
+/* video-9.4 */
+/* define grid areas */
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+.main{
+    grid-area:main;
+}
+.aside{
+    grid-area:aside;
+}
+.ad{
+   grid-area: ad;
+}
+.footer{
+    grid-area:footer;
+}
+.header, .ad, .aside, .footer, .main, .nav{
+    background-color: bisque;
+}
+/* grid layout related styles */
+.grid-container{
+    display:grid;
+    gap:20px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "nav main main aside"
+    "nav main main ad"
+    "footer footer footer footer"
+    ;
+}
+/* maximum 576 px ei style dekhabe */
+@media screen and (max-width:576px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "ad"
+        "footer"
+        ;
+    }
+
+
+}
+@media screen and (min-width:576px) and (max-width:992px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "aside main main"
+        "ad footer"
+        ;
+    }
+}
