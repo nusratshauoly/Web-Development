@@ -283,4 +283,148 @@ while(myNumber != Infinity){
    myNumber = myNumber * myNumber;
 }
 
-let number = 
+// array
+const cars = ["Saab", "volvo", "BMW"];
+console.log(typeof cars);
+console.log(cars.length);
+// last element of an array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[4] = "Mango";
+console.log(fruits[fruits.length - 1]);
+
+// array loop
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen =  fruits.length; 
+for(i = 0; i < fruits.fLen; i++){
+    console.log(i);
+console.log(fruits[i]);
+}
+console.log("finished");
+
+// for each
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen =  fruits.length; 
+for(i = 0; i < fruits.fLen; i++){
+    console.log(i);
+console.log(fruits[i]);
+}
+console.log("finished");
+
+// foreach
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+function myFunction(value){
+    console.log(value);
+
+}
+fruits.forEach(myFunction);
+
+// push()
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("lemon");
+
+// add item using length
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits(fruits.length) = "lemon";
+console.log(fruits);
+
+// create undefined holes
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[6] = "lemon";
+console.log(fruits);
+
+// associative Arrays
+
+const person = {
+     name: "Sumit",
+     age: 35,
+     country:"Bangladesh"
+};
+
+const person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46;
+person.length;
+person[0];
+
+// type of array
+const numbers = [1, 2, 3];
+Array.isArray(numbers);
+numbers instanceof Array;
+const persons = {
+    name: "Sumit",
+    age: 35,
+    country:"Bangladesh"
+};
+
+// array methods
+
+// converting array to string
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.toString();
+console.log(fruits);
+// join method
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.join(" * ");
+console.log(fruits);
+
+// push and pop
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+fruits.push("PineApple");
+fruits.shift();
+fruits.unshift("lemon");
+delete fruits[0]; //dont use
+console.log(fruits);
+
+// splice method
+// add method
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "lemon", "kiwi");
+fruits.splice(2, 2, "lemon", "kiwi");
+
+// remove method
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);
+console.log(fruits);
+// concate
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobius", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+console.log(myChildren);
+// concat a string
+const myChildren = arr1.concat("peter");
+console.log(myChildren);
+
+// slice
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
+citrus;
+
+// number sort
+// accending
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a,b)
+{
+    return a - b
+});
+console.log(points);
+// descending
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(b,a)
+{
+    return b - a;
+});
+console.log(points);
+
+// sorting an array in random order
+
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a,b){
+   return 0.5 - Math.random();
+});
+console.log(points);
+// max value
+Math.max.apply(null, [40, 100, 1, 5, 25, 10]);
+
+// foreach
