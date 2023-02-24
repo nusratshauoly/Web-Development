@@ -265,3 +265,384 @@ function welcomeToBooleans(){
 
 return true;
 }
+
+function trueOrFalse(wasThatTrue){
+  if(isItTrue){
+      return "Yes, that was true";
+  }
+  return "No, that was false";
+
+}
+
+console.log(trueOrFalse(true));
+console.log(trueOrFalse(false));
+
+
+function testEqual(val){
+  if(val == 12){
+     return "equal";
+  }
+  return "Not Equal";
+}
+testEqual(10);
+
+
+function testStrict(val){
+   if(val === 7){
+      return "Equal";
+  }
+  return "Not Equal";
+}
+testStrict(10);
+
+function compareEquality(a, b){
+ if(a === b){
+     return "Equal"; 
+}
+return "Not Equal";
+}
+compareEquality(10, "10");
+
+function testNotEqual(val){
+   if(val != 90){
+      return "Not Equal";
+  }
+  return "Equal";
+}
+console.log(testNotEqual(10));
+
+function testStrictNotEqual(val){
+   if(val !== 17){
+       return "Not Equal";
+  }
+return "Equal";
+}
+
+testStrictNotEqual(10);
+
+
+
+function testGreaterThan(val){
+    if(val > 100){
+        return "Over 100";
+    }
+    else if(val > 10){
+        return "Over 10";
+    }
+    else{
+        return "10 or under";
+    }
+}
+console.log(testGreaterThan(10));
+
+function testGreaterOrEqual(val){
+  if(val >= 20){
+    return "20 or Over";
+  }
+  else if(val >= 10){
+    return "10 or Over";
+  }
+  else{
+    return "Less than 10";
+  }
+}
+console.log(testGreatOrEqual(10));
+
+function testLessThan(val){
+   if(val < 25){
+       return "Under 25";
+  }
+  else if(val < 55){
+       return "Under 55";
+  }
+  else{
+       return "55 or Over";
+  }
+}
+console.log(testLessThan(10));
+
+function testLessOrEqual(val){
+  if(val <= 12){
+      return "Smaller Than or Equal to 12";
+  }
+  else if(val <= 24){
+      return "Smaller Than or equal to 24";
+  }
+  else{
+      return "More Than 24";
+  }
+}
+console.log(testLessOrEqual(10));
+
+
+function testLogicalAnd(val){
+  if(val <= 50 && val >= 50){
+       return "Yes";
+  }
+  else{
+       return "No";
+  }
+}
+
+console.log(testLogicalAnd(10));
+
+
+
+
+function testLogicalOr(val){
+  if(val < 10 || val > 20){
+       return "Outside";
+  }
+  else{
+       return "Inside";
+  }
+}
+
+console.log(testLogicalOr(15));
+
+function  testElse(val){
+  let result = "";
+
+  if(val > 5){
+     result = "Bigger than 5";
+  }
+  else{
+     result = "5 or Smallar";
+  }
+return result;
+}
+testElse(4);
+
+
+
+function testElseIf(val){
+   if(val > 10){
+      return "Greater than 10";
+  }
+  else if(val < 5){
+      return "Smaller than 5";
+  }
+  else{
+      return "Between 5 and 10";
+  }
+}
+console.log(testElseIf(7));
+
+
+function orderMyLogic(val){
+    if(val < 5){
+        return "Less than 5";
+    }
+    else if(val < 10){
+        return "Less then 10";
+    }
+    else{
+        return "Greater than or equal to 10";    
+    }
+}
+console.log(orderMyLogic(7));
+
+function caseInSwitch(val){
+   let answer = "";
+   switch(val){
+     case 1:
+      answer = "alpha";
+      break;
+     case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;  
+  }
+  return answer;
+}
+console.log(caseInSwitch(1));
+
+function chainToSwitch(val){
+  let answer = "";
+
+  switch(val){
+    case "bob": 
+    answer = "Marley";
+    break;
+    case 42:
+    answer = "The Answer";
+    break;
+    case 1:
+    answer = "There is no #1";
+    break;
+    case 99:
+    answer = "Missed me by this much!";
+    break;
+    case 7:
+    answer = "Ate Nine";
+    break;
+    
+  }
+  return answer;
+}
+console.log(chainToSwitch(7));
+
+
+//returning boolean value with functions
+function isLess(a,b){
+  return a < b;
+}
+console.log(isLess(10, 15));
+
+
+console.log(Math.PI);
+
+function getRndInteger(min, max){
+return Math.floor(Math.random() * (max-min + 1)) + min;
+}
+
+
+// 
+function abTest(a, b){
+if(a < 0 || b < 0){
+    return undefined;
+}
+return Math.round(Math.pow(Math.sqrt(a) + Math.E.sqrt(b), 2));
+}
+
+abTest(2, 2);
+
+
+let count = 0;
+function cc(card){
+    switch(card){
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+          count++;
+          break;
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+          count--;
+          break;
+    }
+  var holdbet = "Hold";
+  if(count > 0){
+      holdbet = "Bet";
+  }
+  return count + " " + holdbet;
+}
+
+console.log(cc(2), )
+
+
+const testObj = {
+   "hat" : "ballcap",
+   "shirt": "jersey",
+   "shoes": "cleats"
+};
+const  hatValue = testObj.hat;
+const shirtValue = testObj.shirt;
+
+const testObj = {
+    "an entree" : "hamburger",
+    "my side" : "veggies",
+    "the drink" : "water"
+};
+
+const entreeValue = testObj["an entree"];
+const drinkValue = testObj.["the drink"];
+console.log(entreeValue);
+console.log(drinkValue);
+
+
+// 
+
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+const playerNumber = 16;
+const player = testObj[playerNumber];
+console.log(player);
+
+
+// 
+function phoneticLookup(val){
+  var result = "";
+
+
+  var lookup = {
+      "alpha" : "Adams",
+      "bravo": "Boston",
+     "charlie": "Chicago",
+     "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+    result = lookup[val];
+    return result;
+}
+
+
+///
+var myObj = {
+   gift: "pony",
+   pet: "kitten",
+   bed: "sleigh"
+}
+
+function checkObj(obj, checkProp){
+  if(obj.hasOwnProperty(checkProp)){
+     return obj[checkProp];
+  }
+  else{
+   return "Not Found";
+  }
+}
+
+const myStorage = {
+   "car":{
+     "inside":{
+       "glove box": "maps",
+       "passenger seat": "crumbs"
+    },
+    "outside":{
+        "truth": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
+
+
+const myPlants = [
+ {
+   type: "flowers",
+   list: [
+      "rose",
+      "tulip",
+      "dandelion"
+  ]
+},
+{
+type : "trees",
+list: [
+   "fir",
+   "pine",
+   "birch"
+]
+}
+];
+
+const secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+
