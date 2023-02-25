@@ -646,3 +646,152 @@ const secondTree = myPlants[1].list[1];
 console.log(secondTree);
 
 
+const myArray = [];
+let i = 5;
+while(i >= 0){
+   myArray.push(i);
+   i--;
+}
+console.log(myArray);
+
+const myArray = [];
+let i = 5;
+while(i >= 0){
+   myArray.push[i];
+   i--;
+}
+console.log(myArray);
+
+
+const myArray = [];
+
+for(let i = 0; i < 5; i++){
+   myArray.push(i);
+
+}
+console.log(myArray);
+
+
+const myArray = [];
+for(let i = 9; i >= 1; i -= 2){
+    myArray.push();
+}
+console.log(myArray);
+
+const myArray = [];
+for(let i = 9; i >= 1; i -= 2){
+     myArray.push(i);
+}
+console.log(myArray);
+
+
+const myArray = [2, 3, 4, 5, 6];
+const total = 0;
+
+for(let i = 0; i < myArray.length; i++){
+  total += myArray.length();
+}
+console.log(total);
+
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+
+for(let i = 0; i < myArr.length; i++){
+   total += myArr[i];
+}
+console.log(total);
+
+
+function multiplyAll(arr){
+    let product = 1;
+
+  for(let i = 0; i < arr.length; i++){
+     for(let j = 0; j < arr[i].length; j++){
+        product = product * arr[i][j];
+    }
+  }
+return product;
+
+}
+
+
+const myArray = [];
+let i = 10;
+
+do{ 
+  myArray.push();
+  i++;
+}while(i < 5)
+
+console.log(i, myArray);
+
+const myArray = [];
+let i = 10;
+
+
+do{
+  myArray.push(i);
+  i++;
+}while(i <5)
+
+console.log(i, myArray);
+
+
+function sum(arr, n){
+  if(n <= 0){
+     return 0;
+  }else{
+     return sum (arr, n - 1) + arr[n - 1];
+  }
+}
+
+
+
+function lookUpProfile(name, prop){
+  for(let i = 0; i < contacts.length; i++){
+    if(contacts[i].firstName === name){
+     return contacts[i][prop] || "No such property"; 
+    } 
+  }
+  return "No such contact";
+}
+
+const data = (lookUpProfile("Akira", "likes"));
+console.log(data);
+
+function randomFraction(){
+   var result = 0;
+   while(result === 0){
+      result = Math.random();
+  }
+  return result;
+}
+
+
+function randomWholeNum(){
+   return(Math.floor(Math.random() * 10));
+
+
+}
+
+console.log(randomWholeNum());
+
+function randomRange(myMin, myMax){
+return Math.floor(Math.random() * myMax - myMin + 1) + myMin;
+
+}
+let randomNumber = randomRange(5, 15);
+console.log(randomNumber);
+
+
+function convertToInteger(str){
+      return parseInt(str);
+}
+convertToInteger("56");
+
+
+
+function convertToInteger(str){
+     return parseInt(str, 2);
+}
+console.log(convertToInteger("10011"));
