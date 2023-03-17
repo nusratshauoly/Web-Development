@@ -23,8 +23,13 @@
             /* align-items: flex-end; */
             align-items: center;
             /* we can also use stretch ,jodi .box or content ert height na deya thake tahoe .box k stretch korbe */
-            /* align-items: stretch; */
-        }
+            /* align-items: stretch; (height deya thakle stretch hobena) */
+            flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+        }   
         
         .box {
             width: 200px;
@@ -49,6 +54,7 @@
 
 <body>
     <h1>i am flexible right now</h1>
+    <!-- .container>.box{Box-$}*3 -->
     <div class="container">
         <div id="box1" class="box">Box-1</div>
         <div id="box2" class="box">Box-2</div>
