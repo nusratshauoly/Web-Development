@@ -127,9 +127,111 @@
        </section>
 
     <!-- mans jacket -->
-    <section>
-        
-    </section>
+    <section class="mt-12">
+        <h2 class="text-5xl uppercase font-semibold">Men Jacket</h2>
+        <!-- small screen er jonno 1 ta column(grid-cols-1) , medium screen er jonno 2 ta column(md:grid-cols-2) and large screen er jonno 3 ta column(lg:grid-cols-3) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- first jacket -->
+        <!-- image theke border er moddhe padding er jonno(p-4) -->
+        <div class="rounded-2xl p-4 drop-shadow-xl">
+          <!-- jacket card -->
+          <div class="bg-slate-100 p-4 rounded-2xl">
+              <img src="./images/jacket-4.png" alt="">
+          </div>
+          <div>
+              <h3 class="text-2xl">Yellow Coat Jacket</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis.</p>
+              <div class="flex justify-between">
+                  <!-- from custom color from script tag (price) write with (text-price)-->
+                  <h2 class="text-4xl font-semibold text-price">$234</h2>
+                  <button class="py-4 px-8 rounded-lg text-white uppercase bg-gradient-to-r from-[#A4BC46] to-[#85A019]">
+                      <!-- for inline icon (className = inline) -->
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" className="w-6 h-6 inline">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>                          
+                      Buy Now</button>
+              </div>
+          </div>
+        </div>
+
+        <!-- 2nd jacket -->
+        <div class="rounded-2xl p-4 drop-shadow-xl">
+          <!-- jacket card -->
+          <div class="bg-slate-100 p-4 rounded-2xl">
+              <img src="./images/jacket-5.png" alt="">
+          </div>
+          <div>
+              <h3 class="text-2xl">Yellow Coat Jacket</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis.</p>
+              <div class="flex justify-between">
+                  <!-- from custom color from script tag (price) write with (text-price)-->
+                  <h2 class="text-4xl font-semibold text-price">$234</h2>
+                  <button class="py-4 px-8 rounded-lg text-white uppercase bg-gradient-to-r from-[#A4BC46] to-[#85A019]">
+                      <!-- for inline icon (className = inline) -->
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" className="w-6 h-6 inline">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>                          
+                      Buy Now</button>
+              </div>
+          </div>
+        </div>
+
+        <!-- 3rd jacket -->
+        <div class="rounded-2xl p-4 drop-shadow-xl">
+          <!-- jacket card -->
+          <div class="bg-slate-100 p-4 rounded-2xl">
+              <img src="./images/jacket-6.png" alt="">
+          </div>
+          <div>
+              <h3 class="text-2xl">Yellow Coat Jacket</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis.</p>
+              <div class="flex justify-between">
+                  <!-- from custom color from script tag (price) write with (text-price)-->
+                  <h2 class="text-4xl font-semibold text-price">$234</h2>
+                  <button class="py-4 px-8 rounded-lg text-white uppercase bg-gradient-to-r from-[#A4BC46] to-[#85A019]">
+                      <!-- for inline icon (className = inline) -->
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" className="w-6 h-6 inline">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>                          
+                      Buy Now</button>
+              </div>
+          </div>
+        </div>
+
+      </div>
+     </section>
+
+     <!-- our features -->
+     <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="order-2 md:order-1 bg-slate-200 flex p-6 rounded-2xl shadow-2xl">
+            <img class="h-20 w-20" src="./images/house.png" alt="">
+            <div>
+                <h3 class="text-2xl">Find the Perfect Fit</h3>
+                <p>Everybody is different, which is why we offer styles for every body.</p>
+            </div>
+        </div>
+
+        <div class="order-1 md:order-2 bg-slate-200 h-32 rounded-2xl row-span-3">
+            <img src="./images/shopping.png" alt="">
+
+        </div>
+
+        <div class="order-3 bg-slate-200 flex p-6 rounded-2xl shadow-2xl">
+            <img class="h-40 w-20" src="./images/house.png" alt="">
+            <div>
+                <h3 class="text-2xl">Find the Perfect Fit</h3>
+                <p>Everybody is different, which is why we offer styles for every body.</p>
+            </div>
+        </div>
+
+        <div class="order-4 bg-slate-200 flex p-6 rounded-2xl shadow-2xl">
+            <img class="h-20 w-20" src="./images/house.png" alt="">
+            <div>
+                <h3 class="text-2xl">Find the Perfect Fit</h3>
+                <p>Everybody is different, which is why we offer styles for every body.</p>
+            </div>
+        </div>
+     </section>
    </main>
 
    <footer></footer>
