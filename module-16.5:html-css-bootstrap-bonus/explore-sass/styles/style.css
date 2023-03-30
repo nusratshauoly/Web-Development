@@ -1,0 +1,58 @@
+h1 {
+  color: steelblue;
+  font-size: 50px;
+}
+
+h2 {
+  color: red;
+}
+
+p {
+  background-color: red;
+  color: white;
+  margin: 5px;
+  padding: 15px;
+}
+
+ul {
+  border: 2px solid red;
+}
+
+nav ul {
+  border: 2px solid red;
+  margin-left: 20px;
+}
+nav ul li {
+  color: purple;
+}
+nav ul li a {
+  text-decoration: line-through;
+}
+
+button {
+  border: 1px solid red;
+  background-color: rgba(233, 23, 23, 0.512);
+}
+
+button:hover {
+  background-color: red;
+}
+
+button {
+  border: 1px solid red;
+  background-color: rgba(233, 23, 23, 0.512);
+}
+button:hover {
+  background-color: purple;
+  padding: 30px;
+}
+
+.success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: black;
+}
+
+.success {
+  border-color: green;
+}/*# sourceMappingURL=style.css.map */
