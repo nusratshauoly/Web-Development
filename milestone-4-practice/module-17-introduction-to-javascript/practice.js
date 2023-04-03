@@ -96,3 +96,38 @@ var dividing = mangoes / person;
 console.log(dividing);
 var remaining = mangoes % person;
 console.log(remaining);
+
+
+// practice 1
+var givenTaka = 1000;
+var orangesPrice = 350;
+var applesPrice = 350;
+var totalPrice = orangesPrice + applesPrice;
+var remainTk = givenTaka - totalPrice;
+console.log(remainTk);
+
+// practice 2
+
+var mathematics = 75.25;
+var biology = 65;
+var chemistry = 80;
+var physics = 35.45;
+var bangla = 99.50;
+
+var totalNumber = mathematics + biology + chemistry + physics + bangla;
+var averageNumber = totalNumber / 5;
+console.log(averageNumber.toFixed(2));
+
+// practice 3
+
+var first = "I am going to be";
+var second = "an awesome web developer";
+var fullSentence = first + " " + second;
+console.log(fullSentence);
+
+// practice 4
+var inputNumber = 119;
+var divider = 5;
+
+var remainder = inputNumber % divider;
+console.log(remainder);
