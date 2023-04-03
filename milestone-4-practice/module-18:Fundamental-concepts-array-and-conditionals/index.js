@@ -26,7 +26,7 @@ var isSingle = true;
 // toFixed
 // remainder: % (vagshesh)
 
-// 17.2:
+// 18.2:
 
 var friendsAge = [11, 21, 45, 17, 14];
 var picnicFee = [5000, 2000, 4000, 150];
@@ -45,7 +45,7 @@ console.log(friendsName.length);
 var newLength = friendsName.length;
 console.log(newLength);
 
-// 17.3
+// 18.3
 // with index we access array value
 var numbers = [45,56, 67, 78, 89];
 //1. get element by index (kono position er value jodi dekhate chai)
@@ -66,7 +66,7 @@ console.log(positionIndex);
 var positionIndex1 = numbers.indexOf(89);
 console.log(positionIndex1);
 
-// 17.4:
+// 18.4:
 
 //1. new number array er last e add korar jonno
 // use push to add element to an array as the last element array
@@ -98,12 +98,12 @@ console.log(friends);
 friends.shift();
 console.log(friends);
 
-// 17.5
+// 18.5
 console.log(6 != 5);
 var myLove = 99;
 var yourLove = 100;
 
-// 17.6
+// 18.6
 var iphonePrice = 79000;
 var myBudget = 9500;
 // if iphone price is less than my Budget. I will buy the iphone
@@ -151,7 +151,7 @@ else{
     console.log("i will eat potato");
 }
 
-// 17.7
+// 18.7
 // = means value set kora
 // == means compare Kora
 //  === means 
@@ -207,7 +207,7 @@ else{
 
 
 
-// 17.8 multistage conditions
+// 18.8 multistage conditions
 
 var money = 10;
 var danishPrice = 45;
@@ -249,7 +249,7 @@ if(math == true){
 else{
 
 }
-// 17.9
+// 18.9
 
 // practice problem 1
 
