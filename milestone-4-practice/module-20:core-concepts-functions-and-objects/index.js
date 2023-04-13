@@ -313,3 +313,81 @@ console.log(zoo.lion);
 console.log(zoo['lion']);
 let animal = "lion";
 console.log(zoo[animal]);
+
+
+
+
+// video - 20.9:
+
+const color = 'purple';
+if(color === 'green'){
+    console.log('you are a green friend');
+}
+else if(color === 'blue'){
+    console.log('you are blue friend');
+}
+else if(color === 'red'){
+    console.log('you are a red friend');
+}
+else if(color === 'white'){
+    console.log('you are a white friend');
+}
+else if(color === 'yellow'){
+    console.log('you are a yellow friend');
+}
+else{
+    console.log('you are a black friend');
+}
+
+
+// alternative of (if-else) because it takes too much time to iterate
+
+// switch
+const color = "yellow";
+switch(color){
+    case 'green':
+        console.log('you are a green friend');
+        break;
+    case 'blue':
+        console.log('you are a blue friend');
+        break;
+    case 'white':
+        console.log('you are a white friend');
+        break;
+    case 'red':
+        console.log('you are a red friend');
+        break;
+    case 'yellow':
+        console.log('you are a yellow friend');
+        break;
+    default:
+        console.log('you are a black friend');
+
+}
+
+// function 
+function add(num1, num2){
+    const sum = num1 + num2;
+    return sum;
+}
+const result1 = add(12, 13);
+const result2 = add(35, 7);
+const finalResult = add(result1, result2);
+
+// object
+let shoppingCart = {
+    books:3,
+    sunglass:1,
+    keyboard:5,
+    mouse:1,
+    pen:25
+}
+console.log(shoppingCart);
+//set property values
+console.log(shoppingCart);
+shoppingCart.mouse  = 15;
+console.log(shoppingCart);
+shoppingCart['mouse'] = 29;
+console.log(shoppingCart);
+shoppingCart[propertyName] = 89;
+console.log(shoppingCart);
