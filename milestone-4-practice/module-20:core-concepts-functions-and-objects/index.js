@@ -107,3 +107,209 @@ console.log('eating singaras: ', singaras);
 var myTaka = 150;
 var singaras = bringSingara(myTaka);
 console.log('eating singaras: ', singaras);
+
+
+// video - 20.5
+
+// function functionName(prameters){
+//     // function body
+//     //return
+// }
+// functionName(parameters);
+//  // or
+// let returnValue = functionName(parameters value); 
+
+function getTotal (assignment1, assignment2, assignment3){
+    const total = assignment1 + assignment2 + assignment3;
+    const average = total / 3;
+    return average;
+}
+const assignment1Marks = 60;
+const assignment2Marks = 58;
+const assignment3Marks = 59;
+
+let myAverage = getAverage(assignment1Marks, assignment2Marks, assignment3Marks);
+console.log('my average so far', myAverage);
+
+
+// add function
+
+function add(num1, num2){
+    const sum = num1 + num2;
+    return sum;
+}
+const result1 = add(12, 13);
+
+const result2 = add(35, 7);
+const finalResult = add(result1, result2);
+
+
+// video - 20.6
+
+let student = { 
+    id: 115, 
+    name: 'Solayman Khan', 
+    class: 9, 
+    marks: 98
+}
+//
+let mobile = {
+    brand: 'Samsung',
+    price: 19000,
+    storage: '64gb',
+    camera: '7MP',
+}
+console.log(mobile.price); //bracket er vitor console.log(keys,properties)
+//
+let myComputer = {
+    brand: 'lenovo',
+    price: 39000,
+    color: 'silver',
+    processor: 'i7'
+}
+
+console.log(myComputer);
+// jodi object er kono property er value jante chai
+console.log(myComputer.price);
+console.log(myComputer.processor);
+//property value pore edit o kora jay
+myComputer.processor ='i79';
+console.log(myComputer);
+
+
+// video- 20.7: 
+
+let shoppingCart = {
+    books:3,
+    sunglass:1,
+    keyboard:5,
+    mouse:1,
+    pen:25
+}
+console.log(shoppingCart);
+// jodi mouse add korte chai (third way)
+shoppingCart.mouse  = 15;
+
+// when you know the property name, use dot notation to get the property value
+
+//1. first way to write property name 
+let penCount = shoppingCart.pen;
+// alternative system
+// when you know the specific property name, use dot notation to get the property value
+
+// 2. second way to write property name
+let penCount2 = shoppingCart['pen'];
+// ei object er moddhe jotogulo value ase shobgulor man jodi pete chai
+// object er key gulo jodi pete chai
+let properties = Object.keys(shoppingCart);
+// object er value gulo jodi pete chai
+let propertyValues = Object.values(shoppingCart);
+console.log(properties);
+console.log(propertyValues);
+
+
+// 3. third way to write property name
+// set property values
+let propertyName = 'mouse';
+let propertyValue = shoppingCart[propertyName];
+console.log(propertyName, propertyValue);
+
+// (first way) to set property values jodi mouse add korte chai
+shoppingCart.mouse  = 15;
+console.log(shoppingCart);
+
+// (second way) to set property values
+shoppingCart['mouse'] = 29;
+console.log(shoppingCart);
+
+// (third way) to set property values (object er nam ta ekta variable e thakbe , shei variable ta third bracket er moddhe boshabo).
+shoppingCart[propertyName] = 89;
+console.log(shoppingCart);
+
+
+// video - 20.8:
+
+// array vs object
+
+// object er upor loop chalabo
+// array te shudhu property gulo likha jay and object e property and value duitai likha jay (difference between array and object)
+let shoppingItems = ['books', 'sunglass', 'shoes', 'pen']; // array
+
+let friendAge = [12, 45, 78, 12, 32, 14];  // array value declaration
+
+//objet declarations
+let friensAge = {
+    rahim: 12,
+    samad: 45,
+    karim: 78,
+    jamal: 12,
+    robi: 32,
+    kazi: 14
+}
+
+////////
+
+let shoppingCart = {
+    books:3,
+    sunglass:1,
+    keyboard:5,
+    mouse:1,
+    pen:25,
+    shoes: 2,
+    bottle: 1
+}
+// keys gulo jodi ber korte chai
+const keys = Object.keys(shoppingCart);
+console.log(keys);
+
+// jodi values ber korte chai
+const values = Object.values(shoppingCart);
+console.log(values);
+
+// but kon propertyr kon value eta jodi ber korte chai
+
+
+// hard system (using for)
+//keys er moddhe joto gulo item ase shegular length borabor cholbe
+// keys holo ekta array
+// let keys = ['books', 'sunglass', 'keyboard', 'mouse', 'pen', 'shoes'];
+for(let i = 0; i < keys.length; i++){
+    let propertyName = keys[i];
+    let propertyValue = shoppingCart[propertyName];
+    console.log(propertyName, propertyValue);
+
+    //console.log(keys[i]);
+    //console.log(shoppingCart[])
+}
+
+
+// easy system (for .. in  loop)
+for(let propertyName in shoppingCart){
+    const value = shoppingCart[propertyName];
+    console.log(propertyName, value);
+}
+
+
+// entries (key and values)
+const zooFood = {
+    lion: 'meat',
+    panda: 'bamboo'
+}
+Object.entries(zoo)
+//[['lion', 'meat'], ['panda', 'bamboo']]
+
+
+// how to get and set object property
+//1. obj.prop
+// 2. obj['prop']
+//3. {prop} = obj
+//4. obj[prop]
+
+const zooFood = {
+    lion: 'meat',
+    panda: 'bamboo'
+}
+console.log(zoo.lion);
+console.log(zoo['lion']);
+let animal = "lion";
+console.log(zoo[animal]);
