@@ -270,3 +270,24 @@
 // const getMyFactorial = getFactorial(6);
 // console.log(getMyFactorial);
  
+
+////////////////////
+function turnOnFan(){
+   console.log('stand up');
+   console.log('turn on the fan');
+}
+turnOnFan();
+turnOnFan();
+console.log('eating lunch');
+turnOnFan();
+
+
+function bringSingara(money){
+  console.log('singara den');
+  console.log('money');
+}
+bringSingara(100);
+console.log(bringSingara(100));
+
+/////////////////////////////////////////////
+

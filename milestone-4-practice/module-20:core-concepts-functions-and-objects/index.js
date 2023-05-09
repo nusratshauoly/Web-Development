@@ -6,6 +6,7 @@ let numbers = [1, 8, 98, 45, 65, 71, 63];
 numbers.slice(2, 4);
 [98, 45]
 
+
 // include (kono element atring er moddhe ache kina oi jinish ta dekhar jonno)
 
 let name = 'Ariana grande is singing';
@@ -15,11 +16,15 @@ name.includes('has');
 // substring (slice er moto string theke element collect kora)
 name.substring(0, 10);
 name.substring(4, 10);
+
+
 // array theke pete parbo value but set korte parbona etake bole ( immutable ).
 name[1] = 'x';
 
 
-// video - 20.2
+
+
+// video - 20.2 : Declare a function, call function, function vs loop:
 
 // function koyek line code er ekta addition(block of code). jeta ekta fixed work complete kore
 
@@ -42,17 +47,19 @@ turnOnFan();
 // give parameter value like variable inside function parameter ()
 //when give parameter value then function call korar shomoy value dite hobe function name er vitor
 function bringSingara(money){
-     console.log('mama singara den');
+    console.log('mama singara den');
      console.log(money);
 }
 bringSingara(100);
+
+
+
 
 // 20.3:
 // return parameter
 function bringSingara(money){
     console.log('eto taka disen: ', money);
-    console.log('ei nen singara');
-   
+    console.log('ei nen singara'); 
 }
 bringSingara(100);
 // or evabeo call korte parbo
@@ -84,12 +91,20 @@ function add(number1, number2){
    // return er  3 ta jinish likha 1)return er por kichu likhbona, 2) return er por kono man likhte pari like 11/ 15 . 3) kono variable likhte tahole j function k call korbe she ei jinish ta pabe.
 // return er por ja likha thakbe shetar man return hishebe pawa jabe.
 // 1. kono kichu return na korle result indefined hpbe, 2. shudhu return likhle return er por kono kichu define na korleo undefined dekhabe. 3. return er por man likhi ba variable likhi tahole variable er man return korbe.
+return 15;
+console.log('i need more code');
+return 'hello done';
 // 1 bar return korlei function oikhan theke ber hoye jabe , 1 bar return er por jodi aro onno kichu return korte chai tahole r return hobe na 1 bar return hoyei ber hoye jabe.
 }
-add(45, 15);
+//add(45, 15);
+
+
 //kono function jekhan theke call kora hobe shetar bampashe kono variable thakle oi function er return er por ja likha thakbe shetar man (value) hoye jabe oi variable er man ba value
-var total = add(80, 20);
+let total = add(80, 20);
 console.log('total', total);
+
+
+
 
 // another function
 function bringSingara(money){
@@ -107,6 +122,8 @@ console.log('eating singaras: ', singaras);
 var myTaka = 150;
 var singaras = bringSingara(myTaka);
 console.log('eating singaras: ', singaras);
+
+
 
 
 // video - 20.5
@@ -167,7 +184,6 @@ let myComputer = {
     color: 'silver',
     processor: 'i7'
 }
-
 console.log(myComputer);
 // jodi object er kono property er value jante chai
 console.log(myComputer.price);
@@ -227,10 +243,20 @@ shoppingCart[propertyName] = 89;
 console.log(shoppingCart);
 
 
+
+
 // video - 20.8:
 
 // array vs object
 
+let shoppingCart = {
+    books: 3,
+    sunglass: 1,
+    keyboard: 5,
+    mouse: 1,
+    pen: 25,
+    shoes: 2
+}
 // object er upor loop chalabo
 // array te shudhu property gulo likha jay and object e property and value duitai likha jay (difference between array and object)
 let shoppingItems = ['books', 'sunglass', 'shoes', 'pen']; // array
@@ -273,6 +299,7 @@ console.log(values);
 //keys er moddhe joto gulo item ase shegular length borabor cholbe
 // keys holo ekta array
 // let keys = ['books', 'sunglass', 'keyboard', 'mouse', 'pen', 'shoes'];
+
 for(let i = 0; i < keys.length; i++){
     let propertyName = keys[i];
     let propertyValue = shoppingCart[propertyName];
@@ -282,7 +309,7 @@ for(let i = 0; i < keys.length; i++){
     //console.log(shoppingCart[])
 }
 
-
+///another system
 // easy system (for .. in  loop)
 for(let propertyName in shoppingCart){
     const value = shoppingCart[propertyName];
@@ -295,7 +322,7 @@ const zooFood = {
     lion: 'meat',
     panda: 'bamboo'
 }
-Object.entries(zoo)
+Object.entries(zooFood);
 //[['lion', 'meat'], ['panda', 'bamboo']]
 
 
@@ -309,17 +336,18 @@ const zooFood = {
     lion: 'meat',
     panda: 'bamboo'
 }
-console.log(zoo.lion);
-console.log(zoo['lion']);
+console.log(zooFood.lion);
+console.log(zooFood['lion']);
 let animal = "lion";
-console.log(zoo[animal]);
+console.log(zooFood[animal]);
 
 
 
 
 // video - 20.9:
-
-const color = 'purple';
+//const color = '';
+//const color = 'purple';
+const color = 'yellow';
 if(color === 'green'){
     console.log('you are a green friend');
 }
@@ -383,12 +411,16 @@ let shoppingCart = {
     pen:25
 }
 console.log(shoppingCart);
-//set property values
+
+//set property values(3 ways)
 console.log(shoppingCart);
+// 1.
 shoppingCart.mouse  = 15;
 console.log(shoppingCart);
+// 2.
 shoppingCart['mouse'] = 29;
 console.log(shoppingCart);
+// 3.
 shoppingCart[propertyName] = 89;
 console.log(shoppingCart);
 
