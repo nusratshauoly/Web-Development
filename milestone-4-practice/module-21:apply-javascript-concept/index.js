@@ -290,3 +290,102 @@ console.log('odd number sum', oddNumberSum);
 /////////////////////////
 
 // Module-21-7: Calculate Factorial of a number using for loop:
+
+// Calculate Factorial of a number using for loop:
+// adding 1 to 7 numbers: 1 + 2 + 3 + 4 + 5 + 6 + 7
+let sum = 0;
+for(let i = 1; i <= 7; i++){
+    sum = sum + i;
+    console.log(i, sum);
+}
+//  using function
+function sumOfNumbers(number){
+    // addition er shomoy initial value always 0 rakhbo.
+    let sum = 0;
+    for(let i = 1; i <= number; i++){
+       sum = sum + i;
+       console.log(i, sum);
+    }
+    return sum;
+}
+
+// multiplication of numbers
+
+function multiplicationOfNumbers(number){
+    // multiplication er shomoy initial value always 1 rakhbo
+   let result = 1;
+   for(i = 1; i <= number; i++){
+      result = result * i;
+    }
+    return result;
+}
+const result = multiplicationOfNumbers(7);
+console.log(result);
+
+///////factorial: A factorial is a function that multiplies a number by every number below it till 1.
+
+//3! = 3 * 2 * 1 / 3 * 2! / 3 * (3 - 1)!.
+
+// factorial formula: n! = n * (n - 1)!.
+
+function factorial(number){
+   let result = 1;
+   for(let i = number; i >= 1; i--){
+      result = result * i;
+      console.log(i);
+   }
+   return result;
+}
+const number = 5;
+const fact = factorial(number);
+console.log('factorial of:',number, fact);
+
+
+///////////////////////////////
+
+// Module- 21-8: Factorial using a while loop or a decrementing loop:
+
+// 11. Calculate Factorial of a number using while loop:
+
+function factorial(number){
+    let i = 1;
+    let result = 1;
+    while(i <= 7){
+         result = result * i;
+         i++;
+    }
+    return result;
+ }
+ 
+ // factorial while in a reverse way
+ function factorial(number){
+    let i = number;
+    let result = 1;
+    while(i >= 1){
+        result = result * i;
+        i--;
+     }
+     return result;
+ }
+ const output = factorial(7);
+ console.log(output);
+
+ /////////////////////////
+
+ //Module-21-9: Module Summary and Simple Javascript debug: 
+
+//  finding debug
+// each step run kore kore dekhte hobe and bug gulo fix korte hobe.
+function getFactorial(number){
+    //let factorial = 0;
+    let factorial = 1;
+//    for(let i = 0; i <= 7; i++){
+      //factorial = factorial + i;
+      for(let i = 0; i <= number; i++){
+      factorial = factorial * i;
+      console.log(i, factorial);
+    }
+    return factorial;
+}
+const factorial = getFactorial(8);
+console.log('factorial of 8 is: ', factorial);
