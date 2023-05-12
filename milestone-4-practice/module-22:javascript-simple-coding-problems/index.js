@@ -394,7 +394,7 @@ Math.min(69 97 99);
 
 //  Module- 22-7: Who is the tallest? Find the max number in an array
 
-// 1. wh o is the tallest?
+// 1. who is the tallest?
 /*
 Tom and his friends are participating in the 'who is the tallest?" competition. As per the name, the peson with the highest height will be the winner. can you find who is the tallest among tom and all of his friends?
 
@@ -406,3 +406,178 @@ Sample Input-1: 157, 134, 188  | Sample output: 188
 
 Sample Input-2: 167, 190, 120, 165, 137  |  Sample Output-2: 190
 */
+
+function maxInArray(numbers){
+   //console.log('array inside the array', numbers);
+//   5.1: compare er jonno largest variable set kore (numbers er first value k largest dhorlam and array te rakhlam)
+   let largest = numbers[0];
+// 1. array er value gulor length onujayi for loop chalabo (i e let disi karon i er man loop cholar shomoy each time change hobe)
+   for(let i = 0; i < numbers.length; i++){
+    // 2. then we will get the value index of the array (index e const disi karon value gulor index er positionfixed thakbe cause amra onno value reassign kortesi na)
+      const index = i;
+    // 3. numbers array te value er index gulo boshabo 
+      const element = numbers[index];
+    // 4. console.log korbo element k jate amra alada alada kore each element pai
+      console.log(element);
+    // 5.2 protita element jokhon ashbe tokhon largest er shathe element gulo compare korbo.(jodi present element er cheye largest er cheye boro hoy tahole largest e new element er man rakhbo r jodi na hoy tahole ignore kore dibo) then element gulo compare korbo like (167, 190)er compare kore 190 boro then abar 190 er shathe 120 compare, still 190 boro, then abar 190 er shathe 165 compare korbo, evabe shesh porjonto compare chalate thakbo
+      if(element > largest){
+        largest = element;
+    } 
+   }
+//    6. then largest number return korbo for loop er bahire jeye
+   return largest;
+}
+// 00. value gulo declare korbo
+const heights = [167, 190, 120, 165, 137, 265];
+const tallest = maxInArray(heights);
+console.log('tallest person is:' tallest);
+
+// HomeWork1: write a function to get the lowest number in ana array.
+
+
+
+
+
+
+///////////////////////////////////////
+
+
+
+// Module-22-8: Reverse a string and reverse words in a sentence:
+
+
+// string reverse (character reverse)
+
+// str[0], str[1] => evabe string er vitor element gulo ber kora jay. , string er length ber kora jay => str.length 
+
+function reverseString(text){
+    // 0. it is for normal string
+    //for(let i = 0; i < text.length; i++){
+    // 4. jokhon string reverse korbo tokhon empty string diye shuru korte hobe. and reversed variable e tarporer string gulo aste aste add korbo. 
+   let reversed = '';
+   // 1. reverse / shesher theke string show korte hole i er value whole text.length theke -1 korte hobe and loop cholbe 0 index porjonto.
+   for(let i = text.length - 1; i >= 0; i--){   
+    // 2. text er string gulo element variable e save korbo.
+       const element = text[i];
+    // 5. first e empty string er pore joto string ashbe shegulo reversed element er moddhe add kore dibo and (element and reversed value gulo console.log korbo)
+       reversed = reversed + element;
+       console.log(element, reversed);
+   }
+   // 6. reversed variable return kore dibo
+   return reversed;
+}
+// 3. value declare korbo function e
+const myString = 'I am a good boy';
+const reversed = reverseString(myString);
+console.log('reversed output: ', reversed);
+
+
+///////////////
+
+
+// words reverse
+function reverseWords(str){
+// 1.  myString variable er value / word gulo (' ') diye split korbo. 
+   const words = str.split(' ');
+// 4. result variable e shob reverse word gulo store korbo 
+   const result = [];
+   //console.log(words);
+   // ['I', 'am', 'a', 'good', 'boy'] {ei word take reverse korbo}
+// 2. reverse er for loop e words.full theke (-1) korte hoy
+   for(let i = words.length - 1; i >= 0; i--){
+// 3. each item(i) reverse korar por jokhon ashbe tokhon notun variable element er vitor word e boshaye dite parbo and element gulo result er vitor push korbo.
+       const element = words[i];
+       result.push(element);
+   }  
+//    console.log(result); 
+// 5. then shob gulo alada word er string guloke abar sentence er jonno join kore dibo and reversed return korbo.
+const reversed = result.join(' ');
+return reversed; 
+}
+const myString = 'I am a good boy';
+const reversedWords = reverseWords(myString);
+console.log(reversedWords);
+
+
+// ///full code//////
+
+ // string reverse
+
+// str[0], str[1] => evabe string er vitor element gulo ber kora jay. , string er length ber kora jay => str.length 
+
+function reverseString(text){
+    // 0. it is for normal string
+    //for(let i = 0; i < text.length; i++){
+   let reversed = '';
+   for(let i = text.length - 1; i >= 0; i--){   
+       const element = text[i];
+       reversed = reversed + element;
+       console.log(element, reversed);
+   }
+   return reversed;
+}
+const myString = 'I am a good boy';
+const reversed = reverseString(myString);
+console.log('reversed output: ', reversed);
+
+// words reverse
+function reverseWords(str){
+   const words = str.split(' ');
+   const result = [];
+   //console.log(words);
+   // ['I', 'am', 'a', 'good', 'boy'] {ei word take reverse korbo}
+   for(let i = words.length - 1; i >= 0; i--){
+       const element = words[i];
+       result.push(element);
+   }  
+//    console.log(result); 
+const reversed = result.join(' ');
+return reversed; 
+}
+const myString = 'I am a good boy';
+reverseWords(myString);
+
+
+
+//////////////////////////////////////////
+
+// Module- 22-9: (advanced) create a fibonacci series using a for loop:
+
+//shobgulo problem vs code e iteration kore dekhte hobe 
+
+// const fibonacci = [1, 1, 2, 3, 4, 5, 8, 13, 21, 34, 55, 89, 144];
+
+/*
+fibonnaci er 1 ta pod ager 2 ta poder addition then ager 2 ta value default vabe diye dite hobe.
+fibo[3] = fibo[2] + fibo[1];
+fibo[4] = fibo[3] + fibo[2];
+fibo[5] = fibo[4] + fibo[3];
+fibo[50] = fibo[49] + fibo[48];
+fibo[487] = fibo[486] + fibo[485];
+fibo[n] = fibo[n-1] + fibo[n-2];
+fibo[i] = fibo[i - 1] + fibo[i - 2];
+
+*/
+
+const fibo = [0, 1];
+// 1. i er value 2 theke shuru korte horte karo fibonacci te default vabe age 2 ta value diye dite hobe.
+// 2. 10 ta number dekhabe
+for(let i = 2; i <= 10; i++){
+    // 3. fibonacci ber korar rule (i er value 2 tai fibo[i=indexnumber]=fibo(2-1) + fibo(2-2) then evabe cholbe)
+   fibo[i] = fibo[i - 1] + fibo[i - 2];
+}
+console.log(fibo);
+
+
+// ////////full code////////////
+const fibo = [0, 1];
+for(let i = 2; i <= 10; i++){
+    fibo[i] = fibo[i - 1] + fibo[i - 2];
+}
+console.log(fibo);
+
+
+////////////////////////////////////
+
+// Module - 22-10: Module summary and where you need to focus
+
