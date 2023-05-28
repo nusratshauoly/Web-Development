@@ -22,7 +22,7 @@ name.substring(4, 10);
 name[1] = 'x';
 
 
-
+////////////////////////////////////////////
 
 // video - 20.2 : Declare a function, call function, function vs loop:
 

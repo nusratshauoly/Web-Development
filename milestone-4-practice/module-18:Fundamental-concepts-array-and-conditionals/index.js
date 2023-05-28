@@ -26,6 +26,8 @@ var isSingle = true;
 // toFixed
 // remainder: % (vagshesh)
 
+///////////////////////////////////////
+
 // 18.2:
 
 var friendsAge = [11, 21, 45, 17, 14];
