@@ -52,6 +52,7 @@ function bringSingara(money){
 }
 bringSingara(100);
 
+////////////////////////////////////////////////////
 
 
 
@@ -136,20 +137,21 @@ console.log('eating singaras: ', singaras);
 //  // or
 // let returnValue = functionName(parameters value); 
 
-function getTotal (assignment1, assignment2, assignment3){
+function getAverage (assignment1, assignment2, assignment3){
     const total = assignment1 + assignment2 + assignment3;
     const average = total / 3;
     return average;
 }
+//(function call directly o kora jay or parameter er value gulo evabe aladavabe declare koreo kora jay)
 const assignment1Marks = 60;
 const assignment2Marks = 58;
 const assignment3Marks = 59;
 
-let myAverage = getAverage(assignment1Marks, assignment2Marks, assignment3Marks);
+let myAverage = getAverage(assignment1, assignment2, assignment3);
 console.log('my average so far', myAverage);
 
-
-// add function
+// another function
+// add function (parameter er ekta value er vitoreo multiple operation korte pari)
 
 function add(num1, num2){
     const sum = num1 + num2;
@@ -159,6 +161,12 @@ const result1 = add(12, 13);
 
 const result2 = add(35, 7);
 const finalResult = add(result1, result2);
+
+
+
+
+
+////////////////////////////////////////////////////
 
 
 // video - 20.6
@@ -239,9 +247,12 @@ shoppingCart['mouse'] = 29;
 console.log(shoppingCart);
 
 // (third way) to set property values (object er nam ta ekta variable e thakbe , shei variable ta third bracket er moddhe boshabo).
+let propertyName = 'mouse';
 shoppingCart[propertyName] = 89;
 console.log(shoppingCart);
 
+
+///////////////////////////////////////////////////
 
 
 
