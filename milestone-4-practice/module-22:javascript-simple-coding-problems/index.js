@@ -4,12 +4,12 @@
 write a function called foo() which prints "foo" and a function called bar() which prints "bar". Call function bar() in the foo() function after printing. What will be the output? Now call the foo() to see the output
 */
 
-function bar(){
-    console.log("bar");
-}
 function foo(){
     console.log("foo");
     bar();
+}
+function bar(){
+    console.log("bar");
 }
 foo();
 
@@ -19,7 +19,7 @@ foo();
 
 // website er inspect e jeye (console) eo likha jay javascript
 // string er length e word er shathe space gulokeo count kora hoy. 
-const myAddress = '212/A, Shamoli Tower, Shamoli'
+const myAddress = '212/A, Shamoli Tower, Shamoli';
 myAddress.length;
 
 const name = 'AbM T';
