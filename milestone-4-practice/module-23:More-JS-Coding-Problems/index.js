@@ -32,7 +32,7 @@ console.log(typeof student);
 
 // 2. Array.isArray (this way we can get the type of an array (check array using Array.isArray)
 console.log(Array.isArray(friends));
-console.log(typeof add);
+console.log(typeof age);
 
 // ----------------------------------
 //3. includes (array er moddhe value gulo ache kina search korar jonno)
@@ -105,7 +105,7 @@ function removeDuplicate(names){
     }
     return uniqueNames;
 }
-const uniqueNames = removeDuplicate(names);
+const uniqueName = removeDuplicate(names);
 console.log(uniqueNames);
 
 
@@ -124,7 +124,7 @@ function removeDuplicate(names){
       }
       return uniqueNames;
   }
-  const uniqueNames = removeDuplicate(names);
+  const uniqueName = removeDuplicate(names);
   console.log(uniqueNames);
 
   ///////////////////////////////
@@ -278,6 +278,30 @@ for(let i = 0; i <= 50; i++){
 camera: 12, camera: 10, camera: 7, camera: 17, camera: 25, camera: 6, camera: 10.
 
 */
+const phones = [
+    {name: 'Samsung', camera: 12, storage: '32gb', price: 36000, color: 'silver'},
+    {name: 'Walton', camera: 10, storage: '32gb', price: 22000, color: 'silver'},
+    {name: 'iphone', camera: 7, storage: '32gb', price: 83000, color: 'silver'},
+    {name: 'Xaomi', camera: 17, storage: '32gb', price: 52000, color: 'silver'},
+    {name: 'Oppo', camera: 25, storage: '32gb', price: 2000, color: 'black'},
+    {name: 'Nokia', camera: 6, storage: '32gb', price: 44000, color: 'silver'},
+    {name: 'HTC', camera: 10, storage: '32gb', price: 62000, color: 'silver'},
+];
+
+function cheapestPhone(phones) {
+    let highest = phones[0];
+
+    for (let i = 0; i < phones.length; i++){
+        let phone = phones[i];
+        if (phone.camera > highest.camera) {
+            highest = phone;
+        }
+    }
+    return highest;
+}
+const mySelection = cheapestPhone(phones);
+console.log(mySelection);
+
 
 ///////////////////////////////////////
 

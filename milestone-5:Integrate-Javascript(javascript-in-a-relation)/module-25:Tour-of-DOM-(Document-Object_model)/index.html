@@ -1,0 +1,86 @@
+<!-- Module- 25-1: What is Dom, Connect your JS file with html file -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tour of DOM</title>
+        <!-- connect external css file -->
+        <link rel="stylesheet" href="./styles/style.css">
+        <!-- we can also write css like this -->
+        <style>
+            ul{
+                color: blue;
+            }
+        /* <!-- // Module:25-3: Traversing dom - getElementByClass VS getElementById --> */
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+        /* // Module:25-4: Traversing dom - getElementByQuerySelector, querySelectorAll */
+        .fruits-container li{
+            color: tomato;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to my DOM</h1>
+        </header>
+        <main>
+            <section>
+                <h1>My Awesome DOM</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quisquam, nemo sit mollitia est recusandae ex!</p>
+                <ul>
+                    <li>Jalali set</li>
+                    <li>bonobash</li>
+                    <li>shafayet</li>
+                </ul>
+            </section>
+
+            <!-- // Module:25-3: Traversing dom - getElementByClass VS getElementById -->
+
+            <!-- // Module:25-4: Traversing dom - getElementByQuerySelector, querySelectorAll -->
+            <section class="fruits-container">
+                <h1 id="fruits-title">fruits I like</h1>
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Carrot</li>
+                </ul>
+            </section>
+
+            <section>
+                <h1 class="places-title">Places I like to visit</h1>
+                <ul>
+                    <li class="important-places">Sundarban</li>
+                    <li class="important-places">Bandarban</li>
+                    <li class="important-places">Kataban</li>
+                    <li class="other-places">shalbon</li>
+
+                </ul>
+            </section>
+        </main>
+
+        <!-- we can also connect internal js file -->
+        <!-- Module: 25-2: Traversing dom - getElementsByTagName -->
+        <script>
+            const student = {
+                name: 'ABUL',
+                ID: 11,
+                study: function (time){
+                    console.log(time, 'study kortese');
+                }
+            }
+            console.log('adding js inside the html file');
+        </script>
+        <!-- connect external javascript file  -->
+        <script src="index.js"></script>
+    </body>
+</html>
+
+<!-- Module: 25-2: Traversing dom - getElementsByTagName -->

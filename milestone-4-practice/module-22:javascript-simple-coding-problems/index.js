@@ -89,10 +89,13 @@ const doesExist = lyricsLowerCase.includes(searchString);
 // jodi jei word search korbo oita uperCase or mixed case thake tahole oitakeo lowercase banabo age.
 const searchStringLower = searchString.toLowerCase();
 const doesExist = lyricsLowerCase.includes(searchStringLower);
+console.log(doesExit);
+
+
+
 
 // uporer shobtuku k 1 line eo likha jay
 const doesExistOneLine = lyrics.toLowerCase().includes(searchString.toLowerCase());
-console.log(doesExist);
 console.log(doesExistOneLine);
 
 
@@ -312,7 +315,7 @@ Math.exp(x);
 */
 
 /*
-1. Jim is a meritorious student. He secures first place in his class all the time. This year, Dela has joinedhis class. 
+1. Jim is a meritorious student. He secures first place in his class all the time. This year, Dela has joined his class. 
 She was also a topper at her previous school. On the day of result publication, the teacher comes into the class with a delicious cake and says that "Jim & Dela, whoever is the topper, will get this tasty cake." Can you find out who will get this cake? 
 
 Input: 
@@ -384,11 +387,54 @@ Math.min(69 97 99);
 
 // Homework1: write a function that will take 3 numbers will return the max number.
 
+function maxNumber(num1, num2, num3) {
+    const maximum = Math.max(num1, num2, num3);
+    return maximum;
+}
+const maximumNumber = maxNumber(84, 69, 99);
+console.log(maximumNumber);
+
+// using if- else
+const num1 = 84;
+const num2 = 75;
+const num3 = 77;
+
+if (num1 > num2 && num1 > num3) {
+    console.log(`${num1} is greater`);
+}
+else if (num2 > num1 && num2 > num3) {
+    console.log(`${num2} is greater`);
+}
+else {
+    console.log(`${num3} is greater`);
+}
+
+
 // Homework2: write a function that will take 3 parameters and will return the min number.
 // first time do it using if-else
 //  second time do it using Math.min or Math.max
 
+function minNumber(num1, num2, num3) {
+    const minimum = Math.min(num1, num2, num3);
+    return minimum;
+}
+const minimumNumber = minNumber(34, 64, 9);
+console.log(minimumNumber);
 
+// using if -else
+const num1 = 84;
+const num2 = 75;
+const num3 = 77;
+
+if (num1 < num2 && num1 < num3) {
+    console.log(`${num1} is smaller`);
+}
+else if (num2 < num1 && num2 < num3) {
+    console.log(`${num2} is smaller`);
+}
+else {
+    console.log(`${num3} is smaller`);
+}
 
 ///////////////////////////////////////////
 
