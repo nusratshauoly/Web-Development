@@ -30,7 +30,9 @@
         <header>
             <h1>Welcome to my DOM</h1>
         </header>
-        <main>
+
+        <!-- // Module: 25-8: Create HTML elements using Javascript and appendChild -->
+        <main id="main-container">
             <section>
                 <h1>My Awesome DOM</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -45,8 +47,10 @@
             <!-- // Module:25-3: Traversing dom - getElementByClass VS getElementById -->
 
             <!-- // Module:25-4: Traversing dom - getElementByQuerySelector, querySelectorAll -->
+            <!-- // Module: 25-5: Dynamic style, getAttribute, setAttribute, innerText, innerHTML -->
             <section class="fruits-container">
-                <h1 id="fruits-title">fruits I like</h1>
+                <h1 id="fruits-title" class="some-class random-class">fruits I
+                    like</h1>
                 <ul>
                     <li>Apple</li>
                     <li>Banana</li>
@@ -54,9 +58,11 @@
                 </ul>
             </section>
 
-            <section>
+            <!-- // Module: 25-6: Styling dom properties, add and remove css class using JS -->
+            <section id="places-container" class="large-text">
                 <h1 class="places-title">Places I like to visit</h1>
-                <ul>
+                <!-- // Module: 25-8: Create HTML elements using Javascript and appendChild -->
+                <ul id="places-list">
                     <li class="important-places">Sundarban</li>
                     <li class="important-places">Bandarban</li>
                     <li class="important-places">Kataban</li>
@@ -79,8 +85,10 @@
             console.log('adding js inside the html file');
         </script>
         <!-- connect external javascript file  -->
-        <script src="index.js"></script>
+        <script src="./js/index.js"></script>
+
+        <!-- // Module: 25-8: Create HTML elements using Javascript and appendChild -->
+        <script src="./js/append.js"></script>
+        <script src="./js/stylejs.js"></script>
     </body>
 </html>
-
-<!-- Module: 25-2: Traversing dom - getElementsByTagName -->
