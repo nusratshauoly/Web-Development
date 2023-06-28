@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>More Events</title>
+    </head>
+    <body>
+        <h1>Explore More Events</h1>
+        <button id="btn-more">Events</button>
+
+        <input id="text-field" type="text">
+        <!-- -------------------------------------------------------------- -->
+        <!-- inline js -->
+        <script>
+            // *** for button
+            // (click) er moto r ekta event ache 
+            // 1. (mouseenter), mouse khali button e touch korlei eta operate korbe.
+            // 2. (mousemove),jotobar button er vitore mouse move korbo , totobar operate korbe.
+            document.getElementById('btn-more').addEventListener('mouseenter', function(){
+                console.log('event triggered');
+            })
+
+            // ----------------------------------------------------------------
+            //3. *** for text (focus => input e click korle focus hobe)
+            document.getElementById('text-field').addEventListener('focus', function(){
+                console.log('Event triggered inside the input field');
+            });
+
+
+            // 4. *** for text (blur => input er bahire click korle blur hobe)
+            document.getElementById('text-field').addEventListener('blur', function(){
+                console.log('Event triggered inside the input field blur');
+            });
+
+            // --------------------------------------------------------------
+            //5. *** for text (keydown = keyboard er kono key press korar jonno use kora hoy)
+            document.getElementById('text-field').addEventListener('keydown', function(event){
+                // (event => jei key press korbo sheta dekhabe), (target => kothay text er keydown kortesi? inputfield e), (value => input field e ki ki value press korbo & add hobe tar cheye 1 ta value kom dekhabe).
+                console.log(event.target.value);
+            });
+
+            // ----------------------------------------------------------------
+            // 6. *** for text (keydown = keyboard er kono key press korar jonno use kora hoy)
+            document.getElementById('text-field').addEventListener('keypress', function(event){
+                // (event => jei key press korbo sheta dekhabe), (target => kothay text er keydown kortesi? inputfield e), (value => input field e ki ki value press korbo & add hobe tar cheye 1 ta value kom dekhabe).
+                console.log(event.target.value);
+            });
+
+            // ---------------------------------------------------------------
+            // 7. *** for text (keydown = keyboard er kono key press korar jonno use kora hoy)
+            document.getElementById('text-field').addEventListener('keyup', function(event){
+                // (event => jei key press korbo sheta dekhabe), (target => kothay text er keydown kortesi? inputfield e), (value => input field e ki ki value press korbo & add hobe ta dekhabe).
+                console.log(event.target.value);
+            });
+        </script>
+
+    </body>
+</html>
