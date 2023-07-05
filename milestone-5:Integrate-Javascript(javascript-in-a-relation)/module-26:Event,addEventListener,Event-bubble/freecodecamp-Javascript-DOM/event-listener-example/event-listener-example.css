@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  
+    background: #466368;
+    background: linear-gradient(to left bottom, #648880, #293f50);
+    text-align: center;
+    position: relative;
+    color:aliceblue
+ 
+  
+}
+#main-heading{
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 30px;
+}
+.container{
+  
+    text-align: center;
+    margin-top: 10px;
+}
+
+button{
+   /* visibility: hidden; */
+   border: 3px solid white;
+   padding: 10px;
+}
+.boxes{
+    padding: 50px;
+    font-size: 24px;
+    margin: auto;
+    border-radius: 5px;    
+}
+/* content hidden korar jonno */
+.hidden-content{
+    display: none;
+}
+/* click korar por content show korar jonno */
+.hidden-content.reveal-btn{
+    display: block;
+}
