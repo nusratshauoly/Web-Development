@@ -30,6 +30,15 @@ div{
     border: 5px solid white;
     padding: 50px 75px;   
 }
-button{
+.button{
     padding: 10px;
+    font-size: 30px;
+    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid white;
+    background: none;
+    color: white;
+    display: block;
 }
