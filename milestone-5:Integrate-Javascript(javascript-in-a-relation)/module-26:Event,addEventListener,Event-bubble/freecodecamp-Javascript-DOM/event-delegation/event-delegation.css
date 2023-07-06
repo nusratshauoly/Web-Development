@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+     background: #466368;
+    background: linear-gradient(to left bottom, #648880, #293f50);
+    text-align: center;
+     border: 3px solid white;
+}
+#sports{
+   margin: 100px auto;
+} 
+li{
+    border: 2px solid white;
+    padding: 10px;
+    margin: 10px; 
+}
