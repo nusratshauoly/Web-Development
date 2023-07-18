@@ -81,8 +81,6 @@ console.log(otherPlace.innerText);
 const favouritePlace = document.getElementsByClassName('important-place');
 console.log(favouritePlace);
 
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Module:25-4: Traversing dom - getElementByQuerySelector, querySelectorAll
@@ -128,8 +126,8 @@ const fruitsBackgroundColor = document.getElementById('fruits-title').style.back
 
 
 // getAttribute('idName/ className') => element er class / id name ber korte parbo
-// fruitsColor.getAttribute('id');
-// fruitsColor.getAttribute('class');
+ fruitsColor.getAttribute('id');
+ fruitsColor.getAttribute('class');
 
 
 // element er shob gulo class ekshathe pawar jonno (.classList) o use kora jay
@@ -137,37 +135,37 @@ const fruitsBackgroundColor = document.getElementById('fruits-title').style.back
 fruitsColor.classList;
 
 // ** kono new class jodi dynamic vabe add korte chai taholeo parbo
-//fruitsColor.classList.add('new-class');
+fruitsColor.classList.add('new-class');
 // then check korte parbo add hoise naki
-//fruitsColor.classList;
+fruitsColor.classList;
 
 
 // ** (delete - class) kono new class jodi dynamic vabe delete korte chai taholeo parbo
-// fruitsColor.classList.delete('random-class');
-// fruitsColor.classList;
+ fruitsColor.classList.delete('random-class');
+ fruitsColor.classList;
 
 
 /////////////////////////////////////////////////////
 
 // (setAttribute) diye element er vitor kono kichu value set kora jay (first e class/id name, second e ki set korbo or kon value set korbo).
 
-// title.setAttribute('fruits-color', 'tooltip set by Javascript');
+title.setAttribute('fruits-color', 'tooltip set by Javascript');
 
 
 // **** getElementByClassName diye position ber korbo index er
-//document.getElementsByClassName('fruits-container')[0];
+document.getElementsByClassName('fruits-container')[0];
 
 // jodi index[0] er full innerHTML chai (/n = > new line)
 
-//document.getElementsByClassName('fruits-container')[0].innerHTML;
+document.getElementsByClassName('fruits-container')[0].innerHTML;
 
 // *** innerHTML er vitor change oredit o korte pari
 
-//document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2>ABC wow DOM is changing.</h2>';
+document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2>ABC wow DOM is changing.</h2>';
 
 
 // *** fullHTML er moto full text o pawa jay
-//document.getElementsByClassName('fruits-container')[0].innerText;
+document.getElementsByClassName('fruits-container')[0].innerText;
 
 // *** (innerText) mane holo HTML er vitorer jei text ta dekhte parbo.
 
@@ -179,9 +177,9 @@ fruitsColor.classList;
 // </div> */}
 
 // getting text
-// const div = document.getElementById('my-details');
-// const text = div.innerText;
-// console.log(text);
+ const div = document.getElementById('my-details');
+ const text = div.innerText;
+ console.log(text);
 
 // (output e only name and age show korbe)
 /*
@@ -194,9 +192,9 @@ Age: 12years
 ///////////////////////////////////////////////////
 
 // uses of (innerHTML) show kore
-// const div = document.getElementById('my-details');
-// const html = div.innerHTML;
-// console.log(html);
+ const div = document.getElementById('my-details');
+ const html = div.innerHTML;
+ console.log(html);
 // Output e HTML file er vitor ki ki tag ache shetao dekhabe
 
 /*
@@ -229,7 +227,7 @@ for (const section of sections) {
 }
 
 const placesContainer = document.getElementById('places-container');
-//placesContainer.style.backgroundColor = 'yellow';
+placesContainer.style.backgroundColor = 'yellow';
 placesContainer.classList.add('yellow-bg');
 placesContainer.classList.add('text-center');
 placesContainer.classList.remove('large-text');
@@ -296,7 +294,7 @@ li2.innerText = "another dynamic li";
 // then (placesUL) e (li2) ,(appendChild) diye push kore dibo
 placesUL.appendChild(li2);
 
-
+//////////////////////
 // *** we can show the (parentNode) of a (childNode), ekhane (placesUL) er (parentNode) ber korte parbo
 placesUL.parentNode;
 

@@ -7,7 +7,7 @@ numbers.slice(2, 4);
 [98, 45]
 
 
-// include (kono element atring er moddhe ache kina oi jinish ta dekhar jonno)
+// include (kono element string er moddhe ache kina oi jinish ta dekhar jonno)
 
 let name = 'Ariana grande is singing';
 name.includes('is');
