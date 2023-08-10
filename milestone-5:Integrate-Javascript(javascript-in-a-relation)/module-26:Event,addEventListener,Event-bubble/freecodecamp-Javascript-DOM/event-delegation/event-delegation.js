@@ -18,7 +18,7 @@
 */
 //--------- football -------------
 // football click korar por j change ashbe, (querySelector) dibo cause whole(ul) er vitor (li) select korbo tai.
-document.querySelector('#football')?.addEventListener('click', function (e) {
+document.querySelector('#football').addEventListener('click', function (e) {
     console.log('football is clicked');
 
     // click korar por background color change howar jonno
@@ -31,7 +31,7 @@ document.querySelector('#football')?.addEventListener('click', function (e) {
 
 //--------- basketball -------------
 // football click korar por j change ashbe, (querySelector) dibo cause whole(ul) er vitor (li) select korbo tai.
-document.querySelector('#basketball')?.addEventListener('click', function (e) {
+document.querySelector('#basketball').addEventListener('click', function (e) {
     console.log('basketball is clicked');
 
     // click korar por background color change howar jonno
@@ -45,7 +45,7 @@ document.querySelector('#basketball')?.addEventListener('click', function (e) {
 
 //--------- boxing -------------
 // football click korar por j change ashbe, (querySelector) dibo cause whole(ul) er vitor (li) select korbo tai.
-document.querySelector('#boxing')?.addEventListener('click', function (e) {
+document.querySelector('#boxing').addEventListener('click', function (e) {
     console.log('boxing is clicked');
 
     // click korar por background color change howar jonno
@@ -103,7 +103,7 @@ document.querySelector('#golf')?.addEventListener('click', function (e) {
 //  instead of attaching the eventlisteners directle to each of the list items here we can delegate the listening to the parent which is the (ul) here which has the id of sports so that when the li is clicked the listener of the parent element catches the bubbling event and performs our task which change the color of our background to lightgray when we clicked one of the boxes and also showcased some text inside of our console here.
 */
 // using event delegation (our target is the (li) items which has the id attribute which all of them do whichever one that we click on will display that specific sport + extra bit of text here of is clicked)
-document.querySelector('#sports')?.addEventListener('click', function (e) {
+document.querySelector('#sports').addEventListener('click', function (e) {
     console.log(e.target.getAttribute('id') + ' is clicked');
 
 
