@@ -28,7 +28,8 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
    // console.log(newWithdrawAmount);
 
 
-//jekono valid invalid value input e enter korar por input field ta clearhowar jonno  . clear er amount ta amra already 1ta varible e niye nisi tai ei code variable er niche likhbo
+//jekono valid invalid value input e enter korar por input field ta clear howar jonno. clear er amount ta amra already 1ta varible e niye nisi tai ei code variable er niche likhbo
+    
 // step-7: clear the input field
     withdrawField.value = '';
 
@@ -69,13 +70,13 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
 // validation check when withdraw more money than deposited money
     
     if (newWithdrawAmount > previousBalanceTotal) {
-        alert('Bank e eto tk nai');
+        alert("Your Bank doesn't have sufficient Balance");
 //  ekhane condition ta function er vitore. function oi jaygay stop korte chaile condition er vitor return kore dibo.
         return;
     }
 
 
-//---- cause of add step-4 here ------- beshi amount withdraw korte chaile total balance er cheye ----------(withdraw total take update kortesi ei step 4 e. tai jodi withdraw money (balance) er cheye beshi dei then alert ashleo shei withraw money value ta (withdraw) section e dekhabe tai ei step ta condition er pore likhbo cause jodi condition true hoy tahole r update korbena money value.r jodi false hoy tahole chole jabe mane value show korbe then condition er vitor o dhukbena and return o korbena.
+//---- cause of add step-4 here ------- beshi amount withdraw korte chaile total balance er cheye ----------(withdraw total take update kortesi ei step 4 e. tai jodi withdraw money (balance) er cheye beshi dei then alert ashleo shei withraw money value ta (withdraw) section e dekhabe tai ei step ta condition er pore likhbo cause jodi condition true hoy tahole r update korbena money value.r jodi false hoy tahole chole jabe mane value show korbe then condition er vitor o dhekbena and return o korbena.
     
 // step-4: calculate total withdraw amount
     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
@@ -100,42 +101,49 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
 })
 
 
+
+
+
 // // -------------------- full code ---------------------
 
-// // step-1: add event handler with the withdraw button
-// document.getElementById('btn-withdraw').addEventListener('click', function () {
+// step-1: add event handler with the withdraw button
+document.getElementById('btn-withdraw').addEventListener('click', function () {
 
-// // step-2: get the withdraw amount from the withdraw input field
-//     const withdrawField = document.getElementById('withdraw-field');
-//     const newWithdrawAmountString = withdrawField.value;
-//     const newWithdrawAmount = parseFloat(newWithdrawAmountString); 
+// step-2: get the withdraw amount from the withdraw input field
+    const withdrawField = document.getElementById('withdraw-field');
+    const newWithdrawAmountString = withdrawField.value;
+    const newWithdrawAmount = parseFloat(newWithdrawAmountString); 
 
-// // step-7: clear the input field
-//     withdrawField.value = '';
+// step-7: clear the input field
+    withdrawField.value = '';
 
-//     if (isNaN(newWithdrawAmount)) {
-//         alert('please provide a valid number');
-//         return;
-//     }
+    if (isNaN(newWithdrawAmount)) {
+        alert('please provide a valid number');
+        return;
+    }
 
-// // step-3: Get previous withdraw total
-//     const withdrawTotalElement = document.getElementById('withdraw-total');
-//     const previousWithdrawTotalString = withdrawTotalElement.innerText;
-//     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
+// step-3: Get previous withdraw total
+    const withdrawTotalElement = document.getElementById('withdraw-total');
+    const previousWithdrawTotalString = withdrawTotalElement.innerText;
+    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
-// // step-5: get the previous balance total
-//     const balanceTotalElement = document.getElementById('balance-total');
-//     const previousBalanceTotalString = balanceTotalElement.innerText;
-//     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
-//        if (newWithdrawAmount > previousBalanceTotal) {
-//         alert('Bank e eto tk nai');
-//         return;
-//        }
 
-// // step-4: calculate total withdraw amount
-//     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-//     withdrawTotalElement.innerText = currentWithdrawTotal;
-// // step-6: calculate new balance total
-//     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
-//     balanceTotalElement.innerText = newBalanceTotal;
+
+// step-5: get the previous balance total
+    const balanceTotalElement = document.getElementById('balance-total');
+    const previousBalanceTotalString = balanceTotalElement.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+       if (newWithdrawAmount > previousBalanceTotal) {
+        alert("Bank doesn't have sufficient money");
+        return;
+       }
+
+// step-4: calculate total withdraw amount
+    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+    withdrawTotalElement.innerText = currentWithdrawTotal;
+
+
+// step-6: calculate new balance total
+    const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+    balanceTotalElement.innerText = newBalanceTotal;
 
