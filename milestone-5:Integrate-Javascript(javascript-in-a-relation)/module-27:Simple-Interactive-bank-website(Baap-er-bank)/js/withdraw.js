@@ -127,6 +127,9 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const previousWithdrawTotalString = withdrawTotalElement.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
+// step-4: calculate total withdraw amount
+    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+    withdrawTotalElement.innerText = currentWithdrawTotal;
 
 
 // step-5: get the previous balance total
@@ -138,9 +141,6 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
         return;
        }
 
-// step-4: calculate total withdraw amount
-    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    withdrawTotalElement.innerText = currentWithdrawTotal;
 
 
 // step-6: calculate new balance total
