@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice html</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body{
+                font-size:14px;
+                font-family: 'Courier New', Courier, monospace;
+                color:#555;
+                width:200px;
+            }
+            #box #container{
+                width: 200px;
+            }
+            .navigation ul *{
+                width: 100px;
+                float: left;
+            }
+            input[type="text"]{
+                border: solid 1px #ccc;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+            p:first-letter{
+                display: block;
+                margin: left;
+                margin: 0 5px 5px 0;
+
+            }
+            ::selection{
+                background: green;
+            }
+
+            div p{
+                color: #222;
+            }
+
+            div>p{
+                color: #333;
+            } 
+
+             div+p{
+                color: #444;
+            } 
+
+             div~p{
+                color: #555;
+            } 
+
+            @import url(secondary.css);
+            body{
+            font-size:14px;
+                font-family: 'Courier New', Courier, monospace;
+                color:#555;
+                width:200px;
+            }
+            blockquote:before, blockquote:after{
+                content: '';
+                content: none;
+            }
+            table{
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+        </style>
+    </head>
+    <body id="top">
+        <a href="https://chat.openai.com/c/a54e70e6-1e82-4377-8cff-fece890d3c4e"
+            target="_blank">Chatgpt</a>
+        <h1>chatGPT</h1>
+        <h2 id="box">chatGPT</h2>
+        <h3 id="container">chatGPT</h3>
+        <h4>chatGPT</h4>
+        <h5>chatGPT</h5>
+        <h6>chatGPT</h6>
+        <p>chatgpt</p>
+        <nav class="navigation">
+            <ul>
+                <li>list</li>
+            </ul>
+        </nav>
+        <input type="text">
+
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A,
+                porro.
+            </p>
+        </div>
+
+        <div>
+            <p>
+                Lorem ipsum dolor,<em>sit amet consectetur</em> adipisicing <i>elit.
+                    A,
+                    porro.</i>
+            </p>
+        </div>
+
+        <div>
+            <p><strong>Lorem ipsum dolor, sit amet consectetur </strong>
+                adipisicing elit. <b> A,
+                    porro.</b>
+            </p>
+        </div>
+
+        <div>
+            <p class="social">
+                Lorem ipsum dolor, <span class="tooltip">sit amet</span>
+                consectetur adipisicing elit. A,
+                porro.
+            </p>
+        </div>
+
+        <header>my phone</header>
+        <section>
+            <nav>
+                <ul>
+                    <a href="home.html">Home</a>
+                    <a href="speakers.html">speakers</a>
+                </ul>
+            </nav>
+            <article>my personal phone</article>
+        </section>
+        <aside>my new phone</aside>
+        <footer><small>&copy; bye</small>bye</footer>
+        <a
+            href="mailto:https://mail.google.com/mail/u/0/#inbox/FMfcgzGtxSvtmvXLqnzzhxHtsZDJwlrM">email
+            me</a>
+        <a href="#top">back to top</a>
+        <a href="new.html">new file</a>
+        <footer>
+            <nav>
+                <ul>
+                    <a href="home.html">Home</a>
+                    <a href="speakers.html">speakers</a>
+                </ul>
+            </nav>
+        </footer>
+
+        <section>
+            <section>
+                <a href="speakers.html">
+                    <h3>Speakers</h3>
+                    <h5>workd-class speakers</h5>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi vitae dolorem odit at, temporibus rerum sunt eos
+                    repellendus soluta consequuntur magnam aut nihil quasi
+                    maiores doloremque officiis, animi, veritatis iusto?
+                </p>
+            </section>
+        </section>
+    </body>
+</html>
