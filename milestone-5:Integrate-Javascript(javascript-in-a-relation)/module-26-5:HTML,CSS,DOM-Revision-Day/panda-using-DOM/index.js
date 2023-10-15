@@ -105,40 +105,40 @@ const connectInput = document.getElementById("exampleInputEmail1").addEventListe
 
  function shoe3Image() {
  document.getElementById("shoe-3").src = "./images/milkshake-on-pink.jpeg";
- }
+};
 
  function shoe3OldImage() {
  document.getElementById("shoe-3").src = "images/shoes/shoe-3.png";
- }
+};
 
 // for bag - 1
 function bag1Image() {
  document.getElementById("bag-1").src = "./images/milkshake-on-pink.jpeg";
- }
+};
 
  function bag1OldImage() {
  document.getElementById("bag-1").src = "images/bags/bag-1.png";
- }
+};
 
 
 // for bag - 2
 function bag2Image() {
  document.getElementById("bag-2").src = "./images/milkshake-on-pink.jpeg";
- }
+};
 
  function bag2OldImage() {
  document.getElementById("bag-2").src = "images/bags/bag-2.png";
- }
+};
 
 
 //  for bag - 3
 function bag3Image() {
  document.getElementById("bag-3").src = "./images/milkshake-on-pink.jpeg";
- }
+};
 
  function bag3OldImage() {
  document.getElementById("bag-3").src = "images/bags/bag-3.png";
- }
+};
 
 //////////////////////////////////////
 

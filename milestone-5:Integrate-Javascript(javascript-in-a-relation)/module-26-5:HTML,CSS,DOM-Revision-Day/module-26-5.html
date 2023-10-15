@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button value="click me" onclick="alert('thank you')">Click me</button>
+
+        <div class="button-list" onclick="console.log('button-list')">
+            <div class="button-container"
+                onclick="console.log('button-container')">
+                <button class="button" onclick="console.log('button')">Click Me!</button>
+
+            </div>
+
+        </div>
+
+        <div class="button-list" onclick="console.log('button-list')">
+            <div class="button-container"
+                onclick="console.log('button-container')">
+                <button class="button" onclick="console.log('button')">Click Me!</button>
+            </div>
+        </div>
+
+        <div id="buttons">
+            <button class="buttonClass">Click me!</button>
+            <button class="buttonClass">Click me!</button>
+            <button class="buttonClass">Click me!</button>
+        </div>
+
+        <script>
+            document.getElementById('buttons').addEventListener('click', function(event){
+                if(event.target.className = "buttonClass"){
+                    console.log('click');
+                }
+            })
+        </script>
+
+    </body>
+</html>

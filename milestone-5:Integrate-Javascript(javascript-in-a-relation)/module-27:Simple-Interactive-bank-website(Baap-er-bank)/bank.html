@@ -3,40 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- ---------------------------------------
-Module: 27-4: Navigate to another page, Deposit, withdraw, Balance grid
--------------------------------------- -->
-        <title>Bank Inside</title>
-        <!-- tailwind css link -->
+        <title>Bank!!!</title>
+        <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <header>
-            <h1 class="text-5xl text-center">Let's get some <span
-                    class="font-semibold text-violet-600">Mooooooney</span>!!!</h1>
-        </header>
-        <main>
 
-            <!--  Module: 27-5:  deposit, withdraw and balance er id boshate hobe
-          ------------------------- Module: 27-5: Create Deposit and withdraw amount input Fields -------------------------------->
-            -->
+    <body>
+        <header class="mt-12">
+            <h1 class="text-5xl text-center">Let's get some <span
+                    class="font-semibold text-violet-600">Money</span>!!!</h1>
+        </header>
+
+        <main>
             <section class="mt-12">
                 <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
-
-                    <!-- deposit -->
+                    <!-- deposit total -->
                     <div class="bg-green-400 p-8 rounded-xl">
                         <h4 class="text-2xl">Deposit</h4>
-                        <!-- // shudhu amount ta change hobe but ($) sign ta same
-                        thakbe tai amount ta (span) tag er vitor rakhlam -->
                         <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
                     </div>
-                    <!-- withdraw -->
+                    <!-- withdraw total -->
                     <div class="bg-yellow-500 p-8 rounded-xl">
                         <h4 class="text-2xl">Withdraw</h4>
                         <h2 class="text-5xl">$<span id="withdraw-total">00</span></h2>
                     </div>
-                    <!-- balance -->
+                    <!-- balance total -->
                     <div class="bg-violet-400 p-8 rounded-xl">
                         <h4 class="text-2xl">Balance</h4>
                         <h2 class="text-5xl">$<span id="balance-total">1240</span></h2>
@@ -44,37 +35,34 @@ Module: 27-4: Navigate to another page, Deposit, withdraw, Balance grid
                 </div>
             </section>
 
-            <!-- ------------------------- Module: 27-5: Create Deposit and withdraw amount input Fields -------------------------------->
-            <!-- deposit and withdraw section -->
+            <!-- deposit and withdraw field section -->
             <section class="mt-12">
                 <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
+                    <!-- ------------------ deposit field --------------- -->
                     <div class="bg-fuchsia-400 p-8 rounded-xl">
                         <h4 class="text-2xl mb-4 text-white">Please Deposit</h4>
-
-                        <input class="w-9/12 block mb-4 px-3" type="text"
-                            id="deposit-field"
-                            placeholder="$ Amount you want to deposit">
-
+                        <input type="text" id="deposit-field"
+                            class="w-9/12 block mb-4 px-3"
+                            placeholder="$Amount you want to deposit">
                         <button id="btn-deposit"
                             class="bg-amber-600 hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg">Deposit</button>
-
                     </div>
-
-                    <div class="bg-sky-300 p-8 rounded-xl">
+                    <!-- ------------------ Withdraw field ------------- -->
+                    <div class="bg-amber-400 p-8 rounded-xl">
                         <h4 class="text-2xl mb-4 text-white">Please Withdraw</h4>
-
-                        <input class="w-9/12 block mb-4 px-3" type="text"
-                            id="withdraw-field"
-                            placeholder="$ Amount you want to withdraw">
-
+                        <input type="text" id="withdraw-field"
+                            class="w-9/12 block mb-4 px-3"
+                            placeholder="$Amount you want to withdraw">
                         <button id="btn-withdraw"
                             class="bg-amber-600 hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg">Withdraw</button>
                     </div>
+
                 </div>
             </section>
+
         </main>
-        <!-- external deposit javascript file -->
-        <script src="./js/deposit.js"></script>
-        <script src="./js/withdraw.js"></script>
+
+        <!-- External js -->
+        <script src="./JS/deposit.js"></script>
+        <script src="./JS/withdraw.js"></script>
     </body>
-</html>
