@@ -1,8 +1,71 @@
-//from (phone.js) and will be use both (case.js & phone.js)
+//////////////////// for phone case ///////////////////////
 
-// step - 1: 
-// step - 8:(from = phone.js) total phone & phoneCase total price(subtotal, tax, total) er jonno function declare korte hobe fron (step-7)
-// step - 8.5:(from = phone.js) ekhane parameter (elementId) declare korsi karon ekhane (subtotal, tax & total) er id diye eder total ber korbo . tai (elementId) dile jekono shomoy jetar total dibo tar id diye ber korte parbo.
+
+// -------------- 1. (step 1 + 2) from (case.js) Phone case (+) and (-) er kaj all same except (+) , (-) ----------------
+    //  parameter (isIncrease) nibo , jodi (+) kori tahole (case.js) e (updateCaseNumber(true)) diye call korbo or (updateCaseNumber(false)) diye call korbo.
+    // step - 1.1
+function updateCaseNumber(isIncrease) {
+    const caseNumberField = document.getElementById('case-number-field');
+    const caseNumberString = caseNumberField.value;
+    const previousCaseNumber = parseInt(caseNumberString);
+
+    // step - 1.2 + 2.2 from (case.js) case number 1 increase/decrease hobe tai (if/else) use korbo 
+    let newCaseNumber;
+    if (isIncrease) {
+        newCaseNumber = previousCaseNumber + 1;
+    }
+    else {
+        newCaseNumber = previousCaseNumber - 1;
+    }
+
+    // step - 1.3 + 2.3 from (case.js)
+    caseNumberField.value = newCaseNumber;
+    return newCaseNumber;
+
+}
+
+
+// step - 1.3 + 2.3 from (case.js) er (mobile case price increase + decrease) er code same tai etake 1 function er vitore declare korbo and je koyta (newCaseNumber) hobe oiguloke (59) diye (*) kore dibo.
+//  1 ta function er vitor 1 ta value parameter hishebe boshaye dile er value set hoy.
+function updateCaseTotalPrice(newCaseNumber) {
+    const caseTotalPrice = newCaseNumber * 59;
+    const caseTotalElement = document.getElementById('case-total');
+    caseTotalElement.innerText = caseTotalPrice;
+}
+
+
+
+//////////////////////////////////////////////////////////////
+
+//  //////////////////////// for Phone  /////////////////////
+//  ------- step - 1
+function updatePhoneNumber(isIncrease) {
+    const phoneNumberField = document.getElementById('phone-number-field');
+    const phoneNumberString = phoneNumberField.value;
+    const previousPhoneNumber = parseInt(phoneNumberString);
+
+    let newPhoneNumber;
+    if (isIncrease) {
+        newPhoneNumber = previousPhoneNumber + 1;
+    }
+    else {
+        newPhoneNumber = previousPhoneNumber - 1;
+    }
+    phoneNumberField.value = newPhoneNumber;
+    return newPhoneNumber;
+
+}
+function updatePhoneTotalPrice(newPhoneNumber) {
+    const phoneTotalPrice = newPhoneNumber * 1219;
+    const phoneTotalElement = document.getElementById('phone-total');
+    phoneTotalElement.innerText = phoneTotalPrice;
+} 
+
+
+////////////////////// for total money + tax  of phone and phone case /////////////////////
+
+// Module:29-5: (advanced) Calculate subtotal tax amount and final total
+    // step - 2: from (phone.js) -------------------- get text total balance  ------------------
 function getTextElementValueById(elementId) {
     const phoneTotalElement = document.getElementById(elementId);
     const currentPhoneTotalString = phoneTotalElement.innerText;
@@ -10,42 +73,37 @@ function getTextElementValueById(elementId) {
     return currentPhoneTotal;
 }
 
-// step - 4: subtotal element k function e declare korbo
-function setTextElementValueById(elementId, value){
+
+// step - 4: sub total value guloke text hishebe boshanor jonno
+function setTextElementValueById(elementId, value) {
     const subTotalElement = document.getElementById(elementId);
     subTotalElement.innerText = value;
-
 }
 
 
-// step - 2: calculate subtotal
-// step - 10:(from = phone.js) phone & phone case 2tar e plus icon er jonno eki code use hobe tai function use kore likhbo jate code repeat na hoy from (step-9)
+// step - 3: from(phone.js) ------- calculate subtotal
 function calculateSubTotal() {
-    // calculate total
     const currentPhoneTotal = getTextElementValueById('phone-total');
     const currentCaseTotal = getTextElementValueById('case-total');
-
+    // -------------- Add the sub total balance
     const currentSubTotal = currentPhoneTotal + currentCaseTotal;
-    // const subTotalElement = document.getElementById('sub-total');
-    // subTotalElement.innerText = currentSubTotal;
-// step - 5: call the (setTextElementValueById) function from (step - 4)
+    // step - 4.1 : (step - 4) er subtotal er innerText k ekhane declare korbo.....
     setTextElementValueById('sub-total', currentSubTotal);
-    
 
-
-// step - 3 : ------------------------ calculate tax --------------------------------
-    // ekhane tax money (.) er por 2 digits dekhabe tai (.toFixed(2)) nibo but it will become string k number e convert korbo (parseFloat) diye
-    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);  // tax 10% = 0.1
+    // -------------- step - 5: calculate tax
+    // (.) er por 2 digits and string k number return korar jonno
+    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
     const taxAmount = parseFloat(taxAmountString);
-
+    // step - 5.1 : (step - 4) er subtotal er innerText k ekhane declare korbo.....
     setTextElementValueById('tax-amount', taxAmount);
 
+    // ------------- step - 6: calculate final Amount
     const finalAmount = currentSubTotal + taxAmount;
     setTextElementValueById('final-total', finalAmount);
+
 }
 
-
-//  ------------------------------------ full code ---------------------------------------
+// ------------------------- full code -----------------------
 
 function getTextElementValueById(elementId) {
     const phoneTotalElement = document.getElementById(elementId);
@@ -53,20 +111,21 @@ function getTextElementValueById(elementId) {
     const currentPhoneTotal = parseInt(currentPhoneTotalString);
     return currentPhoneTotal;
 }
-function setTextElementValueById(elementId, value){
+
+function setTextElementValueById(elementId, value) {
     const subTotalElement = document.getElementById(elementId);
     subTotalElement.innerText = value;
 }
+
 function calculateSubTotal() {
-    // calculate total
     const currentPhoneTotal = getTextElementValueById('phone-total');
     const currentCaseTotal = getTextElementValueById('case-total');
-
     const currentSubTotal = currentPhoneTotal + currentCaseTotal;
     setTextElementValueById('sub-total', currentSubTotal);
-    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);  // tax 10% = 0.1
+    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
     const taxAmount = parseFloat(taxAmountString);
     setTextElementValueById('tax-amount', taxAmount);
     const finalAmount = currentSubTotal + taxAmount;
     setTextElementValueById('final-total', finalAmount);
+
 }
