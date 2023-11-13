@@ -4,14 +4,13 @@ body{
 .cart{
 	margin: 100px 0;
 	background-color: #f6f5fa;
-	padding: 60px 0;
+	padding: 60px 60px;
 }
-
 .cart-item{
 	background-color: #fff;
 	border-radius: 10px;
-	padding: 10px 20px;
 	margin-bottom: 20px;
+	padding: 15px 20px;
 }
 .center-item{
 	display: flex;
@@ -24,17 +23,17 @@ body{
 .cart-item h5{
 	padding: 0 45px;
 }
-.cart-item  .remove-item{
+.cart-item .remove-item{
 	width: 25px!important;
 }
 .btn-default{
 	background-color: #fff;
 }
-.cart-item .form-control{
+.form-control{
 	background-color: #f6f5fa;
 	border: none;
 	width: 65px;
-	border-radius:10px!important;
+	border-radius: 10px!important;
 	font-weight: 700;
 	font-size: 20px;
 }
@@ -49,6 +48,7 @@ body{
 	float: right;
 	padding: 10px 30px;
 	font-size: 19px;
+	font-weight: 700;
 	background-color: #2fbe70;
-	border: none;
+	border: none; 
 }

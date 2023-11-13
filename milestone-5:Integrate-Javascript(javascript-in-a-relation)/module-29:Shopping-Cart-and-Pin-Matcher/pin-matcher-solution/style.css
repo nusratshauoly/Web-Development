@@ -51,12 +51,12 @@ input[type='text']:focus {
     margin: 30px 0;
 }
 
-.calc-typed {
+/* .calc-typed {
 margin-top: 20px;
 font-size: 45px;
 text-align: right;
 color: #fff;
-}
+} */
 
 .calc-button-row {
 width: 100%;
@@ -76,9 +76,9 @@ margin-right: -4px;
 border-radius: 10px;
 cursor: pointer;
 }
-.blink-me {
+/* .blink-me {
 color: #E0B612;
-}
+} */
 .submit-btn {
     border: none;
     margin-top: 20px;

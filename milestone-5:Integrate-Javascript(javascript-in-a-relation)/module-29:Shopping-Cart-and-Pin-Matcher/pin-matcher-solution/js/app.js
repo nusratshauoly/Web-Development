@@ -1,5 +1,5 @@
 // ----------------- generate pin -----------------
-// Step - 2: kono number er length jante hole oi number er shathe (+ ' ') add korbo tahole tahole sheta number theke string hobe then jodi (4 digit) er number chai then (1000) diye (/) korlei bujha jabe.
+// Step - 2: kono number er length jante hole oi number er shathe (+ ' ') add korbo tahole sheta number theke string hobe then jodi (4 digit) er number chai then (1000) diye (/) korlei bujha jabe.
 function getPin() {
     const pin = generatePin();
 
@@ -32,14 +32,14 @@ document.getElementById('generate-pin').addEventListener('click', function(){
 // ---------------------- calculator -----------------------
 /*
    Task :
-   1. number gulo side by side input field e pront hobe
+   1. number gulo side by side input field e print korte hobe
    2. 'C' click korle puro input field clear hoye jabe
-   3. '<' click korle print kora digit theke lat er 1 ta digit kore delete hoye jabe.
+   3. '<' click korle print kora digit theke length er 1 ta digit kore delete hoye jabe.
 */
 
 //  step - 4 : use event bubble to create calculator to do that give id='calculator' in a whole calculator body div and create document & addEventListener with function & id... & set a parameter named (event) cause it's button and button e click korle kono (event) create hobe..
 document.getElementById('calculator').addEventListener('click', function (event) {
-    //5. (event.target.value/innerText) dile & oi button e click korle oi field er html code full dekhabe. string hishhebe.
+    //5. (event.target.value/innerText) dile & oi button e click korle oi field er html code full dekhabe. string hishebe.
     const number = event.target.innerText;
     //6. calculator input field
     const typedNumberField = document.getElementById('typed-numbers');
@@ -106,9 +106,10 @@ document.getElementById('verify-pin').addEventListener('click', function () {
     }
 })
 
-// ------------------------ ---------------------------------------- full code ------------------------------------------------------------------------------------------
+// ------------------------ ---------------------------------------- --------------------------- full code ------------------------------------------------------------------------------------------
 
 // ----------------- generate pin -----------------
+// 2.
 function getPin() {
     const pin = generatePin();
     const pinString = pin + '';
@@ -119,11 +120,13 @@ function getPin() {
         return getPin();
     }
 }
+// 1.
 function generatePin() {
     const random = Math.round(Math.random() * 10000);
     return random;
 }
 
+// 3.
 document.getElementById('generate-pin').addEventListener('click', function(){
     const pin = getPin();
     const displayPinField = document.getElementById('display-pin');
@@ -152,8 +155,7 @@ document.getElementById('calculator').addEventListener('click', function (event)
     }
 })
 
-
-  // --------------------------------- submit button ------------------------------------
+  // --------------------------- submit button -----------------------------------
 document.getElementById('verify-pin').addEventListener('click', function () {
     const displayPinField = document.getElementById('display-pin');
     const currentPin = displayPinField.value;

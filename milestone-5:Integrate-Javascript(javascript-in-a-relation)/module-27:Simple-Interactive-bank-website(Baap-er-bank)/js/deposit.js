@@ -1,31 +1,27 @@
-// button
 document.getElementById('btn-deposit').addEventListener('click', function () {
-// deposit field
+// ---------- deposit Field -----------
     const depositField = document.getElementById('deposit-field');
-    const newDepositFieldAmountString = depositField.value;
-    const newDepositFieldAmount = parseFloat(newDepositFieldAmountString);
+    const newDepositFieldString = depositField.value;
+    const newDepositField = parseFloat(newDepositFieldString);
     depositField.value = '';
 
-    if (isNaN(newDepositFieldAmount)) {
-        alert("Please Provide a valid Number!!!");
+    if(isNaN(newDepositField)) {
+        alert('Enter a valid Amount!!!');
         return;
     };
 
-// deposit total
-    const depositTotal = document.getElementById('deposit-total');
+
+    // ------------ Deposit Total ---------------
+    const depositTotal = document.getElementById('total-deposit');
     const previousDepositTotalString = depositTotal.innerText;
     const previousDepositTotal = parseFloat(previousDepositTotalString);
-    const currentDepositTotal = previousDepositTotal + newDepositFieldAmount;
-    depositTotal.innerText = currentDepositTotal;
+    const newDepositTotal = previousDepositTotal + newDepositField;
+    depositTotal.innerText = newDepositTotal;
 
-
-// balance total
-    const balanceTotal = document.getElementById('balance-total');
+    // ------------ Balance Total -------------
+    const balanceTotal = document.getElementById('total-balance');
     const previousBalanceTotalString = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
-
-    const currentBalanceTotal = previousBalanceTotal + newDepositFieldAmount;
-    balanceTotal.innerText = currentBalanceTotal;
-    
-
+    const newBalanceTotal = previousBalanceTotal + newDepositField;
+    balanceTotal.innerText = newBalanceTotal;
 })

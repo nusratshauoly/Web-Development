@@ -1,41 +1,35 @@
-// button
 document.getElementById('btn-withdraw').addEventListener('click', function () {
-// withdraw field
+    // --------- withdraw field -----------
     const withdrawField = document.getElementById('withdraw-field');
-    const newWithdrawFieldAmountString = withdrawField.value;
-    const newWithdrawFieldAmount = parseFloat(newWithdrawFieldAmountString);
+    const newWithdrawFieldString = withdrawField.value;
+    const newWithdrawField = parseFloat(newWithdrawFieldString);
     withdrawField.value = '';
 
-    if (isNaN(newWithdrawFieldAmount)) {
-        alert("Please Provide a valid Number!!!");
-        return;
-    };
-
-// withdraw total
-    const withdrawTotal = document.getElementById('withdraw-total');
-    const previousWithdrawTotalString = withdrawTotal.innerText;
-    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
-
-
-  
-// balance total
-    const balanceTotal = document.getElementById('balance-total');
-    const previousBalanceTotalString = balanceTotal.innerText;
-    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
-
-    // withdraw over money
- if (newWithdrawFieldAmount > previousBalanceTotal) {
-        alert("You don't have suffiecient balance!!!");
+    if (isNaN(newWithdrawField)) {
+        alert('Enter a valid number');
         return;
     }
 
-  // withdraw total
-    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawFieldAmount;
-    withdrawTotal.innerText = currentWithdrawTotal;
+    // -------- withdraw total ------------
+    const withdrawTotal = document.getElementById('total-withdraw');
+    const previousWithdrawTotalString = withdrawTotal.innerText;
+    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
+    const newWithdrawTotal = previousWithdrawTotal + newWithdrawField;
+    withdrawTotal.innerText = newWithdrawTotal;
 
 
-    // balance total
-    const currentBalanceTotal = previousBalanceTotal - newWithdrawFieldAmount;
-    balanceTotal.innerText = currentBalanceTotal;
+    // -------------- balance Total ---------------
+    const balanceTotal = document.getElementById('total-balance');
+    const previousBalanceTotalString = balanceTotal.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+
+    if (newWithdrawField > previousBalanceTotal) {
+        alert('Do not have sufficient balance!!!');
+        return;
+    }
+    const newBalanceTotal = previousBalanceTotal - newWithdrawField;
+    balanceTotal.innerText = newBalanceTotal;
+
 
 })
