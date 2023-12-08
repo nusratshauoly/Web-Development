@@ -122,7 +122,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // 7.2. check score if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // 7.3. finish the game
       // 8.1: when playing is finish
       playing = false;
@@ -179,7 +179,7 @@ const btnHold = document.querySelector('.btn--hold');
 
 let scores, currentScore, activePlayer, playing;
 
-// Starting conditions
+// Starting conditions or reset the new game
 const init = function () {
   scores = [0, 0];
   currentScore = 0;
@@ -191,17 +191,21 @@ const init = function () {
   current0El.textContent = 0;
   current1El.textContent = 0;
 
+  // remove player winner and active both player when starting / restarting a new game
   diceEl.classList.add('hidden');
   player0El.classList.remove('player--winner');
   player1El.classList.remove('player--winner');
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
 };
+// call the init function means click the newgame or start the game.
 init();
 
+// when switching the next player
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
+  //the value of activePlayer. If activePlayer is 0, it becomes 1, and if it's 1, it becomes 0.
   activePlayer = activePlayer === 0 ? 1 : 0;
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
@@ -230,6 +234,7 @@ btnRoll.addEventListener('click', function () {
   }
 });
 
+// when a active player starts playing
 btnHold.addEventListener('click', function () {
   if (playing) {
     // 1. Add current score to active player's score
@@ -252,10 +257,11 @@ btnHold.addEventListener('click', function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
     } else {
-      // Switch to the next player
+      // Switch to the next player (when a dice value 1 comes)
       switchPlayer();
     }
   }
 });
 
+// event listener function calling when restart the new game
 btnNew.addEventListener('click', init);

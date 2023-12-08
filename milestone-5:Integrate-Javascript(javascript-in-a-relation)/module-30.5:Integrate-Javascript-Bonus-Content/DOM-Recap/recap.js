@@ -174,3 +174,4 @@ else {
 
     // Answer will be => false cause it is object.
     console.log(Array.isArray(student));
+
