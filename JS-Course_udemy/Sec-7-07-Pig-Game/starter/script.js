@@ -31,7 +31,7 @@ let scores, currentScore, activePlayer, playing;
 // // * the two players position will be (0 and 1).
 // const scores = [0, 0];
 // let currentScore = 0;
-// // * 6.3.0: we need to know which player is the active player(which player is playing) when dice rolled (it will hold 0 if the current player is player0 and hold 1 if  player1 plays)
+// // * 6.3.0: we need to know which player is the active player(which player is playing) when dice rolled (it will hold 0 if the current player is player0 and hold 1 if player1 plays)
 // let activePlayer = 0;
 // // * 8. set a boolean value when playing is true and when finish the game playing is false
 // let playing = true;
