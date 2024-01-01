@@ -21,3 +21,7 @@ const subject = 'math';
 const subjectMarks = student.marks[subject];
 console.log(subjectMarks);
 
+
+// ❌ can not write like this
+const marks2 = student.marks.subject;
+console.log(marks2); // answer: undefined;
