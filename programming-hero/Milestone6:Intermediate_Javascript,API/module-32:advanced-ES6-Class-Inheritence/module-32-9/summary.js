@@ -13,5 +13,3 @@ student.marks?.math
 // 6. (must) prototypical Inheritance
 
 
-
-
