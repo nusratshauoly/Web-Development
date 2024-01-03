@@ -2,8 +2,6 @@
 const numbers = [12, 546, 56, 90]; // jokhon variable declare korbo tokhon e value dite hobe and reassign korte parbo na.
 
 
-
-
 // 2. let a number reassign korte parbo
 let salary = 450;
 salary = 455;
@@ -27,9 +25,6 @@ const element = `
    </div>
 `
 
-
-
-
 // 5. Arrow function
 const doubleIt = x => x * 2;
 const calculateSalary2 = (salary, tax, bonus) => salary - salary * tax + bonus;
@@ -41,14 +36,11 @@ const newAges = [...ages, 22, 24, 23];
 console.log(newAges);
 
 
-
-
-// 7. destructuring (...c is rest operator => x, y, z er por baki shobgulo (c) te add hobe )
-
-
+// 7. destructuring (...z is rest operator => a, b, c er por baki shobgulo (z) te add hobe )
 // object er moddhe position name and variable name same hote hobe
-const {x, y, z ...c} = {x: 45, y: 12, z: 33, name: 'Sakib Al Hasan', salary: 450000}
+const {a, b, c, ...z} = {a: 45, b: 67, c: 78, name: 'sakib', salary: 1200};
+
 
 
 // Array er moddhe position and variable name same na holeo hobe
-const [a, b, ...r] = [12, 45, 21, 65, 98];
+const [a, b, ...c] = [12, 13, 14, 15, 16];

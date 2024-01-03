@@ -19,7 +19,7 @@ const data = {
 console.log(data);
 console.log(data.count);
 // data object er vitor data array er first[0] position element er job ber korte hobe and egulo k 1 ta variable er moddhe rakhbo
-const firstJob = data.data[0].job
+const firstJob = data.data[0].job;
 console.log(firstJob);
 
 
