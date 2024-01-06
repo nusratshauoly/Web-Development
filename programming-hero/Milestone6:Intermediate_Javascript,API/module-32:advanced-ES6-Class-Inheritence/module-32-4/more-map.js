@@ -24,6 +24,7 @@ const firstLetters = friends.map(friend => friend[0]);
 console.log(firstLetters);
 
 // name length of each friends
+const friends = ['tom hanks', 'tom cruise', 'tom brady', 'tom solaiman'];
 const nameLengths = friends.map(friend => friend.length);
 console.log(nameLengths);
 

@@ -35,7 +35,6 @@ do {
     console.log(i);
     i++;
 } while (i < 5)
-
 // 3. while loop
 let array = [10, 20, 30, 40];
 let i = 0;
@@ -43,17 +42,14 @@ while (i < array.length) {
     console.log(array[i]);
     i++;
 }
-
 // 4. for...of
 let array = [10, 20, 30, 40];
 for (let i of array) {
     console.log(i);
 }
-
 // 5. map() method
 const names = ['lincoln', 'danial', 'tahina', 'meils'];
 let newArr = names.map(index) => console.log(index);
-
 // 6. forEach()
 let array = [10, 20, 30, 40];
 array.forEach((index) => {console.log(index)});

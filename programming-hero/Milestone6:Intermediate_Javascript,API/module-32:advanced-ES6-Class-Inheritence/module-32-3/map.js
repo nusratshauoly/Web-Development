@@ -76,7 +76,7 @@ function getDoubles(numbers) {
     }
     return output;
 }
-// ekhane (const doubled = number * 2;) doubled k amra ekta map function er vitor o rakhte pari + shei function ta call korte pari (can use arrow function instead of normal fnction).
+// ekhane (const doubled = number * 2;) doubled k amra ekta map function er vitor o rakhte pari + shei function ta call korte pari (can use arrow function instead of normal function).
 const doubleItArrow = number => number * 2;
 const makeDouble = numbers.map(doubleItArrow); 
 
