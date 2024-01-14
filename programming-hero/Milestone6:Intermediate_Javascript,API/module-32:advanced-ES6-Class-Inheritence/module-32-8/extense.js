@@ -12,7 +12,7 @@ class TeamMember{
         this.location = location;
     }
     provideFeedback() {
-        console.log(`${this.name} thank you for your feedback.`);
+        console.log(`${name} thank you for your feedback.`);
     }
 
 }
@@ -112,3 +112,75 @@ const bipasha = new JobPlacement('bipasa', 'kolkata', 'india');
 console.log(bipasha);
 
 
+//  ----------- full code ------------
+class TeamMember{
+    name;
+    location;
+    constructor (name, location) {
+        this.name = name;
+        this.location = location;
+    }
+    provideFeedback() {
+        console.log(`${this.name} thank you for your feedback.`);
+    }
+}
+class Instructor extends TeamMember{
+    // name;
+    designation = 'Web course Instructor'
+    team = 'web team'
+    // location;
+    
+    constructor (name, location) {
+        super(name, location);
+    }
+    
+    startSupportSession(time) {
+        console.log(`start the support session at ${time}`);
+    }
+    createQuiz(module) {
+        console.log(`please create quiz for module ${module}`);
+    }
+}
+// Another class developer team
+class Developer extends TeamMember{
+    // name;
+    designation = 'Web course Instructor'
+    team = 'web team'
+    tech;
+    // location;
+    constructor (name, location, tech) {
+        super(name, location);
+        this.tech = tech;    
+    }
+    developFeature(feature) {
+        console.log(`Please develop the ${feature}`);
+    }
+    release(version) {
+        console.log(`please release the version ${version}`);
+    }
+}
+// Another class job placement team
+class JobPlacement extends TeamMember{
+    // name;
+    designation = 'Job Placement Commandos'
+    team = 'Job Placement'
+    region;
+    // location;
+    constructor (name, location, tech) {
+        super(name, location);
+        this.region = region;    
+    }
+    provideResume(feature) {
+        console.log(`Please develop the ${feature}`);
+    }
+    prepareStudent(version) {
+        console.log(`please release the version ${version}`);
+    }
+}
+
+// input given
+const alia = new Developer('Alia Bhatt', 'Dhaka', 'React');
+console.log(alia);
+alia.provideFeedback();
+const bipasha = new JobPlacement('bipasa', 'kolkata', 'india');
+console.log(bipasha);
