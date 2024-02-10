@@ -1,10 +1,10 @@
-// video- 18.2
+// video- 17.2
 var friendsAge = [11, 12, 13, 14, 15];
 var vowels = ['a', 'e', 'i', 'o', 'u'];
 console.log(vowels.length);
 console.log(friendsAge.length);
 
-// video- 18.3
+// video- 17.3
 //1. get element by index
 //array position count 0 diye shuru hoy
 var numbers = [45, 76, 67, 12, 98, 89];
@@ -25,7 +25,7 @@ console.log(positionIndex);
 var indexPosition1 = numbers.indexOf(77);
 console.log(indexPosition1);
 
-// video -  18.4
+// video -  17.4
 //push pop
 var numbers = [78, 45, 98, 45];
 numbers.push(65); 
@@ -40,7 +40,7 @@ var unShiftElement = numbers.unshift(13);
 console.log(unShiftElement);
 
 
-// 18.5:  comparison
+// 17.5:  comparison
 // less than
 console.log(5 < 6);
 // greater than
@@ -71,7 +71,7 @@ console.log(num1 > num2);
 // money1 > money2 || height1 > height2;
 
 
-// 18.6
+// 17.6
 var iphonePrice = 79000;
 var myBudget = 9500;
 
@@ -94,7 +94,7 @@ if(chickenPrice < myMoney){
     console.log("alu khabo");
 }
 
-// 18.7
+// 17.7
 var isGraduated = true;
 var salary = 75000;
 var cars = 1;
@@ -106,7 +106,7 @@ else{
     console.log('lets not get married');
 }
 
-// 18.8
+// 17.8
 var money = 10;
 var danishPrice = 45;
 var butterBread = 35;

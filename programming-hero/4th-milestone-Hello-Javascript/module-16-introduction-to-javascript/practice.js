@@ -1,10 +1,12 @@
+// video- 16.1
 console.log(3);
-// video- 17.3
+
+// video- 16.3
 var price = 30;
 var age = 25;
 var temperature = 38; 
 
-// video - 17.4
+// video - 16.4
 // numeric
 var person = 'nusrat';
 var name = "nusrat jahan";
@@ -12,7 +14,7 @@ var serious = true;
 var isPassed = false;
 
 
-// video- 17.6
+// video- 16.6
 var onionPrice = 20;
 var eggPrice = 10;
 var totalPrice = onionPrice + eggPrice;
@@ -31,6 +33,7 @@ var orangeQuantity = 7;
 var totalPrice = (orangePrice * orangeQuantity);
 console.log(totalPrice);
 
+
 // divison
 var money = 500;
 var player = 10;
@@ -38,7 +41,7 @@ var eachPlayer = money / player;
 console.log(eachPlayer);
 
 
-// video-17.7
+// video-16.7
 
 var tomatoPrice = 25;
 tomatoPrice = tomatoPrice + 30;
@@ -52,7 +55,7 @@ age = age + 1;
 age++;
 console.log(age);
 
-// video - 17.8
+// video - 16.8
 var firstName = 'jennie';
 var lastName = 'kim';
 var fullName = firstName + ' ' + lastName;
@@ -69,7 +72,7 @@ var gpa = 3.4;
 var gpaNumber = parseFloat(gpa);
 console.log(gpaNumber);
 
-// video - 17.9:
+// video - 16.9:
 
 var price = 100;
 console.log(typeof price);

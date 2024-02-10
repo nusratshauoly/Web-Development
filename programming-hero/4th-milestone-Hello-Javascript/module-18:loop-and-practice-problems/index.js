@@ -1,4 +1,5 @@
-//19.3
+
+//18.3
 
 // while condition
 //1.loop variable
@@ -33,7 +34,7 @@ while(number <= 10){
    number = number + 2;
 }
 
-// 19.4: 
+// 18.4: 
 
 // 1 to 100 all odd number
 var number = 1;
@@ -69,7 +70,7 @@ for(var i = 1; i <= 20; i+=2){
     console.log(i);
 }
 
-// 19.5: run a loop for each element
+// 18.5: run a loop for each element
 
 // target: display every elements of an array using for loop
 var numbers = [45, 87, 89, 56, 32, 51, 25, 51, 32];
@@ -86,7 +87,7 @@ for(var i = 0; i < items.length; i++){
     console.log(item);
 }
 
-// 19.6: break and continue
+// 18.6: break and continue
 // break condition using for loop
 for(var i = 0; i <= 20; i++){
     console.log(i);
@@ -139,7 +140,7 @@ for(var i = 0; i < numbers.length; i++){ //array te jokhon  ashbe tokhon e conti
 }
 
 
-// 19.7 for and while loop in a reverse way
+// 18.7 for and while loop in a reverse way
 
 // while inverse way
 var num = 1;
@@ -163,6 +164,20 @@ for(var i = 10; i >= 1; i--){
     console.log(i);
 }
 
-// video - 19.8: 
+// video - 18.10: 
 
+/*
+---------------
+Loop
+---------------
+1. Display "Ajke amar mon valo nei" for 39 times
+2. Display numbers between 58 to 98
+3. Show all even numbers from 412 to 456
+4. show all odd numbers 581 to 623
+5. Difference between while loop and for loop
+6. Declare an array for all the topics that you have learned last few days and display them as output
+7. Create an array for all the mobile phones. Display all the elements of the array by using a while loop
+8. Run a loop from 30 to 86. this loop will stop if the values get higher than 44.
+9. Write the price of the books that you have. Display the prices if the prices is lower than 200.
 
+*/
