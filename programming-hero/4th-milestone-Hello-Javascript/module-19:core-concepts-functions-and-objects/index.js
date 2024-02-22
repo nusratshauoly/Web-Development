@@ -1,4 +1,4 @@
-//video - 20.1
+//video - 19.1
 
 //slice
 let numbers = [1, 8, 98, 45, 65, 71, 63];
@@ -19,12 +19,12 @@ name.substring(4, 10);
 
 
 // array theke pete parbo value but set korte parbona etake bole ( immutable ).
-name[1] = 'x';
+name[1] = 'x'; ❌
 
 
 ////////////////////////////////////////////
 
-// video - 20.2 : Declare a function, call function, function vs loop:
+// video - 19.2 : Declare a function, call function, function vs loop:
 
 // function koyek line code er ekta addition(block of code). jeta ekta fixed work complete kore
 
@@ -48,7 +48,7 @@ turnOnFan();
 //when give parameter value then function call korar shomoy value dite hobe function name er vitor
 function bringSingara(money){
     console.log('mama singara den');
-     console.log(money);
+    console.log(money);
 }
 bringSingara(100);
 
@@ -56,7 +56,7 @@ bringSingara(100);
 
 
 
-// 20.3:
+// 19.3:
 // return parameter
 function bringSingara(money){
     console.log('eto taka disen: ', money);
@@ -82,7 +82,7 @@ function sum(a, b, c, d, e){
 sum(15, 98, 56, 7, 9);
 //parameter declare kore variable er moto eta shudhumatro available hocche function j declare korsi er vitore bahir theke access korte parbona.
 
-// video - 20.4:
+// video - 19.4:
 
 function add(number1, number2){
     console.log(number1, number2);
@@ -107,7 +107,7 @@ console.log('total', total);
 
 
 
-// another function
+// ////  another function /////
 function bringSingara(money){
      let singaraPrice = 10;
      let quantity = money / singaraPrice;
@@ -127,7 +127,7 @@ console.log('eating singaras: ', singaras);
 
 
 
-// video - 20.5
+// video - 19.5
 
 // function functionName(prameters){
 //     // function body
@@ -169,7 +169,7 @@ const finalResult = add(result1, result2);
 ////////////////////////////////////////////////////
 
 
-// video - 20.6
+// video - 19.6
 
 let student = { 
     id: 115, 
@@ -201,7 +201,7 @@ myComputer.processor ='i79';
 console.log(myComputer);
 
 
-// video- 20.7: 
+// video- 19.7: 
 
 let shoppingCart = {
     books:3,
@@ -256,7 +256,7 @@ console.log(shoppingCart);
 
 
 
-// video - 20.8:
+// video - 19.8:
 
 // array vs object
 
@@ -355,7 +355,7 @@ console.log(zooFood[animal]);
 
 
 
-// video - 20.9:
+// video - 19.9:
 //const color = '';
 //const color = 'purple';
 const color = 'yellow';
@@ -436,5 +436,52 @@ shoppingCart[propertyName] = 89;
 console.log(shoppingCart);
 
 
+//   /// 
+// 19.10
+
+/*
+-----------------------------
+VARIABLE
+------------------------------
+1. what is Javascript?
+2. How does Javascript works?
+3. What is variable?
+4. Declare a variable?
+5. Types of variable? How can you find a type of variable?
+6. Primitive and non primitive data types
+7. Naming convention of js variables?
+8. Math operations +, -, *, /, %
+9. Short hand : +=, -=, *=, /=
+10. ++, --
+11. parseInt, parseFloat
+12. toFixed
+
+*/
+
+/*
+-----------------------------
+ARRAY
+-----------------------------
+1. What is the purpose?
+2. How to declare an array in JS?
+3. Number of elements in an Array?
+4. What is Index?
+5. Find the value of an element by Index?
+6. Change an element by Index?
+7. get the ndex of an element by the value?
+8. What does it mean when you get undefined while getting the value of an element?
+9. How can you add an element to an array?
+10. How can you remove the last element of an array?
+11. Add an element at the first position of an array?
+12. Remove the first element of an array?  
+*/
 
 
+/*
+--------------------------
+conditionals
+--------------------------
+1. meaning of: >, <, <=, >=, !=, ===, ~==
+2. Meaning of &&
+3. Meaning of ||
+*/

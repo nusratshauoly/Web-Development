@@ -1,4 +1,4 @@
-//Module- 21-0: What are functions:
+//Module- 20-0: What are functions:
 // retrun square2 and square4 to console outside of the function.
 let n = 2;
 //let n = 4;
@@ -20,7 +20,7 @@ function square(num){
 square(n);
 square(4);
 
-// Module- 21-1: JS Concepts recap, var, let and const:
+// Module- 20-1: JS Concepts recap, var, let and const:
 
 // 1. variable:
 var myName = 'Khan';
@@ -78,7 +78,7 @@ console.log(age, countryName);
 
 ///////////////////////////////
 
-// Module-21-2: Unit Convert Inch to Feet, miles to kilometer:
+// Module-20-2: Unit Convert Inch to Feet, miles to kilometer:
 
 /*
 4. Inch to Feet
@@ -136,7 +136,7 @@ console.log('the distance is', kilometer);
 
 //////////////////////////////
 
-// Module - 21-3: Check even and odd number using function:
+// Module - 20-3: Check even and odd number using function:
 
 /*
 6. Even and Odd
@@ -169,7 +169,7 @@ isEven(303);
 
 /////////////////////////////
 
-// Module - 21-4: Check whether a year is a Leap Year or not (simplified way):
+// Module - 20-4: Check whether a year is a Leap Year or not (simplified way):
 
 /*
 7. Kono 1 ta year leap year kina sheta ber kora
@@ -210,7 +210,7 @@ function isLeapYear(year){
 
  /////////////////////////
 
-// Module - 21 - 5: Calculate Sum of all numbers of an array
+// Module - 20 - 5: Calculate Sum of all numbers of an array
 
 /*
 8. Write  a function findOddSum() that will take the array [5,7,8,10,45,30] as the input prameter and will return the sum of the odd numbers.
@@ -255,7 +255,7 @@ sumOfAnArray(myNumbers);
 
 ////////////////////////////
 
-// Module - 21 -6: Get Odd Numbers of an array and get odd Sum of an array:
+// Module - 20 -6: Get Odd Numbers of an array and get odd Sum of an array:
 /*
 9. kono 1 ta array te jeshokol bijor(odd) number ase shegulo ber korbo and add korbo
 */
@@ -308,7 +308,7 @@ console.log('odd number sum', oddNumberSum);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Module-21-7: Calculate Factorial of a number using for loop:
+// Module-20-7: Calculate Factorial of a number using for loop:
 
 // Calculate Factorial of a number using for loop:
 // adding 1 to 7 numbers: 1 + 2 + 3 + 4 + 5 + 6 + 7
@@ -362,7 +362,7 @@ console.log('factorial of:',number, fact);
 
 ///////////////////////////////
 
-// Module- 21-8: Factorial using a while loop or a decrementing loop:
+// Module- 20-8: Factorial using a while loop or a decrementing loop:
 
 // 11. Calculate Factorial of a number using while loop:
 
@@ -391,7 +391,7 @@ function factorial(number){
 
  /////////////////////////
 
- //Module-21-9: Module Summary and Simple Javascript debug: 
+ //Module-20-9: Module Summary and Simple Javascript debug: 
 
 //  finding debug
 // each step run kore kore dekhte hobe and bug gulo fix korte hobe.
