@@ -230,6 +230,6 @@ for (let i = 1; i <= n; i++){
 console.log(arr);
 
 let sum = arr.reduce((res, curr) => {
-    return res, curr;
+    return res + curr;
 })
 console.log(sum);

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- write the inline js command in (script.js) file -->
+        <!-- ---------- event handling ----------- -->
+        <button
+            onclick="console.log('button was clicked'); alert('hello')">click
+            me!</button>
+
+        <!-- ondblclick => double click -->
+        <button ondblclick="console.log('button was clicked 2 times')">click me
+            2
+            times!</button>
+
+        <div onmouseover="console.log('you are inside div')">this is a box</div>
+
+        <!-- ---------------------- -->
+        <button id="btn1">click
+            me!</button>
+        <div>this is a box</div>
+
+        <!-- Practice
+ Question - 1: create a toggle button that changes the screen to dark-mode when clicked & light-mode when clicked again. -->
+        <button id="mode">Change mode</button>
+        <p>Welcome to my website</p>
+        <script src="script.js"></script>
+    </body>
+</html>

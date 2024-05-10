@@ -1,0 +1,22 @@
+h1{
+    color: blue;
+    background-color: yellow;
+}
+body{
+    background-color: pink;
+}
+button{
+    color: white;
+    background-color: blue;
+}
+
+
+/*  2. question: Create 3 divs with common class name - "box". Access them & add some unique text to each of them. */
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: teal;
+    margin: 10px;
+    border: 10px solid blue;
+    text-align: center;
+}
