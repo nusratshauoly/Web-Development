@@ -1,4 +1,4 @@
-// Module- 25-1: What is Dom, Connect your JS file with html file
+// Module- 24-1: What is Dom, Connect your JS file with html file
 
 console.log('hello from js');
 
@@ -9,7 +9,7 @@ console.log(document);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// Module: 25-2: Traversing dom - getElementsByTagName
+// Module: 24-2: Traversing dom - getElementsByTagName
 
 
 
@@ -44,7 +44,7 @@ for (const h1 of allHeadings) {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Module:25-3: Traversing dom - getElementByClass VS getElementById
+// Module:24-3: Traversing dom - getElementByClass VS getElementById
 
 // ***** document.getElementById => directly give us the element cause id 1 ta element er e hoy. html er id tag show, style change and aro onek kichu korar jonno use kora hoy (Id only one time for unique cause use korte hoy)
 
@@ -83,7 +83,7 @@ console.log(favouritePlace);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Module:25-4: Traversing dom - getElementByQuerySelector, querySelectorAll
+// Module:24-4: Traversing dom - getElementByQuerySelector, querySelectorAll
 
 //** querySelectorAll => kono fixed class or id er jonno use kora hoy, like if i want to select some (li)and use it the (querySelectorAll) not all the (li).
 document.querySelectorAll('#fruits-title');
@@ -116,7 +116,7 @@ console.log(firstElement.innerText);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Module: 25-5: Dynamic style, getAttribute, setAttribute, innerText, innerHTML
+// Module: 24-5: Dynamic style, getAttribute, setAttribute, innerText, innerHTML
 
 //*** (.getElementById) = css style set korte parbo
 // **** we can also set style such as color, background-color & others in Id by adding(.style.color = 'color name')
@@ -209,7 +209,7 @@ Age: 12years
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// Module: 25-6: Styling dom properties, add and remove css class using JS
+// Module: 24-6: Styling dom properties, add and remove css class using JS
 
 // html file e kotogulo section ache ta ber korar jonno.
 const sections = document.querySelectorAll('section');
@@ -238,7 +238,7 @@ placesContainer.classList.remove('large-text');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Module: 25-7: NodeList, htmlcollection, parentNode, childNodes, createElement
+// Module: 24-7: NodeList, htmlcollection, parentNode, childNodes, createElement
 
 // *** website er inspect e jeye likhbo
 
@@ -274,18 +274,18 @@ placesContainer.childNodes[3].childNodes[5].nextSibling;
 const placesUL = document.querySelector('#places-container ul');
 
 // then new (li) add korbo (.createElement) used create/ add new tag or element
-const li = document.createElement('p');
+const p = document.createElement('p');
 document.createElement('span');
 document.createElement('div');
 document.createElement('li');
 document.createElement('section');
 
 // ** jodi (li) create korte chai shudhu (li)creat korle hobena , er vitor text o create korte hobe er jonno (innerText use korbo)
-li.innerText = "Brand new place to go";
+p.innerText = "Brand new place to go";
 
 // ** now (placesUL) variable e (li) push korbo with (append). its like (push), used to add new value 
 // ** ekhane (li) add korbo child hishebe
-placesUL.appendChild(li);
+placesUL.appendChild(p);
 
 // new variable declare kore child li create korbo.
 const li2 = document.createElement('li');
@@ -313,7 +313,7 @@ placesUL.parentNode.parentNode.parentNode.parentNode.parentNode;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Module: 25-8: Create HTML elements using Javascript and appendChild
+// Module: 24-8: Create HTML elements using Javascript and appendChild
 
 // ** jokhon onek gulo file or folder thakbe tokhon js file upore evabe (console.log(index.js); filename diye dibo jate konta kon file confusion na thake
 
@@ -392,5 +392,39 @@ mainContainer.appendChild(sectionDress);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+// Module: 24-9: Module Summary (DOM Review)
 // Module: 25-9: Module Summary (DOM Review)
+
+console.log('summary file');
+
+const allLi = document.getElementsByTagName('li');
+console.log(allLi);
+
+
+const allTitles = document.getElementsByClassName('section-title');
+console.log(allTitles);
+
+
+const secondSection = document.getElementById('second-section');
+console.log(secondSection);
+secondSection.style.color = 'violet';
+secondSection.style.backgroundColor = 'steelblue';
+
+
+// document.querySelectorAll => output will be the nodelist
+// document.querySelectorAll => will give the first matching element
+// traversing the nodeList, nodechild, previousSiblings, nextSiblings
+
+
+
+// 1. where to add
+const secondList = document.getElementById('second-list');
+
+// what to add
+const li = document.createElement('li');
+li.innerText = 'My dynamic item';
+
+secondList.appendChild(li);
+
+
 
