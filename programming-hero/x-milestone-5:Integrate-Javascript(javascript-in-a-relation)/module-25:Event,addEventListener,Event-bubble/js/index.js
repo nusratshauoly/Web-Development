@@ -2,7 +2,7 @@ console.log('this is separate JS file');
 
 ////////////////////// option 2 ////////////////////////
 
-// ----------------------------------------------------------Module: 26-2: Add onclick handler directly or via javascript ----------------------------------------------
+// ----------------------------------------------------------Module: 25-2: Add onclick handler directly or via javascript ----------------------------------------------
 
 //1. option-1: directly set on the HTML element
 
@@ -44,7 +44,7 @@ console.log('this is separate JS file');
 
 
 
-// ----------------------------------------------------------Module: 26-3: Different ways to use addEventListener on a button --------------------------------------------------
+// ----------------------------------------------------------Module: 25-3: Different ways to use addEventListener on a button --------------------------------------------------
 
 // ------------------------------------------------------                      option 4:                       ------------------------------------------------------
     //  <button id="make-pink">make Pink</button>

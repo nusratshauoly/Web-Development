@@ -412,7 +412,7 @@ secondSection.style.backgroundColor = 'steelblue';
 
 
 // document.querySelectorAll => output will be the nodelist
-// document.querySelectorAll => will give the first matching element
+// document.querySelector => will give the first matching element
 // traversing the nodeList, nodechild, previousSiblings, nextSiblings
 
 

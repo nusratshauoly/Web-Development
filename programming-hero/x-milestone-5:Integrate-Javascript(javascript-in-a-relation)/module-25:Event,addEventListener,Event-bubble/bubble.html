@@ -71,7 +71,7 @@
 
 // ----------------------------------------------------------------------------
 
-//4. tai jodi shudhu (item-2) ta show korate chai r kono  kichu show korbena same parameter holeo
+//4. tai jodi shudhu (item-2) ta show korate chai r kono  kichu show korbena same parameter holeo (event bubble k stop korte hole (stopPropagation) use korbo. )
             document.getElementById('item-2').addEventListener('click', function(event){
                 console.log('Item-2 clicked');
                 event.stopImmediatePropagation();
