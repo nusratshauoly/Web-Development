@@ -1,18 +1,30 @@
+document.getElementById('withdraw-btn').addEventListener('click', function () {
+    // withdraw Input
+     const withdrawInput = getInputFieldById('withdraw-field');
+     const currentBalance = getTextElementValueById('balance-total');
 
-     // withdraw input field
-    
-    // previous balance of deposit total
-    
-    // calculate new withdraw total
-    
-    // set innertext of withdraw total value
-    
+    // invalid input
+    if (withdrawInput === undefined || withdrawInput <= 0) {
+        return;
+    }
+     
+     // insufficient value
+     if (withdrawInput > currentBalance) {
+          alert('Insufficient balance!!!');
+          return;
+     }
 
-    // get previous balance total by using the function
-    
+    // withdraw total
+    const withdrawTotal = getTextElementValueById('withdraw-total');
+    const newWithdrawTotal = withdrawTotal + withdrawInput;
 
-    // can't have enough balance
-    
+    // set InnerText in deposit total
+    setInnerTextElementValueById('withdraw-total', newWithdrawTotal);
 
-    // set innertext of balance total value
-    
+    // balance total
+      const balanceTotal = getTextElementValueById('balance-total');
+    const newBalanceTotal = balanceTotal - withdrawInput;
+
+    // set InnerText in deposit total
+    setInnerTextElementValueById('balance-total', newBalanceTotal);
+})
