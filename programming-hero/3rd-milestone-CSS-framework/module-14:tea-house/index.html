@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tea house</title>
+        <!-- tailwind and daisy UI -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+            rel="stylesheet">
+
+        <!-- font - awesome link -->
+        <script src="https://kit.fontawesome.com/f4b191b67e.js"
+            crossorigin="anonymous"></script>
+
+        <style>
+            /* <uniquifier>: Use a unique and descriptive class name */
+           /* <weight>: Use a value from 200 to 800 */
+
+            .manrope-font {
+            font-family: "Manrope", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            }
+        </style>
+
+        <!-- taiwind css custom color -->
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    'gradient-start': '#ff8938',
+                    'gradient-end': '#f00',
+                }
+                }
+            }
+            }
+        </script>
+
+    </head>
+    <body class="manrope-font">
+        <!-- ---------------- header ------------- -->
+        <!-- (container) frim tailwind is for padding from all of the page and (mx-auto) is for keep the content middle of the page -->
+        <header class="container mx-auto">
+            <!-- ******* (Hero with figure but reverse order) for header from daisyUI ******** -->
+
+            <!-- don't want to use (hero) (min-h-screen bg-base-200) so remove this -->
+            <div class="my-20">
+                <!-- remove (reverse) from (lg:flex-row-reverse) -->
+                <!-- remove (hero-content) -->
+                <div
+                    class="flex justify-between items-center flex-col lg:flex-row">
+                    <div>
+                        <!-- (text-5xl) and (font-bold) remove and put (text-7xl) and (font-extrabold) -->
+                        <h1 class="text-7xl font-extrabold">It's good <br>
+                            tea time at the <br>
+                            Tea House</h1>
+                        <p class="py-6">Tea and Botanical Solutions Supplier
+                            Give Optimum Satisfaction To Your Taste Buds.</p>
+                        <button
+                            class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white">Explore
+                            More <i
+                                class="fa-solid fa-arrow-trend-up"></i></button>
+                    </div>
+
+                    <!-- make a div and keep image and star image font inside  this div -->
+                    <div>
+                        <!-- keep the image and set it here after child(div) of a parent(div) -->
+
+                        <!-- remove (rounded-lg shadow-2xl) from image-->
+                        <img
+                            src="./images/banner.png"
+                            class />
+
+                        <!-- --- raibgs badge ---- -->
+                        <!-- make a div to create new tag over the image -->
+                        <!-- icon and font k pashapashi likhar jonno (flex) and element gulo center e anar jonno (items-center) & items er majhe space er jonno (gap-4)-->
+
+                        <!-- for shadow in background (drop-shadow-lg bg-white) -->
+
+                        <!-- badge take image er upore uthanor jonno (-mt-24) dibo -->
+                        <div
+                            class="flex items-center gap-4 drop-shadow-lg bg-white p-5 w-60 -mt-16">
+
+                            <!-- star font from (font-awesome) -->
+                            <!-- (text-3xl) for icon size -->
+                            <i
+                                class="fa-solid fa-star text-3xl text-amber-400"></i>
+
+                            <div>
+                                <h3 class="text-3xl">5.00</h3>
+                                <p>Trust Pilot Ratings</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+
+        <!-- ---------------- main ----------------- -->
+        <main class="container mx-auto">
+            <!-- ----------- featured section ---------- -->
+            <section class="text-center my-24">
+                <h2 class="text-5xl font-extrabold mb-5">Our Featured
+                    Products</h2>
+                <p class="lg:max-w-3xl mx-auto mb-10">Lorem ipsum dolor sit amet
+                    consectetur adipisicing
+                    elit. Quas
+                    delectus ea reprehenderit facilis asperiores, deserunt,
+                    harum nulla nostrum, laborum tempora aperiam pariatur!
+                    Perferendis, iste exercitationem?</p>
+                <!-- card container -->
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- ***  first card  (Card) from Daisy UI-->
+                    <!-- custom linear gradient color of card bg from tailwind css from-[#f4f4f4] to-[#f4f4f400]  -->
+                    <div
+                        class="card p-8 bg-gradient-to-r from-[#f4f4f4] to-[#f4f4f400] shadow-xl">
+                        <figure><img
+                                src="./images/tea-1.png"
+                                alt="Tea" /></figure>
+                        <div class="card-body justify-center">
+                            <h2 class="text-2xl font-bold">Milk Tea</h2>
+                            <p>Creamer could be replaced by fresh milk</p>
+
+                        </div>
+                    </div>
+
+                    <!-- ***  second card  (Card) from Daisy UI-->
+                    <!-- custom linear gradient color of card bg from-[#f4f4f4] to-[#f4f4f400]  -->
+                    <div
+                        class="card p-8 bg-gradient-to-r from-[#f4f4f4] to-[#f4f4f400] shadow-xl">
+                        <figure><img
+                                src="./images/tea-2.png"
+                                alt="Tea" /></figure>
+                        <div class="card-body justify-center">
+                            <h2 class="text-2xl font-bold">Black Tea</h2>
+                            <p>Creamer could be replaced by fresh milk</p>
+
+                        </div>
+                    </div>
+
+                    <!-- ***  third card  (Card) from Daisy UI-->
+                    <!-- custom linear gradient color of card bg from-[#f4f4f4] to-[#f4f4f400]  -->
+                    <div
+                        class="card p-8 bg-gradient-to-r from-[#f4f4f4] to-[#f4f4f400] shadow-xl">
+                        <figure><img
+                                src="./images/tea-3.png"
+                                alt="Tea" /></figure>
+                        <div class="card-body justify-center">
+                            <h2 class="text-2xl font-bold">Lemon Tea</h2>
+                            <p>Creamer could be replaced by fresh milk</p>
+
+                        </div>
+                    </div>
+
+                    <!-- ***  fourth card  (Card) from Daisy UI-->
+                    <!-- custom linear gradient color of card bg from-[#f4f4f4] to-[#f4f4f400]  -->
+                    <div
+                        class="card p-8 bg-gradient-to-r from-[#f4f4f4] to-[#f4f4f400] shadow-xl">
+                        <figure><img
+                                src="./images/tea-4.png"
+                                alt="Tea" /></figure>
+                        <div class="card-body justify-center">
+                            <h2 class="text-2xl font-bold">Ice Tea</h2>
+                            <p>Creamer could be replaced by fresh milk</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ----------- great tea, freshly presented ---------- -->
+            <!-- (flex use kora hoy element guloke side by side anar jonno) -->
+            <section class="my-24 flex flex-col lg:flex-row gap-12">
+                <!-- --- image (first half) --- -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- first image -->
+                    <!-- (linear-gradient) from tailwind css for empty image -->
+                    <div
+                        class="rounded-xl h-36 bg-gradient-to-r from-red-100 to-amber-100"></div>
+
+                    <!-- second image -->
+                    <!-- (row-span-2) from tailwind css -->
+                    <!-- to keep the image into the center (flex justify-center items-center) -->
+                    <div
+                        class="row-span-2 bg-[#e6a6231a] rounded-lg px-8 py-12 flex justify-center items-center">
+                        <img src="./images/fresh-1.png"
+                            alt>
+                    </div>
+                    <!-- third image -->
+                    <div
+                        class="row-span-2 bg-[#5776391a] rounded-lg px-8 py-12 flex justify-center items-center">
+                        <img src="./images/fresh-2.png"
+                            alt>
+                    </div>
+                    <!-- fourth image -->
+                    <div
+                        class="rounded-xl h-36 bg-gradient-to-r from-[#d9d9d9] to-[#ffffff00]"></div>
+
+                </div>
+
+                <!-- ---- text (second half) --- -->
+                <div class="space-y-5 flex-1">
+                    <h3 class="text-5xl font-extrabold">Great Tea, Freshly
+                        <br>Presented</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Asperiores odit assumenda omnis quis suscipit aperiam
+                        enim sapiente eius iusto vel, nesciunt tempore dolorem
+                        error, ducimus hic. Tempore consectetur maiores
+                        ducimus?</p>
+                    <h4 class="text-xl font-extrabold">Unique Test</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Excepturi alias nihil labore quisquam autem tempore?</p>
+                    <h4 class="text-xl font-extrabold mt-8">Premium Quality</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Excepturi alias nihil labore quisquam autem tempore?</p>
+                </div>
+
+            </section>
+
+            <!-- --------------- Meet our super client section ---------------- -->
+            <section
+                class="my-24 rounded-xl bg-gradient-to-r from-gradient-start to-gradient-end px-16 py-24 flex flex-col lg:flex-row gap-12">
+                <!-- first half -->
+                <!-- to give positioning the first half we have keep all the elements in another div -->
+                <div class="flex items-center lg:pr-28">
+                    <div class="space-y-5">
+                        <h2 class="text-5xl font-extrabold text-white">Meet Our
+                            Super <br>
+                            Client</h2>
+                        <p class="text-white">Lorem ipsum dolor sit amet
+                            consectetur
+                            adipisicing elit.
+                            Natus incidunt expedita eaque iusto placeat,
+                            deserunt,
+                            cum dolores labore veniam saepe illum quaerat non
+                            mollitia ipsa corporis dignissimos rerum nam culpa
+                            odit
+                            nostrum possimus perspiciatis. Quisquam unde rem
+                            ducimus
+                            optio eius.</p>
+                        <button
+                            class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white border-none">Show
+                            All</button>
+                    </div>
+
+                </div>
+
+                <!-- second half -->
+                <div class="relative">
+                    <!-- 1st review (next review) -->
+                    <!-- to fix the position of image use (relatve) in parent and (absolute -top-5 -left-5) in image -->
+                    <div
+                        class="p-10 rounded-lg bg-white relative opacity-40 mb-16 z-10">
+                        <img
+                            class="absolute -top-5 -left-5 border-4 border-white rounded-full bg-white"
+                            src="./images/client.png"
+                            alt>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Blanditiis repudiandae totam fuga ducimus
+                            voluptas corrupti nihil voluptates assumenda, nobis
+                            nostrum.</p>
+                        <h4 class="font-bold mt-5">Ilham Yuda</h4>
+                        <p class="font-medium">Businessman</p>
+                        <div class="flex justify-end">
+                            <img src="./images/circles.png" alt>
+                        </div>
+                    </div>
+
+                    <!-- 2nd review (current review)  -->
+                    <!-- (absolute) diyechi karon ei card ta shobar upore show korar jonno -->
+                    <!-- (lg:w-[430px]) large screen er jonno card width diye disi -->
+                    <!-- (z-20) z-index ekhanne beshi disi karon card ta shobar upore anar jonno -->
+                    <div
+                        class="p-10 rounded-lg bg-white absolute top-40 lg:-left-24 lg:w-[430px] z-20">
+                        <img
+                            class="absolute -top-5 -left-5 border-4 border-white rounded-full bg-white"
+                            src="./images/client.png"
+                            alt>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Blanditiis repudiandae totam fuga ducimus
+                            voluptas corrupti nihil voluptates assumenda, nobis
+                            nostrum.</p>
+                        <h4 class="font-bold mt-5">Ilham Yuda</h4>
+                        <p class="font-medium">Businessman</p>
+                        <div class="flex justify-end">
+                            <img src="./images/circles.png" alt>
+                        </div>
+                    </div>
+
+                    <!-- 3rd review (previous review) -->
+                    <div
+                        class="p-10 rounded-lg bg-white relative opacity-40 z-10">
+                        <img
+                            class="absolute -top-5 -left-5 border-4 border-white rounded-full bg-white"
+                            src="./images/client.png"
+                            alt>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Blanditiis repudiandae totam fuga ducimus
+                            voluptas corrupti nihil voluptates assumenda, nobis
+                            nostrum.</p>
+                        <h4 class="font-bold mt-5">Ilham Yuda</h4>
+                        <p class="font-medium">Businessman</p>
+                        <div class="flex justify-end">
+                            <img src="./images/circles.png" alt>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- -------------- News and Events (self practice) ---------------- -->
+
+        </main>
+
+        <!-- --------------- footer ---------------- -->
+
+        <!-- (Footer with a form) from daisy UI -->
+        <footer class="px-4 lg:px-48 py-10 bg-base-200 text-base-content">
+            <!-- add a new logo -->
+            <div class="flex justify-between my-24">
+                <img src="./images/cup.png" alt>
+                <p>
+                    <span>Ready to get started?</span>
+                    <button
+                        class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white">Get
+                        Started</button>
+                </p>
+            </div>
+            <div class="footer">
+                <div>
+                    <nav>
+                        <h6 class="footer-title">Services</h6>
+                        <a class="link link-hover">Branding</a>
+                        <a class="link link-hover">Design</a>
+                        <a class="link link-hover">Marketing</a>
+                        <a class="link link-hover">Advertisement</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <nav>
+                        <h6 class="footer-title">Company</h6>
+                        <a class="link link-hover">About us</a>
+                        <a class="link link-hover">Contact</a>
+                        <a class="link link-hover">Jobs</a>
+                        <a class="link link-hover">Press kit</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <nav>
+                        <h6 class="footer-title">Legal</h6>
+                        <a class="link link-hover">Terms of use</a>
+                        <a class="link link-hover">Privacy policy</a>
+                        <a class="link link-hover">Cookie policy</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <form>
+                        <h6 class="footer-title">Newsletter</h6>
+                        <fieldset class="form-control w-80">
+                            <label class="label">
+                                <span class="label-text">Enter your email
+                                    address</span>
+                            </label>
+
+                            <!-- (relative) class for input & button -->
+                            <div class="relative">
+                                <!-- (bg-transparent) for no background color -->
+                                <!-- for the horizontal line in email input -->
+                                <input type="text"
+                                    placeholder="username@site.com"
+                                    class="py-4 bg-transparent border-b-2 border-black outline-none" />
+                                <button
+                                    class="btn absolute top-0 right-0 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end text-white">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <!-- (Footer with copyright text) from Daisy UI -->
+            <div class="mt-10 text-center">
+                <p>Copyright © 2024 - All right reserved by ACME Industries
+                    Ltd</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
