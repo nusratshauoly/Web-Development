@@ -17,38 +17,52 @@
             crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
+        <header class="mx-10 my-10 bg-sky-100 p-3 rounded-md">
+            <!-- responsive (dropdown menu on small screen, center menu on large screen) from daisyUI -->
+            <div class="navbar">
+                <div class="navbar-start">
+                    <p class="text-3xl font-bold">Geometry Genius</p>
+                </div>
+
+                <div class="navbar-end">
+                    <a
+                        class="btn btn-primary text-white btn-md px-10 text-base font-bold hover:bg-blue-400">Blog</a>
+                </div>
+            </div>
 
         </header>
 
         <main>
             <!-- ------------ ****  main container ***** -------- -->
-            <!-- ----- first row ---- -->
-            <div class="flex flex-col lg:flex-row">
+            <!-- ----- - - - - - first row - - - - - ---- -->
+            <div class="flex flex-col lg:flex-row mt-24 ml-6 mr-6">
 
                 <!-- -------- ***** shape container ***** -------- -->
                 <!-- (flex-1) uses for it will spand and shrink as per screen size -->
                 <div
-                    class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- ----- triangle card ---- (card) from (daisy UI) -->
-                    <div class="card bg-base-100 w-96 shadow-xl">
+                    <!-- remove fixed width (w-96) -->
+                    <div
+                        class="card bg-base-100 shadow-xl hover:bg-blue-200">
                         <figure>
                             <img
                                 src="./images/triangle.png"
-                                alt="Triangle" />
+                                alt="Triangle" class="p-10" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Triangle</h2>
                             <p>Area (A) = 0.5 X b X h</p>
                             <p>
                                 <!-- triangle base input -->
-                                <input type="text"
+                                <!--1. data validation : input e number chara onno kichu na likhar jonno . way 1: input type='number' -->
+                                <input type="number"
                                     class="border bg-gray-100  text-xl w-24 px-2"
                                     placeholder="base" id="triangle-base">
                                 <span class="ml-2">cm</span>
 
                                 <!-- triangle height input -->
-                                <input type="text"
+                                <input type="number"
                                     class="ml-4 border bg-gray-100  text-xl w-24 px-2"
                                     placeholder="height" id="triangle-height">
                                 <span class="ml-2">cm</span>
@@ -62,17 +76,17 @@
                             <!-- remove (justify-end) -->
                             <div class="card-actions">
                                 <button onclick="calculateTriangleArea()"
-                                    class="btn btn-primary  w-full">Calculate</button>
+                                    class="btn btn-primary w-full uppercase">Calculate</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- ----- rectangle card ---- (card) from (daisy UI) -->
-                    <div class="card bg-base-100 w-96 shadow-xl">
+                    <div class="card bg-base-100 shadow-xl hover:bg-pink-200">
                         <figure>
                             <img
                                 src="./images/rectangle.png"
-                                alt="Rectangle" />
+                                alt="Rectangle" class="p-10" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Rectangle</h2>
@@ -99,17 +113,17 @@
                             <!-- remove (justify-end) -->
                             <div class="card-actions">
                                 <button onclick="calculateRectangleArea()"
-                                    class="btn btn-primary  w-full">Calculate</button>
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- ----- Parallelogram card ---- (card) from (daisy UI) -->
-                    <div class="card bg-base-100 w-96 shadow-xl">
+                    <div class="card bg-base-100 shadow-xl hover:bg-teal-200">
                         <figure>
                             <img
                                 src="./images/parallelogram.png"
-                                alt="Rectangle" />
+                                alt="Rectangle" class="p-10" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Parallelogram</h2>
@@ -137,32 +151,36 @@
                             <!-- remove (justify-end) -->
                             <div class="card-actions">
                                 <button onclick="calculateParallelogramArea()"
-                                    class="btn btn-primary  w-full">Calculate</button>
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- ------------- ***** area calculator ***** --------- -->
+
+                    <div
+                        class="p-10 card bg-base-100 shadow-xl hover:bg-indigo-200">
+                        <div class="text-4xl">Area Calculator</div>
+                        <div id="calculation-entry"></div>
+                    </div>
+
                 </div>
 
-                <!-- ------------- ***** area calculator ***** --------- -->
-
-                <div class="w-[400px] ml-6 text-center border-2 gap-10">
-                    <div class="text-4xl">Area Calculator</div>
-                </div>
             </div>
 
-            <!-- ------ second row ------ -->
-            <div class="flex flex-col lg:flex-row">
+            <!-- ------ - - - - - - second row - - - - - - ------ -->
+            <div class="flex flex-col lg:flex-row mt-20 ml-6 mr-6">
 
                 <!-- -------- *****  shape container ***** -------- -->
                 <!-- (flex-1) uses for it will spand and shrink as per screen size -->
                 <div
                     class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- ----- Rhombus card ---- (card) from (daisy UI) -->
-                    <div class="card bg-base-100 w-96 shadow-xl">
+                    <div class="card bg-base-100 shadow-xl hover:bg-gray-200">
                         <figure>
                             <img
                                 src="./images/rhombus.png"
-                                alt="Rhombus" />
+                                alt="Rhombus" class="p-10" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Rhombus</h2>
@@ -192,17 +210,18 @@
                             <!-- remove (justify-end) -->
                             <div class="card-actions">
                                 <button onclick="calculateRhombusArea()"
-                                    class="btn btn-primary  w-full">Calculate</button>
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- ----- Pentagon card ---- (card) from (daisy UI) -->
-                    <div class="card bg-base-100 w-96 shadow-xl">
+                    <div
+                        class="card bg-base-100 shadow-xl hover:bg-fuchsia-200">
                         <figure>
                             <img
                                 src="./images/pentagon.png"
-                                alt="Pentagon" />
+                                alt="Pentagon" class="p-10" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Pentagon</h2>
@@ -229,17 +248,17 @@
                             <!-- remove (justify-end) -->
                             <div class="card-actions">
                                 <button onclick="calculatePentagonArea()"
-                                    class="btn btn-primary  w-full">Calculate</button>
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- ----- Ellipse card ---- (card) from (daisy UI) -->
-                    <div class="card bg-base-100 w-96 shadow-xl">
+                    <div class="card bg-base-100 shadow-xl hover:bg-orange-200">
                         <figure>
                             <img
                                 src="./images/ellipse.png"
-                                alt="Ellipse" />
+                                alt="Ellipse" class="p-10" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Ellipse</h2>
@@ -268,7 +287,7 @@
                             <!-- remove (justify-end) -->
                             <div class="card-actions">
                                 <button onclick="calculateEllipseArea()"
-                                    class="btn btn-primary  w-full">Calculate</button>
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
                             </div>
                         </div>
                     </div>

@@ -16,6 +16,9 @@ function calculateTriangleArea() {
     // show triangle area
     const areaSpan = document.getElementById('triangle-area');
     areaSpan.innerText = area;
+
+    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    addToCalculationEntry('Triangle', area);
 }
 
 
@@ -31,12 +34,22 @@ function calculateRectangleArea() {
     const lengthValueText = lengthField.value;
     const length = parseFloat(lengthValueText);
 
+    // 2. validate input: width and length : data validation : input e number chara onno kichu na likhar jonno . way 2: using (isNaN)
+    if (isNaN(width) || isNaN(length)) {
+        alert('Please insert a number');
+        // alert show korar por kono output na dekhanor jonno (return) korbo.
+        return;
+    }
+
     // rectangle area
     const area = width * length;
 
     // show rectangle area
     const areaSpan = document.getElementById('rectangle-area');
     areaSpan.innerText = area;  
+
+    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    addToCalculationEntry('Rectangle', area);
 }
 
 
@@ -52,10 +65,21 @@ function calculateParallelogramArea() {
     const heightValueText = heightField.value;
     const height = parseFloat(heightValueText);
 
+    // validate input: base and height : data validation : input e number chara onno kichu na likhar jonno . way 2: using (isNaN)
+    if (isNaN(base) || isNaN(height)) {
+        alert('Please insert a number');
+        // alert show korar por kono output na dekhanor jonno (return) korbo.
+        return;
+    }
+
     // rectangle area
     const area = base * height;
 
     // show rectangle area
     const areaSpan = document.getElementById('parallelogram-area');
     areaSpan.innerText = area;
+
+    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    addToCalculationEntry('Parallelogram', area);
+
 }
