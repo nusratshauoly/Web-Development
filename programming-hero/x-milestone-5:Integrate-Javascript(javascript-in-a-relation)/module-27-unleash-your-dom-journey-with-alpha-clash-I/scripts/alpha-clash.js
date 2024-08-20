@@ -17,9 +17,9 @@
 
 // 27-7: Build getRandom Alphabet function
 
-// after click the (play now) button the game will start and a random alphabet will generate and we have click the same alphabet without seeing the keyboard.
+//27-7:5. after click the (play now) button the game will start and a random alphabet will generate and we have click the same alphabet without seeing the keyboard.
 function continueGame() {
-    // call getARandomAlphabet() function to generate a random alphabet and set it to a variable
+    //27-7:6. call getARandomAlphabet() function to generate a random alphabet and set it to a variable
     const alphabet = getARandomAlphabet();
     console.log('your random alphabet', alphabet); 
 
@@ -28,18 +28,43 @@ function continueGame() {
     const currentAlphabetElement = document.getElementById('current-alphabet');
     currentAlphabetElement.innerText = alphabet;
 
-    // 27-8:3. set background color
+    // 27-8:3. calling (setBackgroundColorById) function for keyboard color on the (alphabet) which will appear in the screen from (27-7:1 - 27-7:6)
     setBackgroundColorById(alphabet);
 }
 
 
 // 27-6: Change Home Screen to Playground By Click 
-// create function for button
+//27-6:3. create function for button
 function play() {
-    // call the function (hideElementById) to hide home screen
+    //27-6:4. call the function (hideElementById) to hide home screen
     hideElementById('home-screen');
-    // call the function (showElementById) to show playground screen
+    //27-6:5. call the function (showElementById) to show playground screen
     showElementById('play-ground');
-    // call the (continueGame) the start the game to play repeatedly
+    //27-7:7. call the (continueGame) the start the game to play repeatedly
     continueGame();
 }
+
+
+// 28-2: Get the key pressed and check right or wrong key pressed
+
+// 28-2:1. after start playing when the keyboard will appear and for pressing keyboard when player pressed the key
+function handleKeyboardKeyUpEvent(event) {
+    const playerPressed = event.key;
+    console.log('Player Pressed', playerPressed);
+
+    // 28-2:3. user expected to press the keyword
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed, currentAlphabet);
+
+    // 28-2:4. check matched or not
+    if (playerPressed === expectedAlphabet) {
+        console.log('you get a point');
+    }
+    else {
+        console.log('you missed. You lost a life');
+    }
+}
+// 28-2:2. capture keyboard key press
+document.addEventListener('keyup', handleKeyboardKeyUpEvent);

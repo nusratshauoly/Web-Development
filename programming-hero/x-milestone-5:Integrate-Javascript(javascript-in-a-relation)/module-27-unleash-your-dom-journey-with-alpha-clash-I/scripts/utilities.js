@@ -1,28 +1,27 @@
 // 27-6: Change Home Screen to Playground By Click 
 
-
-// common function to hidden content
+//27-6:1. common function to hidden content
 function hideElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('hidden');
 }
 
 
-// common function to show content
+//27-6:2. common function to show content
 function showElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
 }
 
 //  // 27-8: (recap) Random Alphabet and highlight Selected Alphabet
-// 27-8:2. 
+// 27-8:2. set the background color of keyboard word which will apper in the screen
 function setBackgroundColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }
 
 // 27-9: Module summary
-// 27-9:1: removeBackgroundColorById
+// 27-9:1: removeBackgroundColorById from keyboard which  will appear on the screen              
 function removeBackgroundColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('bg-orange-400');
@@ -32,17 +31,19 @@ function removeBackgroundColorById(elementId) {
 
 // 27-7: Build getRandom Alphabet function
 
-//generate a random alphabet
+//27-7:1. generate a random alphabet
 function getARandomAlphabet() {
-    // get or create an alphabet array
+    //27-7:2. get or create an alphabet array
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');
     console.log(alphabets);
 
-    // get a random index between 0 - 25
+    //27-7:3. get a random index between 0 - 25
     const randomNumber = Math.random() * 25;
+    // (Math.round() => make fraction number to a full number)
     const index = Math.round(randomNumber);
  
+    //27-7:4. (alphabet) from (alpha-clash.js): to get the alphabet in index number
     const alphabet = alphabets[index];
     // console.log(index, alphabet);
     // (alphabet) k (alpha-clash.js) theke call korchi tai return korbo.
