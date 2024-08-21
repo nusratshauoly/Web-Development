@@ -28,7 +28,6 @@ function removeBackgroundColorById(elementId) {
 }
 
 
-
 // 27-7: Build getRandom Alphabet function
 
 //27-7:1. generate a random alphabet
@@ -36,7 +35,7 @@ function getARandomAlphabet() {
     //27-7:2. get or create an alphabet array
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');
-    console.log(alphabets);
+    // console.log(alphabets);
 
     //27-7:3. get a random index between 0 - 25
     const randomNumber = Math.random() * 25;
@@ -50,3 +49,27 @@ function getARandomAlphabet() {
     return alphabet;
 }
  
+
+// 28-5: Recap get and set score of life using function
+// 28-5.1: update score
+
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+
+// 28-5:2. set the updated score as innerText value
+function setTextElementValueById(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
+
+
+// 28-7:2. 
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
+}
