@@ -33,3 +33,8 @@ const nums = [78, 98, 45, 12, 6, 444];
 const newSummary = `Sum of ${a} and ${b} and ${nums.length} is: ${a + b}`;
 console.log(newSummary);
 
+// another example
+const numbers = [45, 48, 98, 78];
+const student = {name: 'John cena', age: 5};
+const math = `the math of ${numbers[0]} and ${numbers[0] + numbers.age} is ${a + b}`;
+console.log(math);

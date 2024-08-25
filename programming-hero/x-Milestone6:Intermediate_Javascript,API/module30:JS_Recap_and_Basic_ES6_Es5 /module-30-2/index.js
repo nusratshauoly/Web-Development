@@ -6,6 +6,9 @@ function add(first, second) {
 const result = add(10, 20);
 console.log(result);
 
+const result1 = add(, 10);
+console.log(result1);
+
 // jodi kono karone parameter er number na nei tahole NaN(dekhabe)
 // before es6 we declare undefined parameter like this
 function add(first, second) {
@@ -26,8 +29,8 @@ console.log(result);
 
 
 
-// function in es6: 
-// wwe can set default value in parameter but if we take a new parameter value when calling function the new value will operate instead of default value. r jodi 1 ta value e dei function call e tahole default value show korbe.
+// function in es6: default value
+// we can set (default value) in parameter but if we take a new parameter value when calling function the new value will operate instead of default value. r jodi 1 ta value e dei function call e tahole default value show korbe.
 function add(first, second = 0) {
     const total = first + second;
     return total;
@@ -44,9 +47,12 @@ function add(first = 0, second = 0) {
     return total;
 }
 const result = add(10);
-// const result = add(10, 0);
-// const result = add();
 console.log(result);
+const result = add(10, 0);
+console.log(result);
+const result = add();
+console.log(result);
+
 
 // function (using string)
 function fullName(first, last = 'chowdhury') {
@@ -55,3 +61,14 @@ function fullName(first, last = 'chowdhury') {
 }
 const name = fullName('Aslam');
 console.log(name);
+
+
+// default parameter in array function
+function friends(numbs = []) {
+    
+}
+
+// default parameter in object function
+function friends(numbs = {}) {
+    
+}

@@ -21,19 +21,23 @@ numbers = [12, 89, 65, 45, 77];
 
 // but can modify 
 numbers.push(55);
+numbers.push(8, 9, 10);
 numbers[1] = 90;
 console.log(numbers);
 
-
-cont student = {
+// object
+const student = {
     name: 'mofiz',
-    address: 'rangpur'
+    address: 'rangpur',
+    class: 12
 }
+console.log(student);
 // can not do/change this
 student = {name: 'Mofazzal'};
 
 // can change like this
 student.name = 'Mofazzal';
+console.log(student);
 
 // array declare
 let sum = 0;
@@ -48,4 +52,21 @@ for (let i = 0; i < numbers.length; i++){
 // we cannot declare outside of the block of (let and const variable)
 console.log(number);
 
-// let & cons is block scope
+// let & const is block scope
+
+// loop (it's allowed)
+let sum = 0;
+for (let i = 0; i < 10; i++){
+    sum = sum + i;
+
+}
+console.log(sum);
+
+
+// const (it's not allowed)
+const sum = 0;
+for (let i = 0; i < 10; i++){
+    const num = i;
+    sum = sum + num;
+}
+console.log(sum);

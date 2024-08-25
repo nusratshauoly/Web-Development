@@ -3,7 +3,7 @@
 
 // find a maximum number 
 const max = Math.max(12, 85, 999, 78);
-// console.log(max);
+console.log(max);
 const numbers = [12, 85, 999, 78];
 const largest = Math.max(...numbers);
 
@@ -38,6 +38,23 @@ console.log(numbers3);
 const numbers4 = [444, 78, ...numbers, 111];
 console.log(numbers4);
 
+// 
+const friends = [4, 5, 87, 9];
+const bondhu = friends;
+bondhu.push(12);
+console.log(bondhu);
+console.log(friends);
+
+// 
+const friends = [4, 5, 87, 9];
+const bondhu = friends;
+const dosto = [...friends]; //copy
+console.log(dosto);
+friends.push(100);
+console.log(dosto);
+console.log(friends);
 
 
-
+// advance
+const shongkha = [...friends, 9999]; //add extra elementts while copy
+console.log(shongkha);

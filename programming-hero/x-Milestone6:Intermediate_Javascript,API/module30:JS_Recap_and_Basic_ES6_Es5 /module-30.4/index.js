@@ -57,3 +57,6 @@ console.log(result6);
 
 // how to write arrow function with different parameters if theres 1/2 parameters
 
+const multiply = (num1, num2) => num1 * num2;
+const mult = multiply(3, 12);
+console.log(mult);
