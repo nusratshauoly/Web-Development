@@ -102,3 +102,60 @@ console.log(fiveTimes);
 
 
 
+// -----------------------------------------------------------
+// normal loop (array er eack element k double korbo)
+const numbers = [4, 5, 2, 8, 10];
+
+const doubled = [];  // keep the output of the double number here
+for (const num of numbers) {
+    const double = num * 2;
+    doubled.push(double);
+}
+console.log(doubled);
+
+
+
+// map => loops through each element of the array and do the operation that you passed in the call back function and hold the result from each operation in an array and finally returns you the array
+
+// we can also doubled in another way using map call the function inside map 
+const numbers = [4, 5, 2, 8, 10];
+function doubleIt(num) {
+    return num * 2;
+}
+const result = numbers.map(doubleIt);
+console.log(result);
+
+
+// we can also write in a short way of map
+const numbers2 = [4, 5, 2, 8, 10];
+const double2 = n => n * 2;
+const output2 = numbers2.map(double2);
+console.log(output2);
+
+// or this way of map in a short way
+const numbers3 = [4, 5, 2, 8, 10];
+const output3 = numbers3.map(n => n * 2);
+console.log(output3);
+
+
+
+// ------------------------- more map ----------------------
+const numbers4 = [4, 5, 2, 8, 10];
+
+const doubled4 = numbers4.map(num => num * 2);
+console.log(doubled4);
+const fiveBonus = numbers4.map(num => num + 5);
+console.log(fiveBonus); 
+const halves = numbers.map(num => num / 2);
+console.log(halves);
+
+const friends = ['tom', 'john', 'michael', 'oliver'];
+const lengths = friends.map(frnd => frnd.length);
+console.log(lengths);
+
+// to get the every names first letter
+const firstLetter = friends.map(friend => friend[0]);
+console.log(firstLetter);
+
+
+

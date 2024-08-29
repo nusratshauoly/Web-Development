@@ -10,7 +10,7 @@
   4. name, designation, team, location erokom property / field dibo, function o likhte parbo.
  */
 
-//   class er vitor j function thake ederke bola hoy method...
+// class er vitor j function thake ederke bola hoy method...
 // class holo ekta template or structure jeta diye amra different object create korbo.
 class Instructor{
     name;
@@ -99,3 +99,43 @@ class Vehicle{
 }
 let car = new Vehicle("Toyota", "Corola", "Black");
 console.log(car);
+
+
+
+// --------------------------- more about class ----------------
+
+// inheritance : extends keyword use kore korte hoy
+
+// jokhon class theke object create kori  tokhon onek shomoy similarity thakena
+
+class Vehicle(name, price){
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+    move(){
+        console.log('gari chole na cholena cholena re');
+    }
+}
+
+class Bus extends Vehicle { // onek shomoy onek similar class thake onek gulo tai every time common element gulo na likhe jei class er shathe common mil ache shekhan theke element niye ashte pari (extends) keyword use kore
+    constructor (name, price, seat, ticketPrice) {
+        super(name, price);  // jei element gulo common thake shegulo set korar jonno (super) keyword use korbo and common element gulo likhbo
+        this.seat = seat;
+        this.ticketPrice = ticketPrice;
+    }
+    
+}
+
+
+// another class
+class Truck extends Vehicle{
+    constructor (name, price, load) {
+        super(name, price);
+        this.load = load;
+    }
+    // ekhane truc er jodi kono unsimilar element thake ja parent e nai ta likhbo
+}
+
+
+// 

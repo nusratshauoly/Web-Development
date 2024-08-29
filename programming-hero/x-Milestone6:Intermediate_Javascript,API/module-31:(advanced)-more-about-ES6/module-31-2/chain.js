@@ -45,3 +45,49 @@ console.log(userFloor);
 // (using (? => optional chaining)) : to see porer element e kono value ache kina
 const userFloor = user.address.street?.second;
 console.log(userFloor);
+
+
+// ----------------------
+// data access in object inside array 
+const data = [{id: 1, name: 'abul', address: 'kochu khet'}];
+console.log(data[0].address); // ekhane object er vitore array ta 0 no position e ache
+
+const products = {
+    count: 5000,
+    data: [
+        {id: 1, name: 'lenovo laptop', price: 65000},
+        {id: 2, name: 'macbook', price: 165000},
+    ]
+}
+
+// second product price
+console.log(products.data[1].price); // ekhane array er vitore object gulo 0, 1, 2 erokom position e ache
+
+
+// 
+
+const users = {
+    id: 5001,
+    name: 'Shariful Raj',
+    address: {
+        street: {
+            first: '54/1 uttor side',
+            second: 'poribag er boli',
+            third: 'no dorai'
+        },
+        city: 'Dhaka'
+    }
+}
+console.log(user.address.street.second);
+console.log(user.address.street?.second); // optional chaining
+
+
+const user2 = {
+    id: 5002,
+    name: 'pori bibir majar',
+    address: {
+        city: 'chittagong',
+        country: 'Bangladesh'
+    }
+}
+console.log(user2.address.street?.second);  // optional chaining (jodi street er man pawa jay tahole move forward r na pawa gele give the result here)
