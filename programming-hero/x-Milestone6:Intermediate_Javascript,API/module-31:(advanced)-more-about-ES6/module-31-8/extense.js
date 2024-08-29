@@ -184,3 +184,46 @@ console.log(alia);
 alia.provideFeedback();
 const bipasha = new JobPlacement('bipasa', 'kolkata', 'india');
 console.log(bipasha);
+
+
+// ------------------------------ More about (this) keyword -------------------------------------------
+
+class Person{
+    constructor (name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    sleep() {
+        console.log(`Sleeping now ${this.name}`);
+    }
+    activity() {
+        this.sleep();
+    }
+}
+const kodom = new Person('Kodom Ali', 21)  // class k call kora mane tar constructor k call kora
+console.log(kodom);
+kodom.sleep();
+const badam = new Person('Kacha badam', 23);
+badam.sleep();
+
+
+// won't work:
+const lazy = kodom.sleep();
+lazy();
+
+
+
+// (. notation)
+const person = {
+    name: 'Kodom Ali',
+    job: 'badam khai',
+    3: 'third',   // have to use bracket notation
+    'add-dress': 'kochu khet'  // have to use bracket notation
+}
+
+const prop = 'job';
+console.log(person.job);
+console.log(person['job']);
+console.log(person[job]); // it won't work
+console.log(person['3']);   // have to use bracket notation
+console.log(person["add-dress"]);   // have to use bracket notation

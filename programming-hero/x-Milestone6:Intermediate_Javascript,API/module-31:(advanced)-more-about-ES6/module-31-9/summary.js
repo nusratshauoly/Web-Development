@@ -8,7 +8,7 @@ student.marks?.math
 
 // 4 class : ki jinish, kivabe aj kore
 
-// 5 (optional) : inheritance, super
+// 5 (optional) : inheritance, super, new, extends, this, . notation
 
 // 6. (must) prototypical Inheritance
 

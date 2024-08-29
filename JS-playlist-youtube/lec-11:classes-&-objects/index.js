@@ -1,3 +1,16 @@
+/*
+Prototype in js:
+
+A Javascript object is an entity having state and behavior (properties and method).
+
+JS objects have a special property called prototype.
+
+We can set prototype using __proto__
+
+*** if object & prototype have smae method, object's method will be used.
+
+*/
+
 // a object define
 const student = {
     fullName: "Nusrat jahan", // called (properties)
@@ -26,11 +39,11 @@ console.log(typeof arr);
 // // example: can create our own prototype
 const employee = {
     // create a function which will invoke in (employee) object
-    calcTax1() {
+    calcTax1() { // we can write function like this inside object
         console.log('tax rate is 10%');
     },
 
-    calcTax2: function() {
+    calcTax2: function() { // we can also write function like this inside object
         console.log('tax rate is 20%');
     },
 
@@ -109,9 +122,21 @@ karanArjun.calcTax();
 
 
 
-// a prototype is a (reference) to an object.
+//*****  */ A Prototype is a (reference) to an object.
 
 // ----------------------------------------------------------------- class in js -----------------------------------------------
+/*
+Class is a program-code template for creating objects.
+
+Those objects will have some state(variables) & some behaviour (functions) inside it.
+
+class MyClass{
+    constructor(){...}
+    myMethod()(...)
+}
+let myObj = new MyClass();   // create object from class
+
+*/
 
 // // // class is a blue print of object
 
@@ -125,8 +150,6 @@ class ToyotaCar {
         this.brand = brand;
         this.mileage = mileage;
     }
-
-    
     start() {
         console.log("start");
     }
@@ -136,11 +159,14 @@ class ToyotaCar {
 
     // can create new function inside class
     // // we can set this function to a constructor
-    // setBrand(brand) {
-    //     this.brandName = brand;
-    // }
+
+    // this.brandName is object property
+    // = brand is class function parameter (brand)
+    setBrand(brand) {
+         this.brandName = brand;
+    }
 }
-let fortuner = new ToyotaCar(); // it will print the constructor
+let fortuner = new ToyotaCar(); // it will print the constructor  : creye object from class
 fortuner.setBrand("fortuner", 10);
 console.log(fortuner);
 console.log(typeof fortuner);
