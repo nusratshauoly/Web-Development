@@ -7,122 +7,40 @@
         <link rel="stylesheet" href="style.css">
 
         <!-- daisy ui cdn -->
-        <link
+        <!-- <link
             href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-            rel="stylesheet" type="text/css" />
+            rel="stylesheet" type="text/css" /> -->
         <!-- tailwind css -->
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
         <!-- font awesome -->
-        <script src="https://kit.fontawesome.com/f4b191b67e.js"
-            crossorigin="anonymous"></script>
+        <!-- <script src="https://kit.fontawesome.com/f4b191b67e.js"
+            crossorigin="anonymous"></script> -->
         <!-- bootstrap link -->
-        <link
+        <!-- <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
+            crossorigin="anonymous"> -->
     </head>
     <body>
-        <section>
-            <div class="container">
-                <h2>My Shopping Cart</h2>
-                <div class="cart">
-                    <div class="cols-md-12 cols-lg-10 mx-auto">
-                        <!-- phone -->
-                        <div class="cart-item">
-                            <div class="row">
-                                <!-- phone -->
-                                <div class="col-md-7 center-item">
-                                    <img
-                                        src="./image-shopping-cart/product-1.png"
-                                        alt>
-                                    <h1>iPhone11 100GB Black</h1>
-                                </div>
-                                <!-- phone +/- -->
-                                <div class="col-md-5 center-item">
-                                    <div class="input-group number-spinner">
-                                        <button id="btn-phone-minus"
-                                            class="btn btn-default"><i
-                                                class="fas fa-minus"></i></button>
-                                        <input type="number"
-                                            id="phone-number-field" min="0"
-                                            class="form-control text-center"
-                                            value="1">
-                                        <button id="btn-phone-plus"
-                                            class="btn btn-default"><i
-                                                class="fas fa-plus"></i></button>
-                                    </div>
+        <button class="show-modal">Show Modal 1</button>
+        <button class="show-modal">Show Modal 2</button>
+        <button class="show-modal">Show Modal 3</button>
 
-                                    <!-- phone total -->
-                                    <h5>$<span id="phone-total">1219</span></h5>
-                                    <img src="./image-shopping-cart/remove.png"
-                                        alt>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- case -->
-                        <div class="cart-item">
-                            <div class="row">
-                                <!-- phone image -->
-                                <div class="col-md-7 center-item">
-                                    <img
-                                        src="./image-shopping-cart/product-2.png"
-                                        alt>
-                                    <h1>iPhone11 100GB Black</h1>
-                                </div>
-                                <!-- case +/- -->
-                                <div class="col-md-5 center-item">
-                                    <div class="input-group number-spinner">
-                                        <button id="btn-case-minus"
-                                            class="btn btn-default"><i
-                                                class="fas fa-minus"></i></button>
-                                        <input type="number"
-                                            id="case-number-field" min="0"
-                                            class="form-control text-center"
-                                            value="1">
-                                        <button id="btn-case-plus"
-                                            class="btn btn-default"><i
-                                                class="fas fa-plus"></i></button>
-                                    </div>
-
-                                    <!-- case total -->
-                                    <h5>$<span id="case-total">59</span></h5>
-                                    <img src="./image-shopping-cart/remove.png"
-                                        alt>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- total balance of phone + case -->
-                        <div class="cart-item">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5>SubTotal: </h5>
-                                    <h5>Tax</h5>
-                                    <h5>Total: </h5>
-                                </div>
-
-                                <div class="col-md-4 status">
-                                    <h5><span id="sub-total">1278</span></h5>
-                                    <h5><span id="tax-amount">0</span></h5>
-                                    <h5><span id="final-total">1278</span></h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- check out -->
-                        <div class="col-md-12 pt-4 pb-4">
-                            <button type="button"
-                                class="btn btn-success check-out">Check
-                                Out</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>I'm a modal window 😍</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis officia quisquam minima hic amet corrupti obcaecati
+                dicta maiores aliquid excepturi culpa voluptate maxime natus
+                voluptatem deleniti aut iusto hic assumenda magni necessitatibus
+                incidunt quae, earum ipsam ex blanditiis omnis non fuga
+                reiciendis? Incidunt earum distinctio vero tempora quibusdam ab.
+                At, quae ex.
+            </p>
+        </div>
+        <div class="overlay hidden"></div>
         <!-- external js -->
         <script src="./index.js"></script>
         <script src="./login.js"></script>

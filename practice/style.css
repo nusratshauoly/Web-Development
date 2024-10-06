@@ -1,53 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
 body{
-    background: #fff;
-}
-.cart{
-    margin: 100px 0;
-    background-color: #f6f5fa;
-    padding: 60px 60px;
-}
-.cart-item{
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-}
-.center-item{
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.5;
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to top left, #28b487, #7dd56f);
 }
-.cart-item img{
-    width: 115px;
+.show-modal{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.75rem 3.5rem;
+    margin: 5rem 2rem;
+    border-radius: 10rem;
+    border: none;
+    color: #444;
+    cursor: pointer;
 }
-.cart-item h5{
-    padding: 0 45px;
+.close-modal{
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    cursor: pointer;
+    border: none;
+    color: #333;
+    color: #333;
+    background: none;
 }
-.cart-item .remove-item{
-    width: 25px!important;
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
-.btn-default{
+p{
+    font-size: 1.8rem;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
     background-color: #fff;
+    padding: 6rem;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 }
-.cart-item .form-control{
-    background-color: #f6f5fa;
-    border: none;
-    width: 65px;
-    border-radius: 10px!important;
-    font-weight: 700;
-    font-size: 20px;
+.overlay{
+    position : absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 3;
 }
-.input-group{
-    width: unset;
-    flex-wrap: nowrap;
-}
-.status{
-    text-align: right;
-}
-.check-out{
-    float: right;
-    padding: 10px 30px;
-    font-size: 19px;
-    background-color: #2fbe70;
-    border: none;
+.hidden{
+    display: none;
 }

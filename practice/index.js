@@ -1,26 +1,28 @@
-function getTextElementValueById(elementId) {
-    const textElement = document.getElementById(elementId);
-    const textElementInnerText = textElement.innerText;
-    const element = parseFloat(textElementInnerText);
-    return element;
+'use strict';
+
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const openModalButton = document.querySelectorAll('.show-modal');
+const closeModalButton = document.querySelector('.close-modal');
+
+
+const openModal = function () {
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
 }
 
-function setInnerTextElementById(elementId, newValue) {
-    const textElement = document.getElementById(elementId);
-    textElement.textContent = newValue;
+const closeModal = function () {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
 }
 
-function calculateSubTotal() {
-    const currentPhoneTotal = getTextElementValueById('phone-total');
-    const currentCaseTotal = getTextElementValueById('case-total');
-    const currentSubTotal = currentPhoneTotal + currentCaseTotal;
-    setInnerTextElementById('sub-total', currentSubTotal);
+for (let i = 0; i < openModalButton.length; i++)
+    openModalButton[i].addEventListener('click', openModal);
+closeModalButton.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 
-    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
-    const taxAmount = parseFloat(taxAmountString);
-    setInnerTextElementById('tax-amount', taxAmount);
-
-    const finalTotal = currentSubTotal + taxAmount;
-    setInnerTextElementById('final-total', finalTotal);
-
-}
+document.addEventListener('keydown', function (e) {
+    if (e.key = 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+})
