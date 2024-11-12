@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
     </head>
     <body>
 
@@ -17,6 +18,87 @@
         </form>
 
         <button id="check" type="button" name="button">check</button>
+
+        <h2 id="placeToSee"></h2>
+
+        <!-- --------------- angry parent simulator -------------------- -->
+
+        <h1>You Done Messed Up</h1>
+
+        <form>
+            <label for="firstName">First Name: </label>
+            <input type="text" id="firstName" placeholder="First Name">
+            <label for="firstMiddle">First Middle Name: </label>
+            <input type="text" id="firstMiddle" placeholder="First Middle Name">
+            <label for="lastName">Last Name: </label>
+            <input type="text" id="lastName" placeholder="Enter First Name">
+        </form>
+
+        <button id="yell" type="button" name="button">YELL</button>
+
+        <h2 id="placeToYell"></h2>
+
+        <!--  //  -------- A temperature converter (celius to fahrenheit) --------- -->
+
+        <form>
+            <label for="celcius">Celcius: </label>
+            <input type="text" id="celcius" placeholder="Celcius Value">
+        </form>
+
+        <button id="convert" type="button" name="button">Convert</button>
+
+        <h2 id="placeToConvert"></h2>
+
+        <!-- /------------------ Bachelor Code ----------------- -->
+
+        <!-- 1. -->
+        <header>
+            <h1 id="finalRose">Final Rose</h1>
+        </header>
+
+        <section>
+            <img src="./1c62acd9d61f1d045ba169f4d1655d6b.webp" alt id="claire"
+                style="width: 200px; height: 200px;">
+            <img src="./360e76ff50fbc764386b26b3b68758bf.webp" alt id="nikki"
+                style="width: 200px; height: 200px;">
+            <img src="./95853458f728379f67b2073efa66ec21.webp" alt
+                id="sharleen" style="width: 200px; height: 200px;">
+        </section>
+
+        <!-- 2. --------------- -->
+        <section>
+            <h1>The next Bachelorette should have been: </h1>
+            <h2 id="andiNext">Andi</h2>
+            <h2 id="claireNext">Claire</h2>
+            <h2 id="nikkiNext">Nikki</h2>
+        </section>
+
+        <section>
+            <img src="./1c62acd9d61f1d045ba169f4d1655d6b.webp" alt
+                id="andiImage" class="hidden"
+                style="width: 200px; height: 200px;">
+            <img src="./360e76ff50fbc764386b26b3b68758bf.webp" alt
+                id="nikkiImage" class="hidden"
+                style="width: 200px; height: 200px;">
+            <img src="./95853458f728379f67b2073efa66ec21.webp" alt
+                id="claireImage" class="hidden"
+                style="width: 200px; height: 200px;">
+        </section>
+
+        <!-- 3. --------------- -->
+        <header>
+            <h1>Who has the final Rose?</h1>
+            <h2 class="contestant">Claire</h2>
+            <h2 class="contestant rose">Nikki</h2>
+        </header>
+
+        <section>
+            <img src="./1c62acd9d61f1d045ba169f4d1655d6b.webp" alt
+                class="hidden" id="claireClick">
+            <img src="./360e76ff50fbc764386b26b3b68758bf.webp" alt
+                class="hidden" id="nikkiClick">
+        </section>
+
         <!-- external js -->
         <script src="./index.js"></script>
 
