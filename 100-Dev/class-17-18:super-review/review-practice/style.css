@@ -1,0 +1,57 @@
+
+body{
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+h1{
+    color: blue;
+    text-decoration: underline;
+    background: gold;
+}
+
+h2{
+    color: purple;
+    font-weight: bold;
+    font-size: 25px;
+    border: 2px solid orange; 
+}
+
+section{
+    width: 50%;
+    height: 400px;
+    background: gray;
+    border: 3px solid black;
+    color: white;
+}
+
+/* parent > child  */
+section > p{
+    color: red;
+}
+footer{
+    background: black;
+    border: 5px solid lightgreen;
+    color: white;
+}
+
+/* previous sibling + next sibling */
+p + p{
+    color: rebeccapurple;
+}
+footer a{
+    color: green;
+    font-size: 20px;
+    font-family: sans-serif, 'Roboto';
+}
