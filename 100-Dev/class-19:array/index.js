@@ -69,3 +69,21 @@ let cars = ['Honda', 'Toyota', 'Ford', 'Tesla']
 let nums = [1, 2, 3];
 cars = nums
 console.log(cars);
+
+
+// ------------------- array length (how many elenemts r in your array) ------------------
+console.log(newArr.length);
+
+
+// -------------- array Iteration (Iterates through an array passing in the value and index of each element) ----------------
+let bestColors = ["green", "blue", "yellow", "black"];
+
+for(let i = 0; i < bestColors.length; i++){
+    console.log(bestColors[i]);
+}
+
+// ---------- using forEach
+let bestColor = ["green", "blue", "yellow", "black"];
+bestColor.forEach((x, i) => console.log(x)); // x is the element and i is the index number of element
+// it's gonna run 4 times cause the length of array is 4
+// for Each runs 1 time for each element of array that means heres the element is 4 so it will run 4 times
