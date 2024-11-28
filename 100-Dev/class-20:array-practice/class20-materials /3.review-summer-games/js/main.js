@@ -2,7 +2,10 @@
 
 function multiNumsInArr(arr){
     let product = 1
-    arr.forEach( num => product *= num )
+    arr.forEach( num => product *= num ) // here (num) is the parameter
+
+    // or
+
     // for(let i = 0; i < arr.length; i++){
     //     product *= arr[i]
     // }
