@@ -8,6 +8,8 @@ console.log(favHoliday)
 let favPowerRangersSeries = 'Alien Rangers'
 alert(  favPowerRangersSeries.slice(-3)  )
 
+//--------- theres also => substring, char
+
 // *Functions*
 // Create a function that takes in 5 numbers. Subtract all five from 100. Alert the absolute value of the difference. Call the function.
 function minusFiveAndAbs(n1,n2,n3,n4,n5){
@@ -26,17 +28,21 @@ logHighAndLow(100,50,25)
 
 // *Conditionals*
 //Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
-// function headsOrTails(){
-//     let result = Math.random()
-//     if(result < .5){
-//         return 'heads'
-//     }else{
-//         return 'tails'
-//     }
-// }
-const headsOrTails = _ => Math.random() < .5 ? 'heads' : 'tails'
+function headsOrTails(){
+    let result = Math.random()
+    if(result < .5){
+        return 'heads'
+    }else{
+        return 'tails'
+    }
+}
 
-//console.log( headsOrTails() )
+//  or => (check on chatgpt)
+
+const headsOrTails = _ => Math.random() < .5 ? 'heads' : 'tails'
+console.log( headsOrTails() )
+
+
 //*Loops*
 //Create a function that takes in a number. Console log the result of heads or tails using the previous function x times where x is the number passed into the function. Call the function.
 function flipFlipFlipadelphia(n){
