@@ -3,9 +3,10 @@
 //Create and array of numbers. Sum all of the numbers. Alert the sum.
 let nums = [42,19,77,33,57]
 
-let sum = nums.reduce( (acc,c) => acc + c, 0  )
+let sum = nums.reduce( (acc,c) => acc + c, 0  ) //reduce runs once for each element in the array, every time reduce runs, there two element happens (first value as accumulator + second value as current value), 0 means the accumulation starts at 0. (0 + 42) = 42, 42+19 = 61, 61 + 77 = 138, 138 + 33 = 171, 171 + 57 = 228.
 
-alert(sum)
+
+alert(sum);
 
 
 

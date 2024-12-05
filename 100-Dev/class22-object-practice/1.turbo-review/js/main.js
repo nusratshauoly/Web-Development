@@ -7,7 +7,7 @@ console.log(favDrink)
 
 //Declare a variable, assign it a string of multiple words, and check to see if one of the words is "apple".
 let str = "Bob Duck apple dog"
-if( str.search('apple') !== -1 ){
+if( str.search('apple') !== -1 ){  // if the string do not match with 'apple' it will return -1
     console.log('yes')
 }else{
     console.log('no')
@@ -38,13 +38,14 @@ function checkWin(playerChoice){
         console.log('You Lose')
     }
 }
-//checkWin('rock')
-
+checkWin('rock')
+ 
 //*Loops*
 //Create a function that takes an array of choices. Play the game x times where x is the number of choices in the array. Print the results of each game to the console.
 
+// explanation check on the chatgpt
 function playGameXTimes(arr){
-    arr.forEach( choice => checkWin(choice) )
+    arr.forEach( choice => checkWin(choice) ) // its going to run three times
 }
 
 playGameXTimes( ['rock','paper','scissors'] )
