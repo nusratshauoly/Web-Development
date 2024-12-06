@@ -16,3 +16,4 @@ function TonyHawkCharacter(chName,chStance,chSponsor,chMove){
     }
 }
 let kareemCampbell = new TonyHawkCharacter('Kareem', 'Goofy', 'Element', 'Ghetto Bird')
+console.log(kareemCampbell);
