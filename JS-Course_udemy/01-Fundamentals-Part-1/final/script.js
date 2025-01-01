@@ -1,11 +1,11 @@
-/*
+
 ////////////////////////////////////
-// Linking a JavaScript File
+// vid - 8: Linking a JavaScript File
 let js = "amazing";
 console.log(40 + 8 + 23 - 10);
 
 ////////////////////////////////////
-// Values and Variables
+// vid- 9; Values and Variables
 console.log("Jonas");
 console.log(23);
 
@@ -22,17 +22,47 @@ let $function = 27;
 let person = "jonas";
 let PI = 3.1415;
 
-let myFirstJob = "Coder";
-let myCurrentJob = "Teacher";
 
-let job1 = "programmer";
-let job2 = "teacher";
+// let myFirstJob = "programmer";
+let myFirstJob = "Coder"; // ✅ this is the right way to declare a variable name
+let myCurrentJob = "Teacher"; // ✅ this is the right way to declare a variable name
+
+let job1 = "programmer"; // ❌ this is not  the right way to declare a variable name
+let job2 = "teacher"; // ❌ this is not the right way to declare a variable name
 
 console.log(myFirstJob);
 
+let 3years = 3;  // ❌ not allowed to write like this
+
+let jonas&Matilda = 'JM'; // ❌ not allowed to write like this
+
+let name = 'Jonas'; // ❌ reserved word not allowed to write as variable like this
+
+let Person = 'Jonas'; // ❌ uppercase not allowed to write as first letter like this
+
+let PI = 3.1415; // ✅ can write this variable with fixed value of mathmatical term
+
+// /////////////////////////////////
+// vid - 10: practice assignment
+
+/*
+---- Values and Variables ------
+
+1. Declare variables called country, continent and population and assign their values according to your own country (population in millions).
+
+2. Log their values to the console.
+
+*/
+
+
+
+
 ////////////////////////////////////
-// Data Types
-let javascriptIsFun = true;
+// vid - 11: Data Types
+
+// it's the data that has types not the variable
+
+let javascriptIsFun = true;  //3. boolean (true) or (false)
 console.log(javascriptIsFun);
 
 // console.log(typeof true);
@@ -40,49 +70,72 @@ console.log(typeof javascriptIsFun);
 // console.log(typeof 23);
 // console.log(typeof 'Jonas');
 
-javascriptIsFun = 'YES!';
+javascriptIsFun = 'YES!';  //2. string
 console.log(typeof javascriptIsFun);
 
-let year;
+let year;  //4. undefined
 console.log(year);
 console.log(typeof year);
 
-year = 1991;
+year = 1991;  //1. number 
 console.log(typeof year);
 
-console.log(typeof null);
+console.log(typeof null); //5. null (similar to undefined)
+
+// 6. Symbol(ES2015) : value that is unique and cannot be changed [not useful for now].
+
+// 7. Bigint(ES2020) : Larger integers than the Number type can hold.
+
+
+// /////////////////////////////////
+// ------- practice assignment -------
+
+/*
+
+Data Type ------
+
+1. Declare a variable called isIsland and set its value according to your country. The variable should hold a Boolean value. Also declare a variable language, but don't assign it any value yet.
+
+2. Log the types of isIsland, population, country and language to the console.
+
+*/
+
+
+
+
+
 
 ////////////////////////////////////
-// let, const and var
+//vid - 12: let, const and var
 let age = 30;
 age = 31;
 
 const birthYear = 1991;
-// birthYear = 1990;
+// birthYear = 1990;  // ❌ cannot change value like this
 // const job;
 
-var job = 'programmer';
+var job = 'programmer';  // ❌ donot use now
 job = 'teacher'
 
 lastName = 'Schmedtmann';
 console.log(lastName);
 
 ////////////////////////////////////
-// Basic Operators
-// Math operators
+//vid - 13: Basic Operators
+// ---  Math operators ---
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
 console.log(ageJonas, ageSarah);
 
 console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
-// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
+// exponential value = 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
 
 const firstName = 'Jonas';
 const lastName = 'Schmedtmann';
 console.log(firstName + ' ' + lastName);
 
-// Assignment operators
+// --- Assignment operators ---
 let x = 10 + 5; // 15
 x += 10; // x = x + 10 = 25
 x *= 4; // x = x * 4 = 100
@@ -91,7 +144,7 @@ x--;
 x--;
 console.log(x);
 
-// Comparison operators
+// --- Comparison operators ---
 console.log(ageJonas > ageSarah); // >, <, >=, <=
 console.log(ageSarah >= 18);
 
@@ -99,8 +152,28 @@ const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2018);
 
+
+//--------- Practice Assignment ------------
+
+/*
+
+Let, Const, Var ---
+
+1.Set the value of language to the language spoken where you live (some countries have multiple languages, but just choose one).
+
+2. Think about which variables should be const variables (which values will never change, and which might change?). Then, change these variables to const.
+
+3. Try to change one of the changed variables now, and observe what happens.
+
+*/
+
+
 ////////////////////////////////////
-// Operator Precedence
+
+//vid - 14: Operator Precedence
+
+// mdn javascript operator precedence
+
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
@@ -113,10 +186,10 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-*/
+
 
 ////////////////////////////////////
-// Coding Challenge #1
+// vid - 16: Coding Challenge #1
 
 /*
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
@@ -131,12 +204,12 @@ TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1
 GOOD LUCK 😀
 */
 
-// const massMark = 78;
-// const heightMark = 1.69;
-// const massJohn = 92;
-// const heightJohn = 1.95;
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
 
-/*
+
 const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
@@ -149,7 +222,7 @@ const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
 ////////////////////////////////////
-// Strings and Template Literals
+// vid - 17: Strings and Template Literals
 const firstName = 'Jonas';
 const job = 'teacher';
 const birthYear = 1991;
@@ -172,8 +245,38 @@ multiple
 lines`);
 
 
+// ------------ Practice Examples ----------
+
+/*
+ Basic Operators -------
+
+ 1. If your country split in half, and each half would contain half the population, then how many people would live in each half?
+
+2. Increase the population of your country by 1 and log the result to the console.
+
+3. Finland has a population of 6 million. Does your country have more people than Finland?
+
+4. The average population of a country is 33 million people. Does you country have less people than the average country?
+
+5. Based on the variables you created, create a new variable description which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'.
+
+
+*/
+
+
+// ------------ Practice Examples ----------
+
+/*
+
+Strings and Template Literals --------
+
+1. Recreate the description variable from the last assignment, this time using the template literal syntax.
+
+*/
+
+
 ////////////////////////////////////
-// Taking Decisions: if / else Statements
+// vid - 18: Taking Decisions: if / else Statements
 const age = 15;
 
 if (age >= 18) {
@@ -192,10 +295,23 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
+
+
+// -------------- Practice Problems --------------
+
+/*
+Taking Decisions: if/else Statelements -----
+
+1. If your country's population is greater than 33 million, log a string like this to the console: "Portugal's population is 22 million below average" (the 22 is the average of 33 minus the country's population).
+
+2. After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
 */
 
+
+
+
 ////////////////////////////////////
-// Coding Challenge #2
+// vid - 19: Coding Challenge #2
 
 /*
 Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
@@ -208,7 +324,7 @@ HINT: Use an if/else statement 😉
 GOOD LUCK 😀
 */
 
-/*
+
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -230,29 +346,66 @@ if (BMIMark > BMIJohn) {
 }
 
 ////////////////////////////////////
-// Type Conversion and Coercion
+// vid - 20: Type Conversion and Coercion
 
-// type conversion
+// type conversion ---- 
+// when we manually convert one type to another
 const inputYear = '1991';
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear) + 18);
+console.log(Number(inputYear), inputYear); //like the the original number remain string console.log(inputYear); just showing the converted number here console.log(Number(inputYear)
+console.log(Number(inputYear) + 18);  // here the string will be converted to number & add with a number.
 
-console.log(Number('Jonas'));
-console.log(typeof NaN);
+console.log(Number('Jonas')); // javascript gives us (NaN) value whenever the operations that involve number fails to produce a new number.
+console.log(typeof NaN);  // (NaN) means invalid number.
 
-console.log(String(23), 23);
+console.log(String(23), 23); //first is string type, second is number type.
+//if the value is white color then it's a string - 
 
-// type coercion
+// javascript can convert in number, string & boolean. but it can not convert something to undefined or null.
+
+// type coercion ------ 
+// happens whenever a operator dealing with two values that have different types. javascript automatically convert types behind the scenes for us, its happens completely hidden from us
 console.log('I am ' + 23 + ' years old');
-console.log('23' - '10' - 3);
-console.log('23' / '2');
+console.log('23' - '10' - 3); // 10(number) -- (-) operator actually triggers the opposite conversion means (string - number = number)
 
-let n = '1' + 1; // '11'
-n = n - 1;
+console.log('23' + '10' + 3); // '23103'(string) -- (string + string = stringstring)
+
+console.log(2 + 3 + 4 + '5'); // '95'(string) -- (number + string = string)
+
+console.log('23' * '2');  // 46 (number)
+
+console.log('23' / '2');  // 11.5 (number)
+
+let n = '1' + 1; // '11' (string)
+n = n - 1; // 10 (number)
 console.log(n);
 
+
+
+// ---------------------  Practice Problem -------------
+
+/*
+Type Conversion and Coercion ---------
+
+1. Predict the result of these 5 operations without executing them:
+
+console.log('9' - '5'); // -> ?
+console.log('19' - '13' + '17'); // -> ?
+console.log('19' - '13' + 17); // -> ?
+console.log('123' < 57); // -> ?
+console.log(5 + 6 + '4' + 9 - 4 - 2); // -> ?
+
+2. Execute the operations to check if you were right.
+
+
+*/
+
+
+
+
+
+
 ////////////////////////////////////
-// Truthy and Falsy Values
+// vid - 21: Truthy and Falsy Values
 
 // 5 falsy values: 0, '', undefined, null, NaN
 console.log(Boolean(0));
@@ -276,7 +429,7 @@ if (height) {
 }
 
 ////////////////////////////////////
-// Equality Operators: == vs. ===
+// vid - 22: Equality Operators: == vs. ===
 const age = '18';
 if (age === 18) console.log('You just became an adult :D (strict)');
 
@@ -298,8 +451,35 @@ if (favourite === 23) { // 22 === 23 -> FALSE
 
 if (favourite !== 23) console.log('Why not 23?');
 
+
+// ------------ Practice Problems ------------
+
+/*
+Equality Operators: == vs. === ------
+
+1. Declare a variable numNeighbours based on a prompt input like this:
+
+    prompt('How many neighbour countries does your contry have?');
+
+2. If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now).
+
+3. Use an else-if block to log 'More than 1 border' in case numNeighbours is greater than 1.
+
+4. Use an else block to log 'No borders' (this block will be executed when numNeighbours is 0 or any other value).
+
+5. Test the code with different values of numNeighbours, including 1 and 0.
+
+6. Change == to ===, and test the code again, with the same values of numNeighbours. Notice what happens when there is exactly 1 border! Why is this happening?
+
+7. Finally, convert numNeighbours to a number, and watch what happens now when you input 1.
+
+8. Reflect on why we should use the === operator and type conversion in this situation.
+*/
+
+
+
 ////////////////////////////////////
-// Logical Operators
+// vid - 24: Logical Operators
 const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
 
@@ -321,10 +501,29 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log('Someone else should drive...');
 }
+
+
+// ------------- Practice Problems -------------
+
+/*
+
+Logical Operators ---
+
+1. Comment out the previous code so the prompt doesn't get in the way.
+
+2. Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks English, has less than 50 million people and is not an island.
+
+3. Write an if statement to help Sarah figure out if your country is right for her. You will need to write a condition that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if necessary.
+
+4. If yours is the right country, log a strings like this 'You should live in Portugal :)'. If not, log 'Portugal does not meet your criteria :('.
+
+5. Probably your country does not meet all the criteria. So go back and temporarily change some variables in order to make the condition true (unless you live in Canada :D).
+
 */
 
+
 ////////////////////////////////////
-// Coding Challenge #3
+// vid - 25: Coding Challenge #3
 
 /*
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
@@ -342,18 +541,18 @@ TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK 😀
 */
 
-/*
-// const scoreDolphins = (96 + 108 + 89) / 3;
-// const scoreKoalas = (88 + 91 + 110) / 3;
-// console.log(scoreDolphins, scoreKoalas);
 
-// if (scoreDolphins > scoreKoalas) {
-//   console.log('Dolphins win the trophy 🏆');
-// } else if (scoreKoalas > scoreDolphins) {
-//   console.log('Koalas win the trophy 🏆');
-// } else if (scoreDolphins === scoreKoalas) {
-//   console.log('Both win the trophy!');
-// }
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas) {
+  console.log('Dolphins win the trophy 🏆');
+} else if (scoreKoalas > scoreDolphins) {
+  console.log('Koalas win the trophy 🏆');
+} else if (scoreDolphins === scoreKoalas) {
+  console.log('Both win the trophy!');
+}
 
 // BONUS 1
 const scoreDolphins = (97 + 112 + 80) / 3;
@@ -371,7 +570,7 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 }
 
 ////////////////////////////////////
-// The switch Statement
+// vid - 26:  The switch Statement
 const day = 'friday';
 
 switch (day) {
@@ -412,8 +611,29 @@ if (day === 'monday') {
   console.log('Not a valid day!');
 }
 
+
+// -------------- Practice Problems ---------------
+
+/*
+The switch statement ------------
+
+1. Use a switch statement to log the following string for the given language:
+
+chinese or mandarin: 'MOST number of native speakers!';
+
+spanish: '2nd place in number of native speakers';
+
+english: '3rd place';
+
+hindi: 'Number 4';
+
+arabic: '5th most spoken language';
+
+for all other simply log 'Great language too :D'.
+*/
+
 ////////////////////////////////////
-// Statements and Expressions
+// vid - 27: Statements and Expressions
 3 + 4
 1991
 true && false && !false
@@ -426,7 +646,7 @@ const me = 'Jonas';
 console.log(`I'm ${2037 - 1991} years old ${me}`);
 
 ////////////////////////////////////
-// The Conditional (Ternary) Operator
+// vid - 28: The Conditional (Ternary) Operator
 const age = 23;
 // age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
 
@@ -442,10 +662,23 @@ if (age >= 18) {
 console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
+
+
+// ------------------ Practice Problem ----------------
+
+/*
+The Conditional (Ternary) Operator ---------
+
+1. If your country's population is greater than 33 million, use the ternary operator to log a string like this to the console: "Portugal's population is above average". Otherwise, simply log "Portugal's population is below average". Notice how only one word change between these two sentences!
+
+2. After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
 */
 
+
+
+
 ////////////////////////////////////
-// Coding Challenge #4
+// vid - 29: Coding Challenge #4
 
 /*
 Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
@@ -461,8 +694,8 @@ HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 GOOD LUCK 😀
 */
 
-/*
+
 const bill = 430;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
-*/
+
