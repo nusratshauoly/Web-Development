@@ -1,6 +1,6 @@
 'use strict';
 
-/*
+
 ///////////////////////////////////////
 // Activating Strict Mode
 let hasDriversLicense = false;
@@ -110,7 +110,7 @@ const yearsUntilRetirement = function (birthYeah, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -135,7 +135,7 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
-/*
+
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAverage(3, 4, 5));
 
@@ -237,7 +237,7 @@ console.log(friends.includes(23));
 if (friends.includes('Steven')) {
   console.log('You have a friend called Steven');
 }
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #2
@@ -257,7 +257,7 @@ HINT: Remember that an array needs a value in each position, and that value can 
 GOOD LUCK 😀
 */
 
-/*
+
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
@@ -365,7 +365,7 @@ console.log(jonas.age);
 // Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 console.log(jonas.getSummary());
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -382,7 +382,7 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 GOOD LUCK 😀
 */
 
-/*
+
 const mark = {
   fullName: 'Mark Miller',
   mass: 78,
@@ -536,7 +536,7 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log('Loop is about to end...');
 }
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #4
@@ -560,7 +560,7 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
 GOOD LUCK 😀
 */
 
-/*
+
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
@@ -586,4 +586,3 @@ const calcAverage = function (arr) {
 console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
-*/

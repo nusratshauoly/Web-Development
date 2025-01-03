@@ -1,4 +1,8 @@
 
+
+// (command + k) for clear the inspect (console) section
+
+
 ////////////////////////////////////
 // vid - 8: Linking a JavaScript File
 let js = "amazing";
@@ -62,6 +66,8 @@ let PI = 3.1415; // ✅ can write this variable with fixed value of mathmatical 
 
 // it's the data that has types not the variable
 
+// ---- * Primitive data types : number, string, boolean, undefined, null, bigInt, Symbol.
+
 let javascriptIsFun = true;  //3. boolean (true) or (false)
 console.log(javascriptIsFun);
 
@@ -77,14 +83,76 @@ let year;  //4. undefined
 console.log(year);
 console.log(typeof year);
 
-year = 1991;  //1. number 
+year = 1991;  //1. number *integer
+year = 19.19; //* float 
 console.log(typeof year);
 
 console.log(typeof null); //5. null (similar to undefined)
 
-// 6. Symbol(ES2015) : value that is unique and cannot be changed [not useful for now].
 
-// 7. Bigint(ES2020) : Larger integers than the Number type can hold.
+// *** 6 & 7 no. dont use usually ***
+
+// 6. Symbol(ES2015) : value that is unique and cannot be changed [not useful for now].
+let y = Symbol("Hello!");
+console.log(y);
+
+// 7. Bigint(ES2020) : Larger integers than the Number type can hold. In Bigint number in last we will see (n) after number.
+let x = BigInt("123");
+console.log(x);
+
+// ----- * Non-primitive data types: 
+// 1. objects ---- collection of values
+
+const student = {
+  age : 24,    // here "age is key" & "24 is value" 
+  name: "Rahul",
+  isPass: true
+};
+
+// * how to assign new value in object
+student["age"] = student["age"] + 1;
+student["name"] = "Rahul Sharma";
+
+console.log(student);
+console.log(student.name);  // can print the name like this
+console.log(student["name"]); // can print the name also like this
+console.log(student["age"]);
+console.log(student["name"]);
+
+// **** Note: we can't change the value of const variable but can change the key of const object variable in object
+
+// ------------ Practice Problem from lec - 1(variable & data types) from JS in (Shradha Khapra) ----------------------
+ 
+/*
+  1. Create a const object called "product" to store information shown in the picture.
+*/
+const product = {
+    name: 'Ball Pen',
+    rating: 4,
+    offer: 5,
+    price: 270,
+};
+console.log(product);
+console.log(typeof product);
+
+
+/*
+  2. create a const object called "profile" to store information shown in the picture
+*/
+
+const profile = {
+  userName: '@ShradhaKhapra',
+  isFollow: false,
+  followers: 123,
+  following: 123
+}
+console.log(profile);
+console.log(typeof profile);
+console.log(typeof profile["userName"]);
+
+// 2. Arrays
+
+// 3. functions
 
 
 // /////////////////////////////////
@@ -107,13 +175,33 @@ Data Type ------
 
 ////////////////////////////////////
 //vid - 12: let, const and var
-let age = 30;
+
+
+// ---- let : variable cannot be re-declared but can be updated. A block scope variable.
+let age = 30;  // ✅ most of the time use this
 age = 31;
 
-const birthYear = 1991;
+{
+  let a = 5;
+// let a = 10;  // ❌ cannot change value like this in the same block;
+// instead
+  a = 10;  // ✅  can change value like this without declaring variable
+  console.log(a);
+}
+
+{
+  let a = 10; // ✅  can change value like this on same variable in the different block;
+  console.log(a);
+}
+
+
+//--- const : Variable cannot be re-declared or updated. A block scope variable.
+const birthYear = 1991; // ✅ most of the time use this
 // birthYear = 1990;  // ❌ cannot change value like this
 // const job;
 
+
+// --- var : Variable can be re-declared & updated. Aglobal scope variable.
 var job = 'programmer';  // ❌ donot use now
 job = 'teacher'
 
@@ -408,11 +496,11 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); // -> ?
 // vid - 21: Truthy and Falsy Values
 
 // 5 falsy values: 0, '', undefined, null, NaN
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean('Jonas'));
-console.log(Boolean({}));
-console.log(Boolean(''));
+console.log(Boolean(0));  // false
+console.log(Boolean(undefined));  // false
+console.log(Boolean('Jonas'));  // true
+console.log(Boolean({}));  // true
+console.log(Boolean(''));  // false
 
 const money = 100;
 if (money) {
@@ -430,9 +518,12 @@ if (height) {
 
 ////////////////////////////////////
 // vid - 22: Equality Operators: == vs. ===
-const age = '18';
+
+const age = '18'; // is not type coersion
 if (age === 18) console.log('You just became an adult :D (strict)');
 
+
+// (==) do type coersion
 if (age == 18) console.log('You just became an adult :D (loose)');
 
 const favourite = Number(prompt("What's your favourite number?"));
@@ -449,8 +540,11 @@ if (favourite === 23) { // 22 === 23 -> FALSE
   console.log('Number is not 23 or 7 or 9')
 }
 
+
+// strict version of not equal
 if (favourite !== 23) console.log('Why not 23?');
 
+// loose version of not equal(!=)
 
 // ------------ Practice Problems ------------
 
@@ -476,6 +570,8 @@ Equality Operators: == vs. === ------
 8. Reflect on why we should use the === operator and type conversion in this situation.
 */
 
+////////////////////////////////////////
+// vid - 23: Boolean Logic
 
 
 ////////////////////////////////////
@@ -487,16 +583,16 @@ console.log(hasDriversLicense && hasGoodVision);
 console.log(hasDriversLicense || hasGoodVision);
 console.log(!hasDriversLicense);
 
-// if (hasDriversLicense && hasGoodVision) {
-//   console.log('Sarah is able to drive!');
-// } else {
-//   console.log('Someone else should drive...');
-// }
+if (hasDriversLicense && hasGoodVision) {
+  console.log('Sarah is able to drive!');
+} else {
+  console.log('Someone else should drive...');
+}
 
 const isTired = false; // C
 console.log(hasDriversLicense && hasGoodVision && isTired);
 
-if (hasDriversLicense && hasGoodVision && !isTired) {
+if (hasDriversLicense && hasGoodVision && !isTired) {   // (!isTired = true)
   console.log('Sarah is able to drive!');
 } else {
   console.log('Someone else should drive...');
@@ -596,6 +692,9 @@ switch (day) {
     console.log('Not a valid day!');
 }
 
+
+// write the conditions with if/else statement-----
+
 if (day === 'monday') {
   console.log('Plan course structure');
   console.log('Go to coding meetup');
@@ -634,10 +733,17 @@ for all other simply log 'Great language too :D'.
 
 ////////////////////////////////////
 // vid - 27: Statements and Expressions
-3 + 4
+
+
+
+// an expression is a piece of code that produce a value.
+3 + 4  
 1991
 true && false && !false
+`${2037 - 1991}`
 
+
+// a statement is like a bigger piece of code that is executed and which does not produce a value on itself.
 if (23 > 10) {
   const str = '23 is bigger';
 }
@@ -648,10 +754,12 @@ console.log(`I'm ${2037 - 1991} years old ${me}`);
 ////////////////////////////////////
 // vid - 28: The Conditional (Ternary) Operator
 const age = 23;
-// age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
-
+age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
+ 
+// ternary operator makes code write in small
 const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
 console.log(drink);
+// ----------------
 
 let drink2;
 if (age >= 18) {
@@ -662,6 +770,8 @@ if (age >= 18) {
 console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
+
+// ternary operator is perfect when we just need to take a quick decision.
 
 
 // ------------------ Practice Problem ----------------
