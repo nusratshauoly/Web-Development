@@ -50,7 +50,7 @@ let PI = 3.1415; // ✅ can write this variable with fixed value of mathmatical 
 // vid - 10: practice assignment
 
 /*
----- Values and Variables ------
+----  vid : 9 - Values and Variables ------
 
 1. Declare variables called country, continent and population and assign their values according to your own country (population in millions).
 
@@ -121,6 +121,8 @@ console.log(student["name"]);
 
 // **** Note: we can't change the value of const variable but can change the key of const object variable in object
 
+// -------------------------------------------------
+
 // ------------ Practice Problem from lec - 1(variable & data types) from JS in (Shradha Khapra) ----------------------
  
 /*
@@ -150,6 +152,9 @@ console.log(profile);
 console.log(typeof profile);
 console.log(typeof profile["userName"]);
 
+
+// ---------------------------------------------
+
 // 2. Arrays
 
 // 3. functions
@@ -160,7 +165,7 @@ console.log(typeof profile["userName"]);
 
 /*
 
-Data Type ------
+ vid - 11 : Data Types ------
 
 1. Declare a variable called isIsland and set its value according to your country. The variable should hold a Boolean value. Also declare a variable language, but don't assign it any value yet.
 
@@ -208,8 +213,29 @@ job = 'teacher'
 lastName = 'Schmedtmann';
 console.log(lastName);
 
+
+//--------- Practice Assignment ------------
+
+/*
+
+ vid - 12 : Let, Const, Var ---
+
+1.Set the value of language to the language spoken where you live (some countries have multiple languages, but just choose one).
+
+2. Think about which variables should be const variables (which values will never change, and which might change?). Then, change these variables to const.
+
+3. Try to change one of the changed variables now, and observe what happens.
+
+*/
+
+
+
+
+
 ////////////////////////////////////
-//vid - 13: Basic Operators
+
+// vid - 13: Basic Operators
+
 // ---  Math operators ---
 const now = 2037;
 const ageJonas = now - 1991;
@@ -241,19 +267,141 @@ const isFullAge = ageSarah >= 18;
 console.log(now - 1991 > now - 2018);
 
 
-//--------- Practice Assignment ------------
+// ------------------------------------------------
+
+// ------------ Lecture Practice from lec - 2(Operators and Conditional Statements) from JS in (Shradha Khapra) ----------------------
+
+// --------- Arithmetic Operators 
+let a = 5;
+let b = 2;
+
+console.log("a = ", a, " & b = ", b);
+console.log("a + b = ", a + b);
+console.log("a - b = ", a - b);
+console.log("a * b = ", a * b);
+console.log("a / b = ", a / b);
+console.log("a % b = ", a % b);
+console.log("a ** b = ", a ** b);  // 25  (expontiation)
+
+// --------- Unary operator
+let a = 5;
+let b = 2;
+
+console.log("a = ", a, " & b = ", b);
+a = a + 1; // 6
+a++;  // post increment
+++a; // pre increment
+a = a - 1; // 4
+a--;
+console.log("a = ", a); // 6
+console.log("a++ = ", a++); 
+console.log("a = ", a); // 4
+console.log("++a = ", ++a); 
+console.log("--a = ", --a); 
+console.log("a-- = ", a--); 
+
+// ---------- assignment operator
+let a = 5;
+let b = 2;
+
+a += 4; // a = a + 4
+console.log("a = ", a); // 9
+
+a -= 4; // a = a - 4
+console.log("a = ", a); // 1
+
+a *= 4; // a = a * 4
+console.log("a = ", a); // 20
+
+a /= 4; // a = a / 4
+console.log("a = ", a); // 1.25
+
+a %= 4; // a = a % 4
+console.log("a = ", a); // 1
+
+a **= 4; // a = a ** 4
+console.log("a = ", a); // 625
+
+
+// ------------ comparison operators
+let a = 5;
+let b = 2;
+console.log("a == b", a == b); // false
+console.log("5 != 2", a != b); // true
+
+a = 5;
+b = 5;
+console.log("5 == 5", a == b); // true
+console.log("5 != 5", a != b); // false
+
+a = 5; // number
+b = "5"; // string -> number (in comparison string converted to number)
+console.log("a == b", a == b); // true
+console.log("a === b", a === b); // false (equal & type comparison)
+console.log("a !== b", a !== b); // true (equal & type comparison)
+
+console.log("5 < 2", a < b); // false
+console.log("5 > 2", a < b); // true
+console.log("5 <= 5", a <= b); // true
+
+a = 6;
+b = 5;
+console.log("6 >= 5", a >= b);
+
+// ------------- Logical Operators
+
+
+let a = 6;
+let b = 5;
+
+let cond1 = a > b; // true
+let cond2 = a === 6; // true
+console.log("cond1 && cond2 = ", cond1 && cond2);  // true  (both should be right)
+
+// --
+let a = 6;
+let b = 5;
+
+let cond1 = a < b; // false
+let cond2 = a === 6; // true
+console.log("cond1 && cond2 = ", cond1 && cond2);  // false
+console.log("cond1 && cond2 = ", a < b && a === 6); // false
+console.log("cond1 || cond2 = ", a < b || a === 6); 
+console.log(" !(6 < 5) = ", !(a < b)); // false
+console.log(" !(6 < 5) = ", !(a === 6)); // true
+
+// -------------- bitwise operator
+/*
+1. &	: Sets each bit to 1 if both bits are 1
+2. |	:	Sets each bit to 1 if one of two bits is 1
+3. ^	:	Sets each bit to 1 if only one of two bits is 1
+4. ~	(NOT) :	Inverts all the bits
+5. <<	:	Shifts left by pushing zeros in from the right and let the leftmost bits fall off
+6. >>	:	Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+7. >>>	:	Shifts right by pushing zeros in from the left, and let the rightmost bits fall off
+*/
+
+// ------------------------------------------------------
+
+
+// ------------ Practice Examples ----------
 
 /*
+ vid - 13: Basic Operators -------
 
-Let, Const, Var ---
+ 1. If your country split in half, and each half would contain half the population, then how many people would live in each half?
 
-1.Set the value of language to the language spoken where you live (some countries have multiple languages, but just choose one).
+2. Increase the population of your country by 1 and log the result to the console.
 
-2. Think about which variables should be const variables (which values will never change, and which might change?). Then, change these variables to const.
+3. Finland has a population of 6 million. Does your country have more people than Finland?
 
-3. Try to change one of the changed variables now, and observe what happens.
+4. The average population of a country is 33 million people. Does you country have less people than the average country?
+
+5. Based on the variables you created, create a new variable description which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'.
+
 
 */
+
 
 
 ////////////////////////////////////
@@ -333,30 +481,12 @@ multiple
 lines`);
 
 
-// ------------ Practice Examples ----------
-
-/*
- Basic Operators -------
-
- 1. If your country split in half, and each half would contain half the population, then how many people would live in each half?
-
-2. Increase the population of your country by 1 and log the result to the console.
-
-3. Finland has a population of 6 million. Does your country have more people than Finland?
-
-4. The average population of a country is 33 million people. Does you country have less people than the average country?
-
-5. Based on the variables you created, create a new variable description which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'.
-
-
-*/
-
 
 // ------------ Practice Examples ----------
 
 /*
 
-Strings and Template Literals --------
+ vid - 17 : Strings and Template Literals --------
 
 1. Recreate the description variable from the last assignment, this time using the template literal syntax.
 
@@ -385,10 +515,120 @@ if (birthYear <= 2000) {
 console.log(century);
 
 
+// ------------------------------------------------
+
+// ------------ Lecture Practice from lec - 2(Operators and Conditional Statements) from JS in (Shradha Khapra) ----------------------
+
+// -------- conditional statements 
+
+let mode = "dark";
+
+if(mode === "dark") console.log(mode);  // if only the condition is true and that is one work/statement need to be done.
+
+// 
+
+let age = 25;
+
+if(age >= 18){
+  console.log("you can vote");
+}
+
+// 
+
+let age = 25;
+
+if(age >= 18){
+  console.log("you can vote");
+}
+else{
+  console.log("you can't vote");
+}
+
+// 
+
+let mode = "dark";
+let color;
+if(mode === 'dark'){
+  color = "black";
+}
+// 
+let mode = "light";
+let color;
+if(mode === "light"){
+  color = "white";
+}
+else{
+  color = "black";
+}
+
+// 
+let mode = "blue";
+let color;
+
+if(mode === "dark"){
+  color = "black";
+}
+else if(mode === "blue"){
+  color = "blue";
+}
+else if(mode === "pink"){
+  color = "pink";
+}
+else{
+  color = "white";
+}
+console.log(color);
+
+// number even or odd
+
+let num = 10;
+
+if(num % 2 === 0){
+  console.log(num, "is even");
+}
+else{
+  console.log(num, "is odd");
+}
+
+// syntax (in programming language) ===> rules
+
+if(age < 18){
+  console.log("junior");
+}
+else if(age > 60){
+  console.log("senior");
+}
+else{
+  console.log("middle");
+}
+
+
+// ---------------- Ternary operator (condition ? "true output" : "false output")
+
+let age = 28;
+
+let result = age > 18 ? "adult" : "not adult";
+console.log(result);
+
+// (?) is not preferable in long and large statement but can use one statement 
+let age = 16;
+age >= 18 ? console.log("adult") : console.log("not adult");
+
+
+
+// -------------- MDN Docs in Javascript
+/*
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript
+*/
+
+
+// -----------------------------------------------------------------------------
+
+
 // -------------- Practice Problems --------------
 
 /*
-Taking Decisions: if/else Statelements -----
+vid - 18: Taking Decisions: if/else Statelements -----
 
 1. If your country's population is greater than 33 million, log a string like this to the console: "Portugal's population is 22 million below average" (the 22 is the average of 33 minus the country's population).
 
@@ -472,7 +712,7 @@ console.log(n);
 // ---------------------  Practice Problem -------------
 
 /*
-Type Conversion and Coercion ---------
+ vid - 20 : Type Conversion and Coercion ---------
 
 1. Predict the result of these 5 operations without executing them:
 
@@ -549,7 +789,7 @@ if (favourite !== 23) console.log('Why not 23?');
 // ------------ Practice Problems ------------
 
 /*
-Equality Operators: == vs. === ------
+ vid - 22 : Equality Operators: == vs. === ------
 
 1. Declare a variable numNeighbours based on a prompt input like this:
 
@@ -603,7 +843,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {   // (!isTired = true)
 
 /*
 
-Logical Operators ---
+vid - 24 : Logical Operators ---
 
 1. Comment out the previous code so the prompt doesn't get in the way.
 
@@ -693,6 +933,23 @@ switch (day) {
 }
 
 
+// write switch statement from MDN javascript
+const expr = 'Papayas';
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+
+
+
 // write the conditions with if/else statement-----
 
 if (day === 'monday') {
@@ -714,7 +971,7 @@ if (day === 'monday') {
 // -------------- Practice Problems ---------------
 
 /*
-The switch statement ------------
+vid - 26 : The switch statement ------------
 
 1. Use a switch statement to log the following string for the given language:
 
@@ -777,7 +1034,7 @@ console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
 // ------------------ Practice Problem ----------------
 
 /*
-The Conditional (Ternary) Operator ---------
+vid - 28 : The Conditional (Ternary) Operator ---------
 
 1. If your country's population is greater than 33 million, use the ternary operator to log a string like this to the console: "Portugal's population is above average". Otherwise, simply log "Portugal's population is below average". Notice how only one word change between these two sentences!
 
@@ -809,3 +1066,58 @@ const bill = 430;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
 
+
+
+
+
+// ------------------------------------------------
+
+// ------------ Practice Problem from lec - 2(Operators and Conditional Statements) from JS in (Shradha Khapra) ----------------------
+
+/*
+  1. Get user to input a number using prompt("Enter a number:"). Check if the number is a multiple of 5 / 3 or not.
+*/
+
+let num = prompt("enter a number: ");
+
+if(num % 5 === 0){
+  console.log(num, "is multiple of 5");
+}
+else{
+  console.log(num, "is not multiple of 5");
+}
+
+
+/*
+  2. Write a code which can give grades to students according to their scores:
+
+  * 90 - 100, A
+  * 70 - 89, B
+  * 60 - 69, C
+  * 50 - 59, D
+  * 0 - 49, F
+*/
+let score = 75;
+// or
+let score = prompt("enter your score (0 - 100): "); // take grade from user
+
+let grade;
+
+if(score >= 90 && score <= 100){
+  grade = "A";
+}
+else if(score >= 70 && score <= 89){
+  grade = "B";
+}
+else if(score >= 60 && score <= 59){
+  grade = "C";
+}
+else if(score >= 50 && score <= 59){
+  grade = "D";
+}
+else if(score >= 0 && score <= 49){
+  grade = "F";
+}
+
+console.log("according to your scores, your grade was : ", grade);
+// ------------------------------------------------
