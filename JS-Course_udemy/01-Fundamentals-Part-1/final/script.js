@@ -3,6 +3,13 @@
 // (command + k) for clear the inspect (console) section
 
 
+/*
+
+  Shradha Khapra Javascript Tutorial video- 1, 2 match with these section content
+
+*/
+
+
 ////////////////////////////////////
 // vid - 8: Linking a JavaScript File
 let js = "amazing";

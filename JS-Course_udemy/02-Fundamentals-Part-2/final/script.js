@@ -2,19 +2,19 @@
 
 
 ///////////////////////////////////////
-// Activating Strict Mode
+//vid - 32: Activating Strict Mode
 let hasDriversLicense = false;
 const passTest = true;
 
 if (passTest) hasDriversLicense = true;
 if (hasDriversLicense) console.log('I can drive :D');
 
-// const interface = 'Audio';
-// const private = 534;
+// const interface = 'Audio';  // (interface is reserved word)
+// const private = 534;  // (private is reserved word for JS)
 
 
 ///////////////////////////////////////
-// Functions
+//vid - 33: Functions
 function logger() {
   console.log('My name is Jonas');
 }
@@ -24,61 +24,150 @@ logger();
 logger();
 logger();
 
+
+// function with parameters
 function fruitProcessor(apples, oranges) {
   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
   return juice;
 }
+console.log(fruitProcessor(5, 0));
 
 const appleJuice = fruitProcessor(5, 0);
 console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
+console.log(appleOrangeJuice);  // console.log is an built-in function that we donot have to write ourselves
 
-const num = Number('23');
+const num = Number('23'); // Number is also an built in function and we pass this argument into the function and this function will then be executed and returned string as a number.
+
+
+// ------------------ practice problem ----------------
+//vid - 33: Functions
+
+/*
+1. Write a function called describeCountry which takes three parameters: country, population and capitalCity. Based on this input, the function returns a string with this format: 'Finland has 6 million people and its capital city is Helsinki'.
+
+2. Call this function 3 times, with input data for 3 different countries. Store the returned values in 3 different variables, and log them to the console.
+
+*/
+
 
 
 ///////////////////////////////////////
-// Function Declarations vs. Expressions
+//vid - 34: Function Declarations vs. Expressions
 
-// Function declaration
-function calcAge1(birthYeah) {
-  return 2037 - birthYeah;
+// *** function is just a value, So just as a number or a string or a boolean value. function is not a type. It's not like a string or number type but it's also a value. and if it's a value, we can store it in a variable.
+
+
+//----- Function declaration --  we use the function keyword to declare a function a bit like we declare a variable. 
+
+function calcAge1(birthYear) {  // parameter is kind of placeholder in the function
+  return 2037 - birthYear;
 }
-const age1 = calcAge1(1991);
+const age1 = calcAge1(1991); // arguments is the actual value that we use to fill in that placeholder that is the parameter.
+console.log(age1);
 
-// Function expression
-const calcAge2 = function (birthYeah) {
-  return 2037 - birthYeah;
+
+
+
+// **  we can call function declarations before they are defined in the code. 
+
+// it's not good idea to do that but can do it if necessary.
+
+const age1 = calcAge1(1991); 
+console.log(age1);
+
+function calcAge1(birthYear) {  
+  return 2037 - birthYear;
+}
+
+
+
+//------ Function expression --  we write function without a name then we define the parameter and we store it into a variable and that variable will then be the function.
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
 }
 const age2 = calcAge2(1991);
 
 console.log(age1, age2);
 
+// **  we can not call function expression before they are defined in the code.
+
+
+
+// * it's a matter of personal preference that in those two types of function , but function expession is a good chooce cause it gives a good code structure.
+
+
+
+
+
+// ------------------ practice problem ----------------
+
+
+//vid - 34: Function Declarations vs. Expressions
+
+
+/*
+1. The world population is 7900 million people. Create a function declaration called percentageOfWorld1 which receives a population value, and returns the percentage of the world population that the given population represents. For example, China has 1441 million people, so it's about 18.2% of the world population.
+
+2. To calculate the percentage, divide the given population value by 7900 and then multiply by 100.
+
+3. Call percentageOfWorld1 for 3 populations of countries of your choice, store the results into variables, and log them to the console.
+
+4. Create a function expression which does the exact same thing, called percentageOfWolrd2, and also call it with 3 country populations (can be the same populations).
+
+*/
+
+
+
+
+
+
 
 ///////////////////////////////////////
-// Arrow functions
+// vid - 35: Arrow functions
 
-const calcAge3 = birthYeah => 2037 - birthYeah;
-const age3 = calcAge3(1991);
+// * arrow function is a simple form of function expression. this is excellent for simple one-liner functions.
+
+
+const calcAge3 = birthYear => 2037 - birthYear;  // here (birthYear) is a parameter and (2037 - birthYear) is statement/calculation. (don't need to write return if it one line statement.) . 
+const age3 = calcAge3(1991); // pass the argument of parameter
 console.log(age3);
 
-const yearsUntilRetirement = (birthYeah, firstName) => {
-  const age = 2037 - birthYeah;
-  const retirement = 65 - age;
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;  // calculate the age
+  const retirement = 65 - age;  // retirement age
   // return retirement;
   return `${firstName} retires in ${retirement} years`;
 }
+console.log(yearsUntilRetirement(1991, 'Jonas')); 
+console.log(yearsUntilRetirement(1980, 'Bob'));
 
-console.log(yearsUntilRetirement(1991, 'Jonas')); console.log(yearsUntilRetirement(1980, 'Bob'));
+// ** what type of function should i use? should i use arrow function to write in every function. since it's easy to write. but the answer is No. Because there is another fundamental difference between the arrow function and more traditional functions. So function declaration and function expression. (it'sa a fact that arrow function do not get a so-called "this" keyword.).
+
+// ------------------ practice problem ----------------
+
+// vid - 35: Arrow functions
+
+/*
+1. Recreate the last assignment, but this time create an arrow function called percentageOfWorld3.
+*/
+
+
+
+
+
 
 
 ///////////////////////////////////////
-// Functions Calling Other Functions
+// vid - 36: Functions Calling Other Functions
+
+// fruits need a machine that cuts the fruits first before making juice.
 function cutFruitPieces(fruit) {
-  return fruit * 4;
+  return fruit * 4;  // cutting the fruit into 4 pieces
 }
 
+// make the juice with cut fruits
 function fruitProcessor(apples, oranges) {
   const applePieces = cutFruitPieces(apples);
   const orangePieces = cutFruitPieces(oranges);
@@ -86,17 +175,42 @@ function fruitProcessor(apples, oranges) {
   const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
   return juice;
 }
+
 console.log(fruitProcessor(2, 3));
+
+// ** It's very common for one function to call another function.
+
+// ** It's a very good example to illustrate the don't repeat yourself principle. (the DRY method)
+
+
+
+// ------------------ practice problem ----------------
+
+// vid - 36: Functions Calling Other Functions
+
+/*
+
+1. Create a function called describePopulation. Use the function type you like the most. This function takes in two arguments: country and population, and returns a strings like this: 'China has 1441 million people, which is about 18.2% of the world'.
+
+2. To calculate the percentage, describePopulation calls the percentageOfWorld1 you created earlier.
+
+3. Call describePopulation with data for 3 countries of your choice.
+*/
+
+
 
 
 ///////////////////////////////////////
-// Reviewing Functions
-const calcAge = function (birthYeah) {
-  return 2037 - birthYeah;
+// vid - 37: Reviewing Functions
+
+
+// one function to call another function.
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
 }
 
-const yearsUntilRetirement = function (birthYeah, firstName) {
-  const age = calcAge(birthYeah);
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
   const retirement = 65 - age;
 
   if (retirement > 0) {
@@ -111,9 +225,12 @@ const yearsUntilRetirement = function (birthYeah, firstName) {
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
 
+// especially when we actually receive a number as an input, here we get (birthYear) as a number and therefore it's a good practice to then also return a number .
+
+
 
 ///////////////////////////////////////
-// Coding Challenge #1
+// vid - 38: Coding Challenge #1
 
 /*
 Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
@@ -165,7 +282,7 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 
 ///////////////////////////////////////
-// Introduction to Arrays
+// vid - 39: Introduction to Arrays
 const friend1 = 'Michael';
 const friend2 = 'Steven';
 const friend3 = 'Peter';
@@ -173,17 +290,25 @@ const friend3 = 'Peter';
 const friends = ['Michael', 'Steven', 'Peter'];
 console.log(friends);
 
-const y = new Array(1991, 1984, 2008, 2020);
+const years = new Array(1991, 1984, 2008, 2020);
 
 console.log(friends[0]);
 console.log(friends[2]);
 
+// how many element are there in the array
 console.log(friends.length);
+
+// to get last element in the array
 console.log(friends[friends.length - 1]);
 
+
+// ** we can change the elements of array even it is start with const. but we cannot change the whole array.
+
+// add element to the array
 friends[2] = 'Jay';
 console.log(friends);
-// friends = ['Bob', 'Alice']
+friends = ['Bob', 'Alice']  // ❌ cannot do this
+
 
 const firstName = 'Jonas';
 const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
@@ -191,22 +316,42 @@ console.log(jonas);
 console.log(jonas.length);
 
 // Exercise
-const calcAge = function (birthYeah) {
-  return 2037 - birthYeah;
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
 }
 const years = [1990, 1967, 2002, 2010, 2018];
 
+// to use calcAge function and then store the results of calculating the ages for some of these years into a new Array.
 const age1 = calcAge(years[0]);
 const age2 = calcAge(years[1]);
 const age3 = calcAge(years[years.length - 1]);
 console.log(age1, age2, age3);
 
+
+// we can place function calls into an Array just fine, because they will produce a value
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
 
 
+// ------------------ practice problem ----------------
+
+// vid - 39: Introduction to Arrays
+
+/*
+1. Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called populations.
+
+2. Log to the console whether the array has 4 elements or not (true or false).
+
+3. Create an array called percentages containing the percentages of the world population for these 4 population values. Use the function percentageOfWorld1 that you created earlier to compute the 4 percentage values.
+*/
+
+
+
+
+
+
 ///////////////////////////////////////
-// Basic Array Operations (Methods)
+// vid - 40: Basic Array Operations (Methods)
 const friends = ['Michael', 'Steven', 'Peter'];
 
 // Add elements
@@ -214,23 +359,23 @@ const newLength = friends.push('Jay');
 console.log(friends);
 console.log(newLength);
 
-friends.unshift('John');
+friends.unshift('John'); // add first element 
 console.log(friends);
 
 // Remove elements
-friends.pop(); // Last
+friends.pop(); // Last element remove
 const popped = friends.pop();
 console.log(popped);
 console.log(friends);
 
-friends.shift(); // First
+friends.shift(); // First element remove
 console.log(friends);
 
-console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Steven')); // in which position the element is in the array
 console.log(friends.indexOf('Bob'));
 
-friends.push(23);
-console.log(friends.includes('Steven'));
+friends.push(23); // last element add
+console.log(friends.includes('Steven')); //the element will simply return true (if the element is in the array) and false if it's not.
 console.log(friends.includes('Bob'));
 console.log(friends.includes(23));
 
@@ -239,8 +384,30 @@ if (friends.includes('Steven')) {
 }
 
 
+// ------------------ practice problem ----------------
+
+// vid - 40: Basic Array Operations (Methods)
+
+/*
+1. Create an array containing all the neighbouring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called neighbours.
+
+2. At some point, a new country called 'Utopia' is created in the neighbourhood of your selected country, so add it to the end of the neighbours array.
+
+3. Unfortunately, after some time the new country is dissolved, so remove it from the end of the array.
+
+4. If the neighbours array does not include the country 'Germany', log to the console: 'Probably not a central european country :D'.
+
+5. Change the name of one of your neighbouring countries. To do that, find the index of the country in the neighbours array, and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'.
+*/
+
+
+
+
+
+
+
 ///////////////////////////////////////
-// Coding Challenge #2
+// video - 41: Coding Challenge #2
 
 /*
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
@@ -271,7 +438,13 @@ console.log(bills, tips, totals);
 
 
 ///////////////////////////////////////
-// Introduction to Objects
+// vid- 42: Introduction to Objects
+
+
+// this is an example of data structure - Array
+
+//  In array the order in which we specify the elements matters a lot. we can only access array elements using their order number. We should use arrays for more order Data.
+
 const jonasArray = [
   'Jonas',
   'Schmedtmann',
@@ -280,7 +453,15 @@ const jonasArray = [
   ['Michael', 'Peter', 'Steven']
 ];
 
+
+// this is an example of data structure - Objects
+
+// the order of this values does not matter at all when we want to retrieve them. We should use objects for more unstructured Data. Data that we actually want to name, then retrieve from the object based on that name. 
+
+
 const jonas = {
+
+  // key: value
   firstName: 'Jonas',
   lastName: 'Schmedtmann',
   age: 2037 - 1991,
@@ -289,8 +470,23 @@ const jonas = {
 };
 
 
+// ------------------ practice problem ----------------
+
+// vid- 42: Introduction to Objects
+
+/*
+1. Create an object called myCountry for a country of your choice, containing properties country, capital, language, population and neighbours (an array like we used in previous assignments).
+
+*/
+
+
+
+
+
+
+
 ///////////////////////////////////////
-// Dot vs. Bracket Notation
+// vid - 43: Dot vs. Bracket Notation
 const jonas = {
   firstName: 'Jonas',
   lastName: 'Schmedtmann',
@@ -300,6 +496,7 @@ const jonas = {
 };
 console.log(jonas);
 
+// retrieve the property from object
 console.log(jonas.lastName);
 console.log(jonas['lastName']);
 
@@ -317,6 +514,8 @@ if (jonas[interestedIn]) {
   console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
 }
 
+
+// can add new properties inside object
 jonas.location = 'Portugal';
 jonas['twitter'] = '@jonasschmedtman';
 console.log(jonas);
@@ -326,8 +525,34 @@ console.log(jonas);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 
 
+/*
+------- MDN operator Precedense in javascript 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+
+*/
+
+
+
+// ------------------ practice problem ----------------
+
+// vid - 43: Dot vs. Bracket Notation
+
+/*
+1. Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki'.
+
+2. Increase the country's population by two million using dot notation, and then decrease it by two million using bracket notation.
+
+*/
+
+
+
+
+
+
+
 ///////////////////////////////////////
-// Object Methods
+//vid - 44: Object Methods
 
 const jonas = {
   firstName: 'Jonas',
@@ -367,8 +592,27 @@ console.log(jonas.age);
 console.log(jonas.getSummary());
 
 
+// ------------------ practice problem ----------------
+
+//vid - 44: Object Methods
+
+/*
+1. Add a method called describe to the myCountry object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
+
+2. Call the describe method.
+
+3. Add a method called checkIsland to the myCountry object. This method will set a new property on the object, called isIsland. isIsland will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
+
+*/
+
+
+
+
+
+
+
 ///////////////////////////////////////
-// Coding Challenge #3
+// vid - 45: Coding Challenge #3
 
 /*
 Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
@@ -418,7 +662,7 @@ if (mark.bmi > john.bmi) {
 
 
 ///////////////////////////////////////
-// Iteration: The for Loop
+// vid - 46: Iteration: The for Loop
 
 // console.log('Lifting weights repetition 1 🏋️‍♀️');
 // console.log('Lifting weights repetition 2 🏋️‍♀️');
@@ -436,9 +680,19 @@ for (let rep = 1; rep <= 30; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
 }
 
+// ------------------ practice problem ----------------
+// vid - 46: Iteration: The for Loop
+
+/*
+1. There are elections in your country! in a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'.
+
+*/
+
+
+
 
 ///////////////////////////////////////
-// Looping Arrays, Breaking and Continuing
+// vid - 47: Looping Arrays, Breaking and Continuing
 const jonas = [
   'Jonas',
   'Schmedtmann',
@@ -489,9 +743,25 @@ for (let i = 0; i < jonas.length; i++) {
   console.log(jonas[i], typeof jonas[i]);
 }
 
+// ------------------ practice problem ----------------
+
+// vid - 47: Looping Arrays, Breaking and Continuing
+
+/*
+1. Let's bring back the populations array from a previous assignment.
+
+2. Use a for loop to compute an array called percentages2 containing the percentages of the world population for the 4 population values. Use the function percentageWOrld1 that you created earlier.
+
+3. Confirm that percentages2 contains exactly the same values as the percentages array that we created manually in the previous assignment, and reflect on how much better this solution is.
+
+*/
+
+
+
+
 
 ///////////////////////////////////////
-// Looping Backwards and Loops in Loops
+// vid - 48: Looping Backwards and Loops in Loops
 const jonas = [
   'Jonas',
   'Schmedtmann',
@@ -516,9 +786,29 @@ for (let exercise = 1; exercise < 4; exercise++) {
   }
 }
 
+// ------------------ practice problem ----------------
+
+// vid - 48: Looping Backwards and Loops in Loops
+
+/*
+1. Store this array of arrays into a variable called listOfNeighbours:
+
+[['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+2. Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country.
+
+3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+
+*/
+
+
+
+
+
+
 
 ///////////////////////////////////////
-// The while Loop
+// vid - 49: The while Loop
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
 }
@@ -537,9 +827,19 @@ while (dice !== 6) {
   if (dice === 6) console.log('Loop is about to end...');
 }
 
+// ---------------------- Practice Problem --------------
+// vid - 49: The while Loop
+
+/*
+1. Recreate the challenge from the lecture Looping Arrays, Breaking and Continuing, but this time using a while loop (call the array percentages3).
+
+2. Reflect on what solution you like better for this task: the for loop or the while loop?
+
+*/
+
 
 ///////////////////////////////////////
-// Coding Challenge #4
+// vid - 50: Coding Challenge #4
 
 /*
 Let's improve Steven's tip calculator even more, this time using loops!

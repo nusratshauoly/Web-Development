@@ -48,9 +48,9 @@ const restaurant = {
   },
 };
 
-/*
+
 ///////////////////////////////////////
-// String Methods Practice
+//vid - 130: String Methods Practice
 
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -72,9 +72,9 @@ for (const flight of flights.split('+')) {
 }
 
 ///////////////////////////////////////
-// Coding Challenge #4
+//vid - 129: Coding Challenge #4
 
-
+/*
 Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
 
 The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
@@ -103,7 +103,7 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
-/*
+
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
 
@@ -121,11 +121,11 @@ document.querySelector('button').addEventListener('click', function () {
     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
   }
 });
-*/
 
-/*
+
+
 ///////////////////////////////////////
-// Working With Strings - Part 3
+// vid - 128: Working With Strings - Part 3
 
 // Split and join
 console.log('a+very+nice+string'.split('+'));
@@ -178,7 +178,7 @@ planesInLine(12);
 
 
 ///////////////////////////////////////
-// Working With Strings - Part 2
+// vid - 127: Working With Strings - Part 2
 
 const airline = 'TAP Air Portugal';
 
@@ -243,7 +243,7 @@ checkBaggage('Got some snacks and a gun for protection');
 
 
 ///////////////////////////////////////
-// Working With Strings - Part 1
+// vid - 126: Working With Strings - Part 1
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
 
@@ -283,10 +283,10 @@ console.log(new String('jonas'));
 console.log(typeof new String('jonas'));
 
 console.log(typeof new String('jonas').slice(1));
-*/
+
 
 ///////////////////////////////////////
-// Coding Challenge #3
+//  vid - 125: Coding Challenge #3
 
 /* 
 Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
@@ -314,7 +314,7 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
-/*
+
 // 1.
 const events = [...new Set(gameEvents.values())];
 console.log(events);
@@ -337,11 +337,11 @@ for (const [min, event] of gameEvents) {
   const half = min <= 45 ? 'FIRST' : 'SECOND';
   console.log(`[${half} HALF] ${min}: ${event}`);
 }
-*/
 
-/*
+
+
 ///////////////////////////////////////
-// Maps: Iteration
+// vid - 123: Maps: Iteration
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
   [1, 'C'],
@@ -377,7 +377,7 @@ console.log([...question.values()]);
 
 
 ///////////////////////////////////////
-// Maps: Fundamentals
+//vid - 122:  Maps: Fundamentals
 const rest = new Map();
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze, Italy');
@@ -411,7 +411,7 @@ console.log(rest.get(arr));
 
 
 ///////////////////////////////////////
-// New Operations to Make Sets Useful!
+// vid - 121: New Operations to Make Sets Useful!
 
 const italianFoods = new Set([
   'pasta',
@@ -454,7 +454,7 @@ console.log(italianFoods.isDisjointFrom(mexicanFoods));
 
 
 ///////////////////////////////////////
-// Sets
+// vid - 120: Sets
 const ordersSet = new Set([
   'Pasta',
   'Pizza',
@@ -488,12 +488,12 @@ console.log(
 );
 
 console.log(new Set('jonasschmedtmann').size);
-*/
+
 
 ///////////////////////////////////////
-// Coding Challenge #2
+// vid - 119: Coding Challenge #2
 
-/* 
+/*
 Let's continue with our football betting app!
 
 1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
@@ -555,7 +555,7 @@ const game = {
   },
 };
 
-/*
+
 // 1.
 for (const [i, player] of game.scored.entries())
   console.log(`Goal ${i + 1}: ${player}`);
@@ -583,11 +583,11 @@ const scorers = {};
 for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
-*/
 
-/*
+
+
 ///////////////////////////////////////
-// Looping Objects: Object Keys, Values, and Entries
+//vid - 118: Looping Objects: Object Keys, Values, and Entries
 
 // Property NAMES
 const properties = Object.keys(openingHours);
@@ -614,7 +614,7 @@ for (const [day, { open, close }] of entries) {
 
 
 ///////////////////////////////////////
-// Optional Chaining
+//vid - 117: Optional Chaining
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
@@ -647,7 +647,7 @@ else console.log('user array empty');
 
 
 ///////////////////////////////////////
-// The for-of Loop
+//vid - 115: The for-of Loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
@@ -657,10 +657,10 @@ for (const [i, el] of menu.entries()) {
 }
 
 // console.log([...menu.entries()]);
-*/
+
 
 ///////////////////////////////////////
-// Coding Challenge #1
+// vid - 114: Coding Challenge #1
 
 /* 
 We're building a football betting app (soccer for my American friends 😅)!
@@ -680,7 +680,7 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
-/*
+
 // 1.
 const [players1, players2] = game.players;
 console.log(players1, players2);
@@ -718,7 +718,7 @@ team1 > team2 && console.log('Team 2 is more likely to win');
 
 
 ///////////////////////////////////////
-// Logical Assignment Operators
+// vid - 113: Logical Assignment Operators
 const rest1 = {
   name: 'Capri',
   // numGuests: 20,
@@ -751,7 +751,7 @@ console.log(rest2);
 
 
 ///////////////////////////////////////
-// The Nullish Coalescing Operator
+// vid - 112: The Nullish Coalescing Operator
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
 console.log(guests);
@@ -762,7 +762,7 @@ console.log(guestCorrect);
 
 
 ///////////////////////////////////////
-// Short Circuiting (&& and ||)
+//vid -111:  Short Circuiting (&& and ||)
 
 console.log('---- OR ----');
 // Use ANY data type, return ANY data type, short-circuiting
@@ -795,7 +795,7 @@ restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 
 ///////////////////////////////////////
-// Rest Pattern and Parameters
+// vid - 110: Rest Pattern and Parameters
 // 1) Destructuring
 
 // SPREAD, because on RIGHT side of =
@@ -834,7 +834,7 @@ restaurant.orderPizza('mushrooms');
 
 
 ///////////////////////////////////////
-// The Spread Operator (...)
+//vid - 109: The Spread Operator (...)
 
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
@@ -885,7 +885,7 @@ console.log(restaurant.name);
 
 
 ///////////////////////////////////////
-// Destructuring Objects
+//vid - 108:  Destructuring Objects
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del Sole, 21',
@@ -927,7 +927,7 @@ console.log(o, c);
 
 
 ///////////////////////////////////////
-// Destructuring Arrays
+// vid - 106: Destructuring Arrays
 const arr = [2, 3, 4];
 const a = arr[0];
 const b = arr[1];
@@ -962,4 +962,4 @@ console.log(i, j, k);
 // Default values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
-*/
+
