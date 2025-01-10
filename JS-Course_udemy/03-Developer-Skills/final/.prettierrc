@@ -1,4 +1,4 @@
 {
   "singleQuote": true,
-  "arrowParens": "avoid"
+   "arrowParens": "avoid"   //  avoid single bracket for 1 type parameter in function
 }

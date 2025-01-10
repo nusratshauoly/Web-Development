@@ -283,6 +283,10 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 ///////////////////////////////////////
 // vid - 39: Introduction to Arrays
+
+// * * * arrays are also an object.
+// *** In Javascript everything is object.
+
 const friend1 = 'Michael';
 const friend2 = 'Steven';
 const friend3 = 'Peter';
@@ -554,6 +558,12 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 ///////////////////////////////////////
 //vid - 44: Object Methods
 
+/*
+ The functions are really just another type of value. and if a function is just a value then that means that we can create a key value pair in which the value is a function. that means we can add functions to objects.
+*/
+
+
+
 const jonas = {
   firstName: 'Jonas',
   lastName: 'Schmedtmann',
@@ -562,34 +572,67 @@ const jonas = {
   friends: ['Michael', 'Peter', 'Steven'],
   hasDriversLicense: true,
 
-  // calcAge: function (birthYeah) {
-  //   return 2037 - birthYeah;
-  // }
 
-  // calcAge: function () {
-  //   // console.log(this);
-  //   return 2037 - this.birthYeah;
-  // }
+  // 1 st method
+
+  // --- we will write function expression here
+  // * (calcAge) is the variable here.
+  // it is a function value property
+
+  calcAge: function (birthYeah) {
+    return 2037 - birthYeah;
+  },
+
+  // 2nd method
+
+/*
+ Here, we should not take birthYear again since it's already in the (calcAge) property, it breaks the rule of (DRY) principle. so we don't need to write this parameter. we will read the birthYear directly from the object. for that we use ('this') keyword. this keyword/variable is basically equal to the object on which the method is called, or in other words , it is equal to the object calling the method. so here is calcAge, and the object that is calling the method is jonas,
+*/
+
+// * with these it will need to declare every time when we want calculate the age so it will be time consuming for bigger problem.
+
+  calcAge: function () {
+   console.log(this);   // (this) indicates jonas.
+    return 2037 - this.birthYeah;
+  },
+
+  // 3rd method
+
+// Instead , we can do is to just calculate the age once, then store it in the object, and then when we need it at a later point, we can then just retrieve the age as a property from the object.
+
+// we only needed to calculate the age once and then (console.log(jonas.age);) from here we simply retrieve the property that we had already calculated before.
+
+// ***  so this is the most efficient solution for Dry method.
 
   calcAge: function () {
     this.age = 2037 - this.birthYeah;
     return this.age;
   },
 
+
+/*
+  Exercise: Write a method called getSummary and this method should return a string which should kind of summarize the data about Jonas, (Jonas is a 46-year old teacher, and he has a/no driver's license)
+
+*/
   getSummary: function () {
     return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
   }
 };
 
-console.log(jonas.calcAge());
 
-console.log(jonas.age);
+console.log(jonas.calcAge(1991)); // ist method
+console.log(jonas['calcAge'](1991));
+
+console.log(jonas.calcAge()); // 2nd method
+
+console.log(jonas.age);  // 3rd method 
 console.log(jonas.age);
 console.log(jonas.age);
 
 // Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 console.log(jonas.getSummary());
+
 
 
 // ------------------ practice problem ----------------
@@ -701,7 +744,7 @@ const jonas = [
   ['Michael', 'Peter', 'Steven'],
   true
 ];
-const types = [];
+const types = [];  // creating an empty array (types of the every element of jonas object element ) and creats a new types of array
 
 // console.log(jonas[0])
 // console.log(jonas[1])
@@ -713,30 +756,55 @@ for (let i = 0; i < jonas.length; i++) {
   // Reading from jonas array
   console.log(jonas[i], typeof jonas[i]);
 
-  // Filling types array
-  // types[i] = typeof jonas[i];
-  types.push(typeof jonas[i]);
-}
+  // 
 
+
+  // Filling types array (from jonas array)
+  types[i] = typeof jonas[i]; // ist method 
+  // types[0] = 'string'; //  type[0] = typeof jonas[0];  type[1] = typeof jonas[1]; etc like this... 
+
+// Output : ["string", "string", "number", "string", "object", "boolean"];
+
+
+// // 2nd method (this method is more cleaner then the first one)
+
+  types.push(typeof jonas[i]);  
+// we now want to pass the element that we do want to add on to the array.
+
+// Output : ["string", "string", "number", "string", "object", "boolean"];
+
+}
 console.log(types);
+
+
+
+// //////////////
+
+// canculate the ages for all these four birth years here and want to store them in a new array
 
 const years = [1991, 2007, 1969, 2020];
 const ages = [];
 
 for (let i = 0; i < years.length; i++) {
-  ages.push(2037 - years[i]);
+  ages.push(2037 - years[i]);  // (2037 - years[0] = > 2037 - 1991 => 46) years will be the first element of [ages] array. & continue doing like this with the rest 3 element also.
 }
-console.log(ages);
+console.log(ages); // answer: [46, 30, 68, 17]
 
 // continue and break
-console.log('--- ONLY STRINGS ---')
+
+
+// --- continue = is to exit the current iteration of the loop and continue to the next one.
+
+console.log('--- ONLY STRINGS ---') // only print the element that are strings.
 for (let i = 0; i < jonas.length; i++) {
   if (typeof jonas[i] !== 'string') continue;
 
   console.log(jonas[i], typeof jonas[i]);
 }
 
-console.log('--- BREAK WITH NUMBER ---')
+// --- break = is used to completely terminate the whole loop.
+
+console.log('--- BREAK WITH NUMBER ---') // only print the element that are not number.
 for (let i = 0; i < jonas.length; i++) {
   if (typeof jonas[i] === 'number') break;
 
@@ -771,12 +839,15 @@ const jonas = [
   true
 ];
 
+// Answer will be : [true, ['Michael', 'Peter', 'Steven'], 'teacher', 2037 - 1991, 'Schmedtmann', 'Jonas']
 // 0, 1, ..., 4
-// 4, 3, ..., 0
+// 4, 3, ..., 0  (backwards print)
 
-for (let i = jonas.length - 1; i >= 0; i--) {
-  console.log(i, jonas[i]);
+for (let i = jonas.length - 1; i >= 0; i--) {  // (jonas.length - 1) is the count of backwards
+  console.log(i, jonas[i]); // here i is the counter value - 0, 1, 2, 3 & jonas[i] is the object value
 }
+
+// ---- Example - we have 3 different exercises , and we want to repeat each of them 5 times.  
 
 for (let exercise = 1; exercise < 4; exercise++) {
   console.log(`-------- Starting exercise ${exercise}`);
@@ -813,15 +884,22 @@ for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
 }
 
+
+// while loop - we can only specify a condition. A while loop is more versatile than the for loop. which means it can be used a larger variety of situations. 
+
+// A while loop does really not have to depend on any counter variable. Whenever you do need a loop without a counter, you can reach for the while loop.
+
 let rep = 1;
 while (rep <= 10) {
   // console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
   rep++;
 }
 
+// *** In while loop we dont need counter variable means there no fixed number, that needs to be looped. It' use in a random number.
+
 let dice = Math.trunc(Math.random() * 6) + 1;
 
-while (dice !== 6) {
+while (dice !== 6) { // if the dice number appears 6 
   console.log(`You rolled a ${dice}`);
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log('Loop is about to end...');
@@ -869,7 +947,7 @@ const tips = [];
 const totals = [];
 
 for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
+  const tip = calcTip(bills[i]); // for each loop bills and tip will have new value.
   tips.push(tip);
   totals.push(tip + bills[i]);
 }
