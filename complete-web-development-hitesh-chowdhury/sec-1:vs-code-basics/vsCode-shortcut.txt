@@ -1,0 +1,31 @@
+1. command + shift + p  => > for opening command.
+
+2. move between the file without pressing touchpad => (command + p) select the file or search it , enter it
+
+3. close the file (command + w)
+
+4. to open the settings file (command + ,)
+
+5. to open terminal (control + ~)
+
+6. open and close sidebar (command + b)
+
+7. save the file (command + s)
+
+8. zoom in & zoom out => (command +, command - )
+
+9. left or start line of the code (command + (left arrow key))
+
+10. right or end line of the code (command + (right arrow key))
+
+11. tab or space for one word at a time  write (option + (right/left) arrow)
+
+12. duplicate the line (option + shift + (down arrow key))
+
+13. switch the line (select the line + option + up/down arrow)
+
+14. write in two/ many line at the same time, first select the line with cursor ( ⌥ Opt+⌘ Cmd+↑/↓) (command + option + up/down arow) for upper line / lower line then write
+
+15. highlight the word (first select the word , (command + d))
+
+16. search the code keyword (command + f)
