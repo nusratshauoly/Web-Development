@@ -1,5 +1,7 @@
-// prettier.io
+// *** prettier.io => docs => configuring prettier => quotes + arrow function parenthesis
 
+
+// *** (code => Preference => user snippets > new global snippets file)
 
 // *** (Command + D) to select multiple line and change all together.
 
@@ -18,7 +20,7 @@ if(x === 23) console.log(23);
 const calcAge = birthYear => 2037 - birthYear;
 console.log(calcAge(1991));
 
-///////////////////////////////////////
+///////////////////////////////////////////////////////
 // vid - 59: Using Google, StackOverflow and MDN
 
 // PROBLEM 1:
@@ -55,7 +57,7 @@ const calcTempAmplitude = function (temps) {
     if (curTemp < min) min = curTemp;
   }
   console.log(max, min);
-  return max - min;
+  return max - min;  // return the amplitude
 };
 const amplitude = calcTempAmplitude(temperatures);
 console.log(amplitude);
@@ -96,13 +98,18 @@ const measureKelvin = function () {
     type: 'temp',
     unit: 'celsius',
 
-    // C) FIX
-    // value: Number(prompt('Degrees celsius:')),
-    value: 10,
+    // error
+    // value: prompt('Degrees celsius:'),
+
+    // C) FIX (this)
+    value: Number(prompt('Degrees celsius:')),
+
+    // value: 10,
   };
 
-  // B) FIND
-  console.table(measurement);
+  // B) FIND (the bug)
+  console.log(measurement);  // we find that value is "10", but we need number 10, that's why the error is happening.
+  console.table(measurement);  // for bigger object it can be helpful
 
   // console.log(measurement.value);
   // console.warn(measurement.value);
@@ -111,14 +118,36 @@ const measureKelvin = function () {
   const kelvin = measurement.value + 273;
   return kelvin;
 };
-// A) IDENTIFY
+// A) IDENTIFY (the bug)
 console.log(measureKelvin());
 
-// Using a debugger
+// --------------- Using a debugger -------------------
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+
+    // C) FIX (this)
+    value: 10,
+  };
+
+  // B) FIND (the bug)
+  console.table(measurement); 
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY (the bug)
+console.log(measureKelvin());
+
+// using a debugger
 const calcTempAmplitudeBug = function (t1, t2) {
   const temps = t1.concat(t2);
   console.log(temps);
 
+
+  // * here the debug is here when we give max and min value 0 , cause in max value if we compare with bigger numbers then it will set the max value, but min value is already 0, it's lowest, so there will be no comparison with min value.
   let max = 0;
   let min = 0;
 
@@ -126,8 +155,8 @@ const calcTempAmplitudeBug = function (t1, t2) {
     const curTemp = temps[i];
     if (typeof curTemp !== 'number') continue;
 
-
-    // debugger;  // a debugger is actually useful inside of a loop // when the browser sees this dibugger, it will automatically open up the debugger tool. go to sources and start debugging.
+    // instead of go to (Sources) file and do the debug, write (debugger) statement.
+    debugger;  // a debugger is actually useful inside of a loop // when the browser sees this debugger, it will automatically open up the debugger tool. go to sources and start debugging. its like a break point
     if (curTemp > max) max = curTemp;
     if (curTemp < min) min = curTemp;
   }
@@ -136,7 +165,7 @@ const calcTempAmplitudeBug = function (t1, t2) {
 };
 const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
 // A) IDENTIFY
-console.log(amplitudeBug);
+console.log(amplitudeBug);   // ans is [9, 0] => amplitude = 9
 
 ///////////////////////////////////////
 // vid - 62:  Coding Challenge #1
@@ -186,7 +215,7 @@ printForecast(data1);
 Let's say you're building a time tracking application for freelancers. write a function called analyzeWorkWeek that receives an array of daily work hours for a certain week, and returns: At some point in building this app, you need a function that receives daily work hours for a certain week, and returns an object with the following data:
 1. Total hours worked
 2. Average daily hours (round to one decimal place)
-3. The day with the most hours worked (assume monday is day 0 in tha array)
+3. The day with the most hours worked (assume monday is day 0 in the array)
 4. Number of days worked (days with more than 0 hours)
 5. Whether the week was full-time (worked 35 hours or more)
 

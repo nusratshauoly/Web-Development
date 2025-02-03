@@ -36,6 +36,7 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice); // console.log is an built-in function that we donot have to write ourselves
 
 const num = Number("23"); // Number is also an built in function and we pass this argument into the function and this function will then be executed and returned string as a number.
+console.log(num);
 
 // ------------------ practice problem ----------------
 //vid - 33: Functions
@@ -46,6 +47,21 @@ const num = Number("23"); // Number is also an built in function and we pass thi
 2. Call this function 3 times, with input data for 3 different countries. Store the returned values in 3 different variables, and log them to the console.
 
 */
+
+"use strict";
+
+function describeCountry(country, population, capitalCity) {
+  return `${country} has ${population} million people and its capital city is ${capitalCity}`;
+}
+const country1 = describeCountry("Finland", 6, "Helsinki");
+console.log(country1);
+
+const country2 = describeCountry("Bangladesh", 16, "Dhaka");
+console.log(country2);
+
+const country3 = describeCountry("Malaysia", 5, "Pahang");
+console.log(country3);
+
 
 ///////////////////////////////////////
 //vid - 34: Function Declarations vs. Expressions
@@ -82,7 +98,7 @@ console.log(age1, age2);
 
 // **  we can not call function expression before they are defined in the code.
 
-// * it's a matter of personal preference that in those two types of function , but function expession is a good chooce cause it gives a good code structure.
+// * it's a matter of personal preference that in those two types of function , but function expession is a good choice cause it gives a good code structure.
 
 // ------------------ practice problem ----------------
 
@@ -98,6 +114,43 @@ console.log(age1, age2);
 4. Create a function expression which does the exact same thing, called percentageOfWolrd2, and also call it with 3 country populations (can be the same populations).
 
 */
+
+"use strict";
+
+// ---------------- function declaration
+function percentageOfWorld1(countryName, populationValue) {
+  const percentage = (populationValue / 7900) * 100;
+  console.log(
+    `${countryName} has ${populationValue} million people, so it's about ${percentage}% of the world population`
+  );
+}
+const country1 = percentageOfWorld1("china", 1441);
+console.log(country1);
+
+const country2 = percentageOfWorld1("Bangladesh", 1541);
+console.log(country2);
+
+const country3 = percentageOfWorld1("India", 1341);
+console.log(country3);
+
+
+
+// ------------------ function expression
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
+};
+
+const country4 = percentageOfWorld2(1441);
+console.log(country4);
+
+const country5 = percentageOfWorld2(1541);
+console.log(country5);
+
+const country6 = percentageOfWorld2(1341);
+console.log(country6);
+
+
+
 
 ///////////////////////////////////////
 // vid - 35: Arrow functions
@@ -117,7 +170,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1980, "Bob"));
 
-// ** what type of function should i use? should i use arrow function to write in every function. since it's easy to write. but the answer is No. Because there is another fundamental difference between the arrow function and more traditional functions. So function declaration and function expression. (it'sa a fact that arrow function do not get a so-called "this" keyword.).
+// ** what type of function should i use? should i use arrow function to write in every function. since it's easy to write. but the answer is No. Because there is another fundamental difference between the arrow function and more traditional functions. So function declaration and function expression. (it's a fact that arrow function do not get a so-called "this" keyword.).
 
 // ------------------ practice problem ----------------
 
@@ -126,6 +179,16 @@ console.log(yearsUntilRetirement(1980, "Bob"));
 /*
 1. Recreate the last assignment, but this time create an arrow function called percentageOfWorld3.
 */
+
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+const percentageOfPortugal = percentageOfWorld3(10);
+const percentageOfChina = percentageOfWorld3(1441);
+const percentageOfUSA = percentageOfWorld3(332);
+
+console.log(percentageOfPortugal, percentageOfChina, percentageOfUSA);
+
+
+
 
 ///////////////////////////////////////
 // vid - 36: Functions Calling Other Functions
@@ -155,14 +218,22 @@ console.log(fruitProcessor(2, 3));
 // vid - 36: Functions Calling Other Functions
 
 /*
-
 1. Create a function called describePopulation. Use the function type you like the most. This function takes in two arguments: country and population, and returns a strings like this: 'China has 1441 million people, which is about 18.2% of the world'.
-
 2. To calculate the percentage, describePopulation calls the percentageOfWorld1 you created earlier.
-
 3. Call describePopulation with data for 3 countries of your choice.
 */
-
+const percentageOfWorld1 = function (populationValue) {
+  const percentage = (populationValue / 7900) * 100;
+  return percentage;
+};
+const describePopulation = function (country, population) {
+  const percentageOfPopulation = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${percentageOfPopulation}% of the world.`;
+  console.log(description);
+};
+describePopulation("Portugal", 10);
+describePopulation("China", 1441);
+describePopulation("USA", 332);
 ///////////////////////////////////////
 // vid - 37: Reviewing Functions
 
@@ -170,7 +241,6 @@ console.log(fruitProcessor(2, 3));
 const calcAge = function (birthYear) {
   return 2037 - birthYear;
 };
-
 const yearsUntilRetirement = function (birthYear, firstName) {
   const age = calcAge(birthYear);
   const retirement = 65 - age;
@@ -183,7 +253,6 @@ const yearsUntilRetirement = function (birthYear, firstName) {
     return -1;
   }
 };
-
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1950, "Mike"));
 
@@ -307,6 +376,21 @@ console.log(ages);
 3. Create an array called percentages containing the percentages of the world population for these 4 population values. Use the function percentageOfWorld1 that you created earlier to compute the 4 percentage values.
 */
 
+"use strict";
+
+const populations = [13, 24, 45, 45];
+console.log(populations.length === 4);
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+
+console.log(percentages);
+
+
 ///////////////////////////////////////
 // vid - 40: Basic Array Operations (Methods)
 const friends = ["Michael", "Steven", "Peter"];
@@ -355,6 +439,29 @@ if (friends.includes("Steven")) {
 
 5. Change the name of one of your neighbouring countries. To do that, find the index of the country in the neighbours array, and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'.
 */
+
+"use strict";
+
+let neighbours = ["bangladesh", "india", "thailand", "Sweden"];
+
+console.log(neighbours);
+
+neighbours.push("Utopia");
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (neighbours.includes("Germany")) {
+  console.log("Probably not a central european country :D");
+}
+
+neighbours.indexOf("Sweden");
+console.log(neighbours);
+
+neighbours[neighbours.indexOf("Sweden")] = "Republic of Sweden;";
+console.log(neighbours);
+
 
 ///////////////////////////////////////
 // video - 41: Coding Challenge #2
@@ -422,6 +529,15 @@ const jonas = {
 
 */
 
+const myCountry = {
+  country: "Sweden",
+  capital: "Helsinki",
+  language: "finnish",
+  population: 6,
+  neighbours: ["Norway", "Sweden", "Russia"],
+};
+
+
 ///////////////////////////////////////
 // vid - 43: Dot vs. Bracket Notation
 const jonas = {
@@ -483,6 +599,26 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 2. Increase the country's population by two million using dot notation, and then decrease it by two million using bracket notation.
 
 */
+
+"use strict";
+
+const myCountry = {
+  country: "Finland",
+  capital: "Helsinki",
+  language: "finnish",
+  population: 6,
+  neighbours: ["Norway", "Sweden", "Russia"],
+};
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} countries and a capital called ${myCountry.capital}`
+);
+
+myCountry.population += 2;
+console.log(myCountry);
+myCountry["population"] -= 2;
+console.log(myCountry);
+
 
 ///////////////////////////////////////
 //vid - 44: Object Methods
@@ -572,6 +708,30 @@ console.log(jonas.getSummary());
 
 */
 
+"use strict";
+
+const myCountry = {
+  country: "finLand",
+  capital: "Helsinki",
+  language: "finnish",
+  population: 6,
+  neighbours: ["Norway", "Sweden", "russia"],
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} million ${this.language}- speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`
+    );
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+  },
+};
+
+myCountry.describe();
+myCountry.checkIsland();
+
+console.log(myCountry);
+
+
 ///////////////////////////////////////
 // vid - 45: Coding Challenge #3
 
@@ -650,6 +810,14 @@ for (let rep = 1; rep <= 30; rep++) {
 1. There are elections in your country! in a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'.
 
 */
+
+"use strict";
+
+for (let voter = 1; voter <= 50; voter++) {
+  console.log(
+    `(for numbers 1 to 50): 'Voter number ${voter} is currently voting'.`
+  );
+}
 
 ///////////////////////////////////////
 // vid - 47: Looping Arrays, Breaking and Continuing
@@ -734,6 +902,23 @@ for (let i = 0; i < jonas.length; i++) {
 3. Confirm that percentages2 contains exactly the same values as the percentages array that we created manually in the previous assignment, and reflect on how much better this solution is.
 
 */
+"use strict";
+
+
+const percentageOfWorld1 = function (populationValue) {
+  const percentage = (populationValue / 7900) * 100;
+  return percentage;
+};
+
+const percentages = [10, 1441, 332, 83];
+
+const percentages2 = [];
+
+for (let i = 0; i < percentages.length; i++) {
+  const perc = percentageOfWorld1(percentages[i]);
+  percentages2.push(perc);
+}
+console.log(percentages2);
 
 ///////////////////////////////////////
 // vid - 48: Looping Backwards and Loops in Loops
@@ -780,6 +965,21 @@ for (let exercise = 1; exercise < 4; exercise++) {
 
 */
 
+"use strict";
+
+let listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+  }
+}
+
+
 ///////////////////////////////////////
 // vid - 49: The while Loop
 for (let rep = 1; rep <= 10; rep++) {
@@ -814,9 +1014,20 @@ while (dice !== 6) {
 1. Recreate the challenge from the lecture Looping Arrays, Breaking and Continuing, but this time using a while loop (call the array percentages3).
 
 2. Reflect on what solution you like better for this task: the for loop or the while loop?
-
 */
+"use strict";
 
+// the while loop
+const population = [10, 1441, 332, 83];
+let percentages3 = [];
+
+let i = 0;
+while (i < population.length) {
+  const perc = percentageOfWorld(population[i]);
+  percentages3.push(perc);
+  i++;
+}
+console.log(percentages3);
 ///////////////////////////////////////
 // vid - 50: Coding Challenge #4
 
@@ -922,6 +1133,8 @@ while (i <= 10) {
 do {
   // do some work
 } while (condition);
+
+// ---------------
 
 let i = 20;
 do {
@@ -1031,7 +1244,7 @@ console.log(userNum);
 while (userNum != gameNum) {
   // whatever input comes from the prompt , we have it in the form of a string. so prompt always return string, that's why (!== [strict equal] deya jabena), we can give (!==) if we give the value of (gameNum = "25");
 
-  userNum = prompt(".You entered wrong number. Guess again : ");
+  userNum = prompt("You entered wrong number. Guess again : ");
 }
 console.log("congratulations, you entered the right number");
 
