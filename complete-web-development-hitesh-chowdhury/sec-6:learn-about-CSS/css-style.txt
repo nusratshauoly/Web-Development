@@ -1,0 +1,7 @@
+To make website beautiful using CSS, important rules to follow:
+
+1. font : font come to the first place, the more beautiful, aligned, spaced the font is , the more beautiful the website become.
+
+2. images: the more beautifully designed the images are , the more ideally optimized the flow, alined in the images takes the second place.
+
+3. button, list, card : how good are these looks like are the important things in a website.

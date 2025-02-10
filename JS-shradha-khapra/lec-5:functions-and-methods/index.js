@@ -88,7 +88,7 @@ console.log(multiplication(2, 2));
 
 /*
 -- Compact way to writing a function
--- we use arrow function for small work like sum, multiplecation like these type of small work
+-- we use arrow function for small work like sum, multiplication like these type of small work
 -- if we have a function which is doing a lot of work, there will be three, four, or six lines of code inside it. For those cases we generally won't use arrow functions.
 
 const functionName = (param1, param2 ...) => {
@@ -168,7 +168,7 @@ arr.forEach(val) => {
     console.log(val);
 }
 
-// when a function associates with object it becames method 
+// when a function associates with object it becomes method 
 // "abc".toUppercase();
 // we always need string to use (toUppercase()).
 // "abc" => string, toUpperCase() => method
@@ -271,9 +271,11 @@ arr.map(callbackFnx(value, index, array))
 
 
 //  EXAMPLE:
+let arr = [2, 3, 4];
 let newArr = arr.map((val) => {
     return val * 2;
-})
+});
+console.log(newArr);
 */
 
 // --- to print array elements
