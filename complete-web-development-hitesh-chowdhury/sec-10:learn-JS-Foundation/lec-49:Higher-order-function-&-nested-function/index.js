@@ -47,17 +47,74 @@ function makeTea(typeOfTea) {
 function processTeaOrder(teaFunction) {
   // Calls the passed function 'teaFunction' with the argument "earl grey"
   // In this case, 'teaFunction' will be 'makeTea'
-  return teaFunction("earl grey"); // return a parameter
+  return teaFunction("earl grey"); // returning a function
 }
 
 // Calling processTeaOrder and passing 'makeTea' as an argument
 // 'processTeaOrder(makeTea)' calls 'makeTea("earl grey")' internally
-let order = processTeaOrder(makeTea); // take function as a parameter
+let order = processTeaOrder(makeTea); // passing a function as a parameter
 
 // Prints the returned value of 'processTeaOrder(makeTea)', which is "maketea: earl grey"
 console.log(order); // Output: "maketea: earl grey"
 
+// --------------- nested function in JS -----------------
+
+/*
+https://www.geeksforgeeks.org/javascript-nested-functions/
+*/
+
 /*
 5. Write a function named `createTeaMaker` that returns another function. The returned function should take one parameter, `teaType`, and return a message like `"Making green tea"`.
 Store the returned function in a variable named `teaMaker` and call it with `"green tea"`.
+*/
+
+/*
+
+The question is asking you to create a higher-order function in JavaScript. Let's break it down step by step.
+
+Understanding the Requirements
+Create a function named createTeaMaker
+
+This function should return another function (a function inside a function).
+The returned function should take one parameter, teaType
+
+This parameter will represent the type of tea (e.g., "green tea", "black tea", etc.).
+The returned function should return a message
+
+The message format should be "Making <teaType>".
+Example: If teaType is "green tea", it should return "Making green tea".
+Store the returned function in a variable named teaMaker
+
+When we call createTeaMaker(), it should return the inner function.
+We store that returned function in a variable.
+Call teaMaker with "green tea"
+
+It should return "Making green tea".
+*/
+
+// Define a function named createTeaMaker
+function createTeaMaker() {
+  // Return an inner function that takes teaType as a parameter
+  return function (teaType) {
+    // Return a formatted string using the teaType argument
+    return `Making ${teaType}`;
+  };
+}
+
+// Call createTeaMaker(), which returns the inner function, and store it in teaMaker
+let teaMaker = createTeaMaker();
+
+// Call the returned function stored in teaMaker with "green tea" as the argument
+let result = teaMaker("green tea");
+
+// Log the result to the console
+console.log(result); // Output: "Making green tea"
+
+// --------------------------------------------------------------------------------------
+
+// *** JS Interview Question:
+/*
+  1. what is the name of features that JS offers
+
+
 */
