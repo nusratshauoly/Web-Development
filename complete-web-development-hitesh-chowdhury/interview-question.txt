@@ -1,0 +1,6 @@
+// *** JS Interview Question:
+/*
+  1. what is the name of features that JS offers
+
+
+*/

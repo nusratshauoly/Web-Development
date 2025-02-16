@@ -64,7 +64,6 @@ function sum(x, y) {
     console.log(x); // the x will print here cause it's in the local variable
     return sum;
     console.log("after return"); // after return this statement will never run
-
 }
 // call the function
 let val = sum(3, 4);
@@ -288,9 +287,9 @@ let newArr = nums.map((val) => {
 });
 console.log(newArr);
 
-let calcSquare = (num) => {
-    console.log(num * num);
-};
+// let calcSquare = (num) => {
+//     console.log(num * num);
+// };
 
 /*
 // *** ------------- Filter ---------------- ***
@@ -365,17 +364,17 @@ console.log(toppers);
 /*
 2: Take a number n as input from user. Create an array of numbers from 1 to n. Use the reduce method to calculate sum of all numbers in the array. Use the reduce method to calculate product of all numbers in the array. (factorial of a number ...)
 */
-let n = prompt("enter a number: ");  // 4 / 5 / 6 / 7 / any number
+let n = Number(prompt("Enter a number: ")); // // Take input from the user and convert it to a number
 let arr = [];  // store 1 to n values
 
 for (let i = 1; i <= n; i++){
-    arr[i - 1] = i;   // store i value in arr [i - 1] index -- exam: i = 1, [1 - 1] = 0 index; i = 2, [2 - 1] = 1 index like this. val= 1(index/position = 0), 2(1), 3(2), 4(3) index e store hobe
+    arr[i - 1] = i;  // Assign each number to the corresponding index (starting from 0)  // store i value in arr [i - 1] index -- exam: i = 1, [1 - 1] = 0 index; i = 2, [2 - 1] = 1 index like this. val= 1(index/position = 0), 2(1), 3(2), 4(3) index e store hobe
 }
-console.log(arr);
+console.log(arr);  // Print the generated array
 
 
 let sum = arr.reduce((res, curr) => {  // (previous value, current value)
-    return res + curr;
+    return (res + curr);   // Initial value is 0 to handle empty array cases
 });
 console.log("sum = ", sum);
 
@@ -384,6 +383,6 @@ console.log("sum = ", sum);
 // 3. (factorial of a number ...)
 
 let factorial = arr.reduce((res, curr) => {
-    return res * curr;
+    return (res * curr); // Initial value is 1 to ensure correct multiplication
 });
 console.log("factorial = ", factorial);

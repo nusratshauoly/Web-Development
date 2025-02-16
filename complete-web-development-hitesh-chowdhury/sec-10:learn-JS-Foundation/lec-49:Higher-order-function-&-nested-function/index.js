@@ -18,6 +18,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function
 */
 
+// --------------- nested function in JS -----------------
+/*
+https://www.geeksforgeeks.org/javascript-nested-functions/
+*/
+
 // ----------------------------------------
 
 /*
@@ -57,11 +62,7 @@ let order = processTeaOrder(makeTea); // passing a function as a parameter
 // Prints the returned value of 'processTeaOrder(makeTea)', which is "maketea: earl grey"
 console.log(order); // Output: "maketea: earl grey"
 
-// --------------- nested function in JS -----------------
-
-/*
-https://www.geeksforgeeks.org/javascript-nested-functions/
-*/
+// ------------------------------------------------------------------------------
 
 /*
 5. Write a function named `createTeaMaker` that returns another function. The returned function should take one parameter, `teaType`, and return a message like `"Making green tea"`.
@@ -69,7 +70,6 @@ Store the returned function in a variable named `teaMaker` and call it with `"gr
 */
 
 /*
-
 The question is asking you to create a higher-order function in JavaScript. Let's break it down step by step.
 
 Understanding the Requirements
@@ -109,12 +109,3 @@ let result = teaMaker("green tea");
 
 // Log the result to the console
 console.log(result); // Output: "Making green tea"
-
-// --------------------------------------------------------------------------------------
-
-// *** JS Interview Question:
-/*
-  1. what is the name of features that JS offers
-
-
-*/

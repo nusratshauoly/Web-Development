@@ -51,11 +51,8 @@ num1 /= 5;
 console.log(num1);
 
 // ---------------- operator precedence
-let scores = ((2 * (3 + 2) - 1);
+let scores = 2 * (3 + 2) - 1;
 console.log(scores);
-
-
-
 
 // ------- operator precedence ------
 
