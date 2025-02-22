@@ -141,6 +141,7 @@ const measureKelvin = function () {
 // A) IDENTIFY (the bug)
 console.log(measureKelvin());
 
+// ------------------------------------------------------
 // using a debugger
 const calcTempAmplitudeBug = function (t1, t2) {
   const temps = t1.concat(t2);
@@ -223,7 +224,9 @@ TEST DATA: [7.5, 8, 6.5, 0, 8.5, 4, 0]
 */
 
 // Written by ChatGPT
+// Function to analyze a week's work hours
 function analyzeWorkWeek(dailyHours) {
+// Define an array to map indexes to weekdays (assuming Monday is index 0)
   const daysOfWeek = [
     'Monday',
     'Tuesday',
@@ -234,46 +237,115 @@ function analyzeWorkWeek(dailyHours) {
     'Sunday',
   ];
 
-  // Validate that the input array has exactly 7 elements
-  if (!Array.isArray(dailyHours) || dailyHours.length !== 7) {
+   // Validate that the input is an array of exactly 7 elements (one for each day of the week)
+   // !Array.isArray(dailyHours) is used to check if dailyHours is not an array.
+   // This condition checks whether the input array does not contain exactly 7 elements (one for each day of the week).   If dailyHours.length is not 7, the condition becomes true, and an error is thrown.
+  if (!Array.isArray(dailyHours) || dailyHours.length !== 7) {   
     throw new Error('Input must be an array of exactly 7 daily work hours.');
   }
 
-  // Calculate total hours worked
+    // Calculate total hours worked by summing up all daily hours (.reduce() is a JavaScript array method used to accumulate values.   sum: Stores the accumulated total (starts at 0).)
   const totalHours = dailyHours.reduce((sum, hours) => sum + hours, 0);
 
-  // Calculate average daily hours, rounded to one decimal place
+    // Calculate the average daily hours, rounding to one decimal place
+    // dailyHours.length is 7 (since the array always has 7 elements, one for each day of the week).
+    // Multiply the value by 10 to shift the decimal place one step to the right.
+    // Use Math.round() to round the number to the nearest integer.
+    // Divide the result by 10 to shift the decimal place back to its correct position.
   const averageHours = Math.round((totalHours / dailyHours.length) * 10) / 10;
 
-  // Find the day with the most hours worked
+  // Determine the maximum number of hours worked in a single day
+  // Math.max() is a JavaScript function that returns the largest value among its arguments.
+  // The spread operator (...) is used to pass all elements of dailyHours as separate arguments to Math.max().
+  //This function helps identify which day had the highest work hours.
   const maxHours = Math.max(...dailyHours);
+
+  // Find the index of the first occurrence of the maxHours in the array
+  //.indexOf(value) is a JavaScript array method that returns the first index where value appears in the array.
+  // maxHours is the maximum number of hours worked in a single day, which we previously found using:
   const maxDayIndex = dailyHours.indexOf(maxHours);
+  // Retrieve the corresponding day of the week using the index
+  //maxDayIndex represents the index of the day with the most work hours.
+  // By accessing daysOfWeek[maxDayIndex], we retrieve the corresponding weekday.
   const maxDay = daysOfWeek[maxDayIndex]; // Convert index to day name
 
-  // Count the number of days worked
+  
+  // Count the number of days where the freelancer worked (i.e., days with more than 0 hours)
+  // .filter() is a JavaScript array method that returns a new array containing only elements that satisfy a given condition.
+  // The condition hours > 0 ensures only days with more than 0 work hours are included in the new array.
+  // This filters out days where no work was done (0 hours).
+  // .length gives the number of elements in the filtered array, which represents the number of days worked.
   const daysWorked = dailyHours.filter(hours => hours > 0).length;
 
-  // Check if the week was full-time (35 hours or more)
+  // Check if the total hours worked is 35 or more (full-time threshold)
+  // This comparison operator (>=) checks if totalHours is greater than or equal to 35.
+  // If totalHours is 35 or more, the result is true (full-time).
+  // Otherwise, it returns false (not full-time).
   const isFullTime = totalHours >= 35;
 
-  // Return the result object
+  
+  // Return an object containing all the calculated results
   return {
-    totalHours,
-    averageHours,
-    maxDay, // The name of the day with the most hours
-    daysWorked,
-    isFullTime,
+    totalHours,  // Total hours worked in the week : 34
+    averageHours,  // Average daily hours, rounded to one decimal place : 4.9
+    maxDay, // The name of the day with the most hours worked : "Friday"
+    daysWorked, // Number of days worked : 5
+    isFullTime,  // Boolean indicating if it was a full-time week : false
   };
 }
 
-const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 5, 0];
+// Example test case: work hours for a full week
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+// Call the function and store the result in a variable
 const analysis = analyzeWorkWeek(weeklyHours);
-console.log(analysis);
+// Print the results
+console.log(analysis); // Output: { totalHours: 35.5, averageHours: 5.1, maxDay: 'Friday', daysWorked: 5, isFullTime: true }
 
+// Example test case with an incorrect input (less than 7 days)
 const weeklyHours2 = [7.5, 8, 6.5, 0, 8.5];
+// This will throw an error due to incorrect input length
 const analysis2 = analyzeWorkWeek(weeklyHours2);
 console.log(analysis2);
 
 
 
-//  What is a callback? Explain the filter method in simple terms to a javascript beginner?
+// ------------- full code -------------
+function analyzeWorkWeek(dailyHours) {
+    const daysOfWeek = [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ];
+
+    if (!Array.isArray(dailyHours) || dailyHours.length !== 7) {   
+      throw new Error('Input must be an array of exactly 7 daily work hours.');
+    }
+    const totalHours = dailyHours.reduce((sum, hours) => sum + hours, 0);
+    const averageHours = Math.round((totalHours / dailyHours.length) * 10) / 10;
+    const maxHours = Math.max(...dailyHours);
+
+    const maxDayIndex = dailyHours.indexOf(maxHours);
+    
+    const maxDay = daysOfWeek[maxDayIndex]; 
+    const daysWorked = dailyHours.filter(hours => hours > 0).length;
+  
+    const isFullTime = totalHours >= 35;
+
+    return {
+      totalHours, 
+      averageHours,
+      maxDay,
+      daysWorked, 
+      isFullTime,
+    };
+  }
+  const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+  const analysis = analyzeWorkWeek(weeklyHours);
+  console.log(analysis);
+  const weeklyHours2 = [7.5, 8, 6.5, 0, 8.5];
+  const analysis2 = analyzeWorkWeek(weeklyHours2);
+  console.log(analysis2);

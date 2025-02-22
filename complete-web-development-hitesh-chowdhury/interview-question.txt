@@ -1,6 +1,7 @@
 // *** JS Interview Question:
 /*
-  1. what is the name of features that JS offers
-
+  1. what is the name of features that JS offers?
+  
+  2. What is a callback? Explain the filter method in simple terms to a javascript beginner?
 
 */
