@@ -87,7 +87,7 @@ for (const city in citiesPopulation) {
   if (city == "Berlin") {
     break;
   }
-  // key = value
+  // key = value  --- create a new kay - value
   cityNewPopulations[city] = citiesPopulation[city]; // (to push an object we have to create a value and a object)   // Store the current city's population in the new object
 }
 console.log(cityNewPopulations); // Print the new object containing only cities before "Berlin"

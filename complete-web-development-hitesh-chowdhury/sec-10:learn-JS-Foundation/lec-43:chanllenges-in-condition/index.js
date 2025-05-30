@@ -1,4 +1,4 @@
-// checking if a number is greater than another number
+// prob -1: checking if a number is greater than another number
 
 let num1 = 5;
 let num2 = 8;
@@ -11,7 +11,7 @@ if (num1 > num2) {
 }
 console.log("I am regular bottom code");
 
-// checking if a string is equal to another string:
+//prob - 2: checking if a string is equal to another string:
 let userName = "chai";
 let anotherUserName = "chai";
 
@@ -19,7 +19,7 @@ if (userName == anotherUserName) {
   console.log("pick another username");
 }
 
-// checking if a variable is a number or not
+// prob - 3 : checking if a variable is a number or not
 // let score = 44;
 let score = "44";
 
@@ -29,7 +29,7 @@ if (typeof score === "number") {
   console.log("No that is not a number");
 }
 
-// checking if a boolean value is true or false
+// prob - 4 : checking if a boolean value is true or false
 let isTeaReady = false;
 
 if (isTeaReady) {
@@ -38,7 +38,7 @@ if (isTeaReady) {
   console.log("Tea is not ready");
 }
 
-// checking if an array is empty or not
+// prob - 5 : checking if an array is empty or not
 let items = [];
 console.log(items.length);
 

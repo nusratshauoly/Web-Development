@@ -11,7 +11,7 @@
 - symbol
 */
 
-// Non-primitive
+// Non-primitive --- is OBJECTS
 
 /*
 - objects
@@ -62,7 +62,7 @@ let sm1 = Symbol("hitesh");
 let sm2 = Symbol("hitesh");
 console.log(sm1);
 
-console.log(sm1 == sm2);
+console.log(sm1 == sm2); // Symbol(hitesh)
 
 // -------- symbol mdn javascript --------
 

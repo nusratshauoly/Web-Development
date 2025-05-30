@@ -4,7 +4,7 @@
 
 // we can declare object variable with (const) and can also change inside the value cause it's a primitive value.
 
-let userName = {
+const userName = {
   firstName: "hitesh",
   isLoggedIn: true,
   "last name": "chimaji",
@@ -15,7 +15,6 @@ console.log(userName);
 console.log(userName.firstName);
 console.log(userName.lastName);
 console.log(typeof userName);
-
 console.log(userName["last name"]);
 
 let today = new Date();
@@ -39,7 +38,7 @@ let isValue = "2";
 console.log(typeof Number(isValue)); // convert string to a number
 
 let isValue = "2abc";
-console.log(typeof Number(isValue)); // ans: NaN
+console.log(typeof Number(isValue)); // number
 
 console.log(Number(null)); // 0
 

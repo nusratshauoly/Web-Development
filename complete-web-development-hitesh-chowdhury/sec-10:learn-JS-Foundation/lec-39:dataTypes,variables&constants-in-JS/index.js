@@ -1,5 +1,6 @@
 console.clear();
 console.table({ city: "Jaipur" });
+console.warn({ city: "Jaipur" });
 
 // Data Types
 /*

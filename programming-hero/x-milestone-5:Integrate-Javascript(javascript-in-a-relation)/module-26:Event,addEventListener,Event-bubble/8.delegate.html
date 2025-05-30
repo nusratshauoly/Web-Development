@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegate</title>
+  </head>
+  <body>
+    <h1>Explore Event Delegate</h1>
+    <section>
+      <!-- 1 step 1. delete item  -->
+      <!-- ul#list-container>li.item*6>lorem3 -->
+      <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Suscipit, totam qui!</li>
+        <li class="item">Cupiditate, veritatis ratione.</li>
+        <li class="item">Dolores, doloribus possimus?</li>
+        <li class="item">Soluta, recusandae ea!</li>
+        <li class="item">Voluptates, delectus. Nesciunt.</li>
+      </ul>
+
+      <!-- 2 step 2. add item -->
+      <button id="btn-add-item">Add Item</button>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- inline js -->
+    <script>
+      // -------- for practice ---------
+
+      // ------------------- for remove item from the list ----------------------
+      /* 1.1. (from 1. delete item) items er element gulo show korar jonno , for ... of use kore protitar upore ekta ekta (item) k items array er moddhe (click) event add kore dibo and function and parameter (event) add korbo and
+       */
+      const items = document.getElementsByClassName("item");
+      // console.log(items);
+      for (const item of items) {
+        item.addEventListener("click", function (event) {
+          /*
+            ----- 1.2: (.target) mane jeta k click korsi sheta and (.parentNode) dile er jeta target korsi er parent take dekhabe mane jodi ekhon (li) er moddhe jekono 1 ta k click kori tahole whole (ul) ta dekhabe (console.log) e.
+            like (li element => (lorem, ipsum dolor) e click korle (whole (ul) element er shob html show korbe (website er (inspect) er (console) e)))
+            */
+          console.log(event.target.parentNode);
+
+          /*
+            ---- 1.3: or (1.2 er moto colsole.log na diye evabe korbo) jodi shorashori (parentNode) theke kono child k remove korte chai then (.parenNode) er por (.removeChild) korbo shei child k jake target kore click korbo (event.target)) and (inspect) er (console) e jabo then (parent) (ul) er jekono 1ta (child/li) k click korbo and sheta remove hoye jabe (li) theke.
+            */
+          event.target.parentNode.removeChild(event.target);
+        });
+      }
+
+      //   --------------- for practice end ----------------
+
+      // ----------------------------------------------------------------------------
+      // 3 step 3.  now when first e normally (Ul) er moddhe (li) deya thake tokhon shegulor moddhe new (li) add korar jhamela thakena just shudhu (remove) korar jonno (step 1.1 to 1.3) use kora hoy but when new (li) add kora hoy tokhon r new (li) element gulor remove korar jonno (step 1.1 to 1.3) gulo kaj korena er jonno new vale (step likhte hobe) but jodi eki (parent element er jono duibar remove code likhte hoy tahole  clean code hobena karon eta (DRY => dont repeat yourself) ei rule break kore) tai (step 1.1 to 1.3) comment kore dibo oita shudhu bujhar jonno rakhbo r (new remove element code likhbo jate previous and new shob element e add korar por abar remove kora jay).
+
+      // 3.1: amra j (addEventListener) eta {child(li er id = items)} er moddhe add na kore {parent(ul er id = list-container)} er moddhe add korbo.. and jotobar (li) item add korar jonno  click korbo totobar eta parent node er kache jabe and new item (parent) er moddhe add korbe. and jokhon (add item) item e (click) korbo tokhon (HTML text) e (parent and child er positin and element) ekshathe dekhabe (inspect er console e). jodi amra (eventBubble) take stop na kori. {atake bole delegat kore deya  means new element child er moddhe add na kore parent k diye deya or parent er moddhe add kore deya.}
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function (event) {
+          //console.log(event.target);
+
+          // 3.2 : now shorashori (parentNode) theke kono child k remove korte chai then (.parenNode) er por (.removeChild) korbo shei child k jake target kore click korbo (event.target)) and (inspect) er (console) e jabo then (parent) (ul) er jekono 1ta (child/li) k click korbo and sheta remove hoye jabe (li) theke.
+          event.target.parentNode.removeChild(event.target);
+        });
+
+      //
+
+      // ------------------------ for add item on the list ----------------------
+      /* 2.1. (from 2. add item theke in HTML)  : first document e id add korbo and (.addEventListener) e click diye function declare korbo.
+            --- kono 1ta element add korte hole 3 ta step follow korte hoy:
+            1. kar moddhe add korbo
+            2. kake add korbo
+            */
+      document
+        .getElementById("btn-add-item")
+        .addEventListener("click", function () {
+          // 2.2:  1. kar moddhe add korbo: (listContainer) name er variable declare korbo and (parentnode) er Ul => (list-container) er moddhe add korbo.
+          const listContainer = document.getElementById("list-container");
+
+          // 2.3:  2. kake add korbo: notun (li) add korbo and (li) er moddhe (innerText) dibo mane ja text thakbe.
+          const li = document.createElement("li");
+          li.innerText = "Brand New Item added";
+          // 2.4: 2.  2. kake add korbo: and new (li) gulor moddhe class add kore dibo ager li gulor same class (item) jate egulor moddhe click korleo remove kora jay ager moto
+          li.classList.add("item");
+          // 2.5: 2.  2. kake add korbo: and lastly (parentNode = > ul=>list-container(id) ) er moddhe new li gulo add kore dibo (appendChild => add kora) diye.
+          listContainer.appendChild(li);
+        });
+    </script>
+  </body>
+</html>

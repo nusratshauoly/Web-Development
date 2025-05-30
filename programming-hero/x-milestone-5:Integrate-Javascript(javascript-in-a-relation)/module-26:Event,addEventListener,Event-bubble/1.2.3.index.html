@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Events</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- // Module: 25-1: What is Event, different types of event in web -->
+    <h1 onclick="console.log('i am clicked')">DOM er ajke special events</h1>
+    <!-- jodi (html) e button tag boshai  file ei button kaj korate chai then (onclick) use korbo. -->
+    <!-- onclick="console.log(7)" => button e click korle 7 show korbe. -->
+    <button title="This is a tooltip" onclick="console.log(7)">click me</button>
+    <button onclick="console.log(65)">Another button</button>
+    <br />
+
+    <!-- -------------------------------------------// Module: 26-2: Add onclick handler directly or via javascript --------------------------------------->
+
+    <!--1. option 1: make css style in inline html(directly set on the html element)  -->
+
+    <button onclick="document.body.style.backgroundColor='yellow'">
+      Make Yellow
+    </button>
+
+    <!-- ///////////////////////////////////// -->
+    <!-- 2. option 2: eventhandler kore button er shathe add kora. (add onclick function) -->
+    <!-- 2.2: makeRed() function ta onclick e add kore dibo -->
+    <button onclick="makeRed()">Make Red</button>
+    <!-- ///////////////////////////////////// -->
+
+    <!-- 3. option 3: give a id (// 3. option 3: element thakbe and id thakbe , id diye capture kore niye ashbo and onclick diye function er name boshaye dibo)-->
+    <button id="make-blue">Make Blue</button>
+
+    <!-- ///////////////////////////////////// -->
+    <!-- 3.5. option 3.5:  -->
+    <button id="make-purple">Make Purple</button>
+
+    <!------------------------------------------------
+            Module: 26-3: Different ways to use addEventListener on a button
+            --------------------------------------------->
+    <!-- 4. option 4:  -->
+    <button id="make-pink">make Pink</button>
+
+    <!-- 4. option 4 .5 (another):  -->
+    <button id="make-green">make Green</button>
+
+    <!-- 4. option 4 (final) (mostly etai use korbo) :  -->
+    <button id="make-goldenrod">make goldenrod</button>
+
+    <!---------------------------------------------------------------external js file ------------------------------------------------->
+    <script src="./js/index.js"></script>
+
+    <!-- -------------------------------------------------------------------inline js      ------------------------------------------------->
+
+    <!-- ///////////////////   option 1   //////////////// -->
+
+    <!-- 1. option-1: directly set on the HTML element -->
+
+    <!-- <h1 onclick="console.log('i am clicked')">DOM er ajke special events</h1> -->
+
+    <!--    ////////// option 2 //////////////////// -->
+    <!-- 2.1 : for option 2 js inline style (add onclick function on the html element)-->
+
+    <!--   <button onclick="makeRed()">Make Red</button>  (html file) -->
+
+    <!-- we can write these option 2 function in external js file -->
+    <script>
+      // function makeRed(){
+      //     document.body.style.backgroundColor = "red";
+      // }
+
+      //////////// option 3 //////////////////////
+
+      // 3.1: for option 3 js inline style (// 3. option 3: element thakbe and id thakbe , id diye capture kore niye ashbo and onclick diye function er name boshaye dibo)
+      //  <button id="make-blue">Make Blue</button> (html file)
+      // const makeBlueButton = document.getElementById('make-blue');
+
+      // makeBlueButton.onclick = makeBlue; //onclick e makeBlue function er name ta khali likhbo call korbo na. (jodi (html) er onclick kori tokhon function call korbo like (makeBlue()), but inline js er vitor onclick e function call korbo na just (makeBlue) )
+
+      //    function makeBlue(){
+      //         document.body.style.backgroundColor = 'blue';
+      //     }
+      //    //console.log(makeBlueButton);
+
+      //////////////// option 3.5 ///////////////////////
+
+      // // 3.5.1: for option 3.5 js inline diye : 4. option 3 another : onclick k variable hishebe declare kore oitate function boshano
+      // <button id="make-purple">Make Purple</button> (html file)
+      //         const purpleButton = document.getElementById('make-purple');
+      //         purpleButton.onclick = function makePurple(){
+      //             document.body.style.backgroundColor = 'purple';
+      //         }
+      //         //console.log(purpleButton);
+
+      // shob gulo external file e nibo ekhan theke
+      // ------------------------------------------------------                      option 4:                       ------------------------------------------------------
+      //  <button id="make-pink">make Pink</button>
+      const pinkButton = document.getElementById("make-pink");
+      // directly (onclick) na diye (addEventListener) er moddhe 2 ta option dibo(1. button e ki korbo like (click) and 2. function name)
+      pinkButton.addEventListener("click", makePink);
+
+      function makePink() {
+        document.body.style.backgroundColor = "pink";
+      }
+      // console.log(pinkButton);
+
+      // ------------------------------------------------------           option 4.5 : another rule                  ------------------------------------------------------
+      //  <button id="make-green">make Green</button>
+      const greenButton = document.getElementById("make-green");
+
+      // directly (onclick) na diye (addEventListener) er moddhe 2 ta option dibo(1. button e ki korbo like (click) and 2. whole function likhbo 2nd option e)
+      greenButton.addEventListener("click", function makeGreen() {
+        document.body.style.backgroundColor = "green";
+      });
+      // console.log(pinkButton);
+
+      // ------------------------------------------------------         option 4 : final (mostly etai use korbo)                 ------------------------------------------------------
+      //  <button id="make-goldenrod">make goldenrod</button>
+
+      /*  document.getElementById('make-goldenrod').addEventListener('click', function(){
+        document.body.style.backgroundColor = 'goldenrod';
+    });
+    */
+      //ekhane first document.getElementById('id-name').addEventListener('ki action nibo', shudhu function likhbo(bracket for parameter){second bracket for body and give the style of body})
+      document
+        .getElementById("make-goldenrod")
+        .addEventListener("click", function () {
+          document.body.style.backgroundColor = "goldenrod";
+        });
+    </script>
+  </body>
+</html>

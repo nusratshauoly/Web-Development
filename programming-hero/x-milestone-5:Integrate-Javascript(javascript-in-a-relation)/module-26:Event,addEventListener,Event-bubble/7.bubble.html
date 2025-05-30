@@ -1,0 +1,105 @@
+<!-- e: 26-7: (semi-advanced) Event bubble and stop propagation -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+    <style>
+      #item-2 {
+        border: 2px solid rebeccapurple;
+      }
+      ul {
+        border: 2px solid tomato;
+      }
+      body {
+        border: 2px solid green;
+      }
+      section {
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+      <!-- ul>li#item-$*6>lorem2 -->
+      <ul id="list-ul">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">Officiis, exercitationem?</li>
+        <li id="item-3">Odio, rem!</li>
+        <li id="item-4">Nemo, soluta?</li>
+        <li id="item-5">Consectetur, animi?</li>
+        <li id="item-6">Facilis, atque.</li>
+      </ul>
+    </section>
+
+    <!-- ------------------------ Inline js ----------------------------- -->
+
+    <script>
+      // <!--1. bubbles holo jodi ami kono jayga theke click kori tahole website/http jei jayga theke click korsi sheta show korbe then er parent j ase take show korbe evabe maximum parent porjonto show korbe -->
+
+      //  2. or jodi amra bubble na chai then shudhu 1 ta element e chai jeta click korbo then 1ta parameter add kore dibo (event) name e. and (event.stopPropagation()) dile jeta click korbo shudhu shetai dekhabe parent link guloke r show korbe na.
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item-2 clicked");
+        });
+      document.getElementById("list-ul").addEventListener("click", function () {
+        console.log("ul clicked");
+      });
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function () {
+          console.log("section container clicked");
+        });
+      document.getElementById("body").addEventListener("click", function () {
+        console.log("body of the html clicked");
+      });
+
+      // ----------------------------------------------------------------------------------------------
+      // 3. jodi now (item-2) id te click kori tahole (fourth) porjonto show korbe, cause all have same parameter.  // even (item-2) e jodi (event.stopPropagation();) dei tarporeo (fourth) porjonto show korbe. r er uporer kichu show korbena.
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item-2 clicked");
+          event.stopPropagation();
+        });
+
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item-2 second clicked");
+          event.stopPropagation();
+        });
+
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item-2 third clicked");
+          event.stopPropagation();
+        });
+
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item-2 fourth clicked");
+          event.stopPropagation();
+        });
+
+      // ----------------------------------------------------------------------------
+
+      //4. tai jodi shudhu particular (item-2) ta show korate chai r kono  kichu show korbena same parameter holeo (event bubble k stop korte hole (stopImmediatePropagation()) use korbo. )
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item-2 clicked");
+          event.stopImmediatePropagation();
+        });
+
+      //-----------------------------------------------------------------------------
+    </script>
+  </body>
+</html>

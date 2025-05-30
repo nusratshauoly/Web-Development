@@ -5,7 +5,7 @@
 
 let teaFlavors = ["green tea", "black tea", "oolong tea"];
 
-const firstTea = teaFlavors[0];
+const firstTea = teaFlavors[0]; // green tea
 
 /* 
 2. Declare an array named `cities` containing `"London"`, `"Tokyo"`, `"Paris"`, and `"New York"`. 
@@ -14,7 +14,7 @@ const firstTea = teaFlavors[0];
 
 let cities = ["London", "Tokyo", "Paris", "New York"];
 const favoriteCity = cities[2];
-console.log(favoriteCity);
+console.log(favoriteCity); // Paris
 
 /* 
 3. You have an array named `teaTypes` containing `"herbal tea"`, `"white tea"`, and `"masala chai"`. 

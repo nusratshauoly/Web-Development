@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Comment</title>
+  </head>
+  <body>
+    <!-- task list:
+            1. Post button e click korte hobe
+            2. input jei field ase oitar moddhe text input hishebe nibe
+            3. jei text ta input hishebe nibo sheta input field er upore 4 no. comment hishebe add hobe.
+            4. comment add hower por input field ta clear kore dibo
+        -->
+
+    <h1>Please add your Comment.</h1>
+
+    <div id="comment-container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor rem quos
+        nisi eligendi aliquid,
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor rem quos
+        nisi eligendi aliquid,
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor rem quos
+        nisi eligendi aliquid,
+      </p>
+    </div>
+
+    <div>
+      <!-- input field er problem holo input field e shob text ekshathe dekha jay na tai textarea use korbo-->
+      <textarea name id="new-comment" cols="60" rows="5"></textarea>
+      <!-- step - 1. button e 1 ta id diye addEventListener add korte hobe -->
+      <button id="btn-post">Post</button>
+    </div>
+
+    <!-- --------------------------------------------
+                          inline js------------------------- -->
+
+    <script>
+      // step - 1.1: add eventlistener to the post ('btn-post') button
+      document
+        .getElementById("btn-post")
+        .addEventListener("click", function () {
+          // as a beginner check kore dekhbo add hoise kina.
+          //console.log('post button clicked');
+
+          //----------------------------------------------------------------
+          // step - 2: get the comment inside the text area (text-area te comment add korbo)
+          const commentBox = document.getElementById("new-comment");
+          // console.log(commentBox);
+          // *** jodi (p) tag or (h1) tag theke text pete chai tahole (.innerText) use korbo and jodi (input / textarea) theke text pete chai tahole (.value) use korbo.
+          const newComment = commentBox.value;
+          console.log(newComment);
+
+          //---------------------------------------------------------------------
+          // step - 3: set the comment inside the comment container
+          // 3.1: get the comment container
+          const commentContainer = document.getElementById("comment-container");
+          // 3.2: create a new element (p tag)
+          const p = document.createElement("p");
+          // 3.3: set the text of the comment as innerText of the p tag
+          p.innerText = newComment;
+          // 3.4: Add the p tag using appendChild
+          commentContainer.appendChild(p);
+
+          // ----------------------------------------------------------------- --
+          // step - 4: clear the text area
+          commentBox.value = "";
+        });
+    </script>
+  </body>
+</html>
