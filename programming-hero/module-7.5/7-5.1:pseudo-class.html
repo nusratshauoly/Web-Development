@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo</title>
+    <style>
+      h3 {
+        color: peru;
+      }
+      h3:hover {
+        color: tomato;
+        background-color: aqua;
+      }
+
+      input:focus {
+        color: brown;
+        padding-left: 10px;
+        outline: 0;
+        border: 5px solid plum;
+      }
+      a:visited {
+        color: gray;
+      }
+
+      li:last-child {
+        color: darkgoldenrod;
+      }
+      li:first-child {
+        background-color: crimson;
+      }
+
+      /* even number child (jor)*/
+      li:nth-child(2n) {
+        color: purple;
+      }
+
+      /* odd number child (bijor) */
+      li:nth-child(2n + 1) {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Heading</h3>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    <a
+      href="https://www.udemy.com/course/web-dev-master/learn/lecture/52149353#overview"
+      >Udemy</a
+    >
+    <a
+      href="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwLE4qszRg9BLITUxJTE8sTk4sUsjNL8tMBQCD9gmT&q=madagascar+movie&rlz=1C5MACD_enBD1136BD1137&oq=mada&gs_lcrp=EgZjaHJvbWUqCggBEC4YsQMYgAQyBggAEEUYOTIKCAEQLhixAxiABDIKCAIQLhixAxiABDIKCAMQLhixAxiABDIKCAQQLhixAxiABDIKCAUQABixAxiABDIHCAYQLhiABDIKCAcQABixAxiABDIHCAgQABiABDIHCAkQABiPAtIBCjE3MTQzajFqMTWoAgiwAgHxBVlJ6FNAcHBT8QVZSehTQHBwUw&sourceid=chrome&ie=UTF-8"
+      >Madagaskar</a
+    >
+
+    <ul>
+      <li>Alia</li>
+      <li>Dalia</li>
+      <li>Balia</li>
+      <li>Kalia</li>
+      <li>Malia</li>
+      <li>Nalia</li>
+    </ul>
+  </body>
+</html>
