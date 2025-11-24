@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/f4b191b67e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style type="text/tailwindcss">
+      /* google font */
+      .manrope-font {
+        font-family: "Manrope", sans-serif;
+      }
+
+      /* customize tailwind css */
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+  <body class="max-w-screen mx-auto px-16 lg:px-28">
+    <!-- header section -->
+    <header class="flex pt-10 pb-20">
+      <!-- text content -->
+      <div>
+        <h1 class="text-5xl md:text-7xl">
+          It's good
+          <br />
+          tea time at The
+          <br />
+          Tea House
+        </h1>
+        <br />
+        <p class="text-gray-500 w-3/4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+          architecto provident! Optio nihil quae unde.
+        </p>
+        <br />
+        <button
+          class="bg-gradient-to-r from-orange-500 to-red-500 px-5 py-3 rounded-lg text-white font-bold"
+        >
+          Explore More
+          <i class="fa-solid fa-arrow-right -rotate-45 text-xl"></i>
+        </button>
+      </div>
+      <!-- image content -->
+      <div class="relative">
+        <div>
+          <img class="w-full" src="./images/banner.png" alt="" />
+        </div>
+        <!-- card over banner image-->
+        <div
+          class="flex items-center bg-white shadow-lg px-2 py-2 md:px-10 lg:py-4 rounded-lg absolute top-28 md:top-50 lg:top-80 md:left-23 lg:left-28"
+        >
+          <!-- icon -->
+          <div>
+            <i class="fa-solid fa-star text-2xl text-amber-500"></i>
+          </div>
+          <!-- text -->
+          <div class="ml-2">
+            <h2 class="lg:text-2xl font-bold">5.00</h2>
+            <p class="text-gray-500">trust Pilot Ratings</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- main content -->
+    <main></main>
+  </body>
+</html>
