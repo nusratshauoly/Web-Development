@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-chestnut: ##64aa8b;
+      }
+
+      @layer base {
+        h3 {
+          @apply text-base font-medium tracking-tight text-slate-900 dark:text-white;
+        }
+
+        p {
+          @apply mt-2 text-sm text-slate-500 dark:text-blue-100;
+        }
+      }
+
+      @layer components {
+        .card {
+          @apply m-10 rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black;
+        }
+      }
+
+      @utility flex-center {
+        @apply flex justify-center items-center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold underline text-clifford">Hello world!</h1>
+
+    <div
+      class="bg-violet-200 h-10 w-full border-2 border-violet-600 rounded-md my-4 p-6 flex justify-center items-center"
+    >
+      <h1 class="text-center font-mono font-extrabold text-[13px]">
+        JSmastery.pro
+      </h1>
+    </div>
+
+    <!-- 1. flex -->
+    <div class="flex flex-col justify-center items-center space-y-6 mt-2 mb-24">
+      <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+      <div class="h-16 w-16 rounded-full bg-orange-500"></div>
+      <div class="h-16 w-16 rounded-full bg-yellow-500"></div>
+    </div>
+
+    <!-- 2. grid -->
+    <div class="grid grid-cols-5 gap-2 mt-2 mx-2 shadow-xl">
+      <div class="h-16 rounded-full bg-blue-500"></div>
+      <div class="h-16 rounded-full bg-orange-500"></div>
+      <div class="h-16 rounded-full bg-yellow-500"></div>
+    </div>
+
+    <!-- 3. media query -->
+    <div class="max-sm:bg-amber-500 md:bg-amber-700">
+      <p class="text-white">I appear on screen wider than 768px</p>
+    </div>
+
+    <!-- 4. ------- dark mode --------- -->
+    <div class="bg-white text-black dark:bg-black dark:text-white">
+      Dark mode enabled
+    </div>
+
+    <!-- 5. custom styles -->
+    <p class="text-[#973f29] bg-chestnut p[16px] text-[30px] p-2">
+      Chestnut Color
+    </p>
+
+    <!-- 6.  -------------- custom css class at (@theme) + (@layer components)  + (@layer base) + (@utility ---------------- >
+
+     7. using (@layer components) + (@utility)-->
+    <div class="card flex-center">
+      <!-- 8. (using @theme) -->
+      <h3 class="text-chestnut font-medium tracking-tight dark:text-white">
+        Writes upside-down
+      </h3>
+
+      <!-- 9. (@layer base) -->
+      <h3>Using @layer base</h3>
+      <p class="mt-2 text-sm text-slate-500 dark:text-blue-100">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla neque
+        ipsam ratione minima architecto aut?
+      </p>
+
+      <!-- 10. (@layer base) -->
+      <p>using @layer base</p>
+    </div>
+
+    <!-- 11. label tick : Accent -->
+    <div class="my-4 flex flex-col ml-2">
+      <label> <input type="checkbox" checked /> Browser Default </label>
+
+      <label>
+        <input type="checkbox" class="accent-pink-500" checked /> customized
+      </label>
+    </div>
+
+    <!-- 12. fluid text -->
+    <!-- <p class="sm:text-7xl text-5xl">Something Nice</p> -->
+    <p class="text-[min(10vw, 70px)]">Something Fluid</p>
+
+    <!-- 13. file -->
+    <label class="my-4 block">
+      <input
+        type="file"
+        class="block w-full text-sm text-slate-500 file:mr-4 file:rounded-full file:border-0 file:bg-violet-500 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-violet-700 hover:file:bg-violet-100"
+      />
+    </label>
+
+    <!-- 14. Highlight -->
+    <div class="selection:bg-green-500 selection:text-white">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi rerum
+        in cupiditate assumenda qui labore aut fugiat unde ipsam eaque odio
+        quisquam similique maiores, hic facere officiis! Praesentium,
+        consequuntur! Eaque architecto pariatur quod harum veritatis ipsa?
+        Nesciunt nulla repudiandae placeat vitae, at odit laudantium, officia
+        ad, enim excepturi <em>was</em>neque eligendi?
+      </p>
+    </div>
+
+    <!--  15. less javascript -->
+    <div class="max-w-lg mx-auto p-8">
+      <details
+        class="open:bg-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg"
+        open
+      >
+        <summary
+          class="text-sm leading-6 text-slate-900 dark:text-white font-semibold select-none"
+        >
+          Why do they call it Ovaltine?
+        </summary>
+        <div class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia,
+            architecto.
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <!-- 16: caret -->
+    <textarea
+      class="w-full caret-pink-900 p-2 text-blue"
+      placeholder="type something nice..."
+    ></textarea>
+
+    <!-- 17: before: & active: -->
+
+    <!-- 18: gradients -->
+
+    <!-- 19: animations -->
+  </body>
+</html>
